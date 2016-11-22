@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginLeft="10sp"
+            android:layout_width="25sp"
+            android:layout_height="35sp"
+            android:src="@drawable/back"/>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="师大介绍"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bei_jing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.lenovo.test_one.XCRoundImageView
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="325dp"
+            android:src="@drawable/mm"/>
+        <TextView
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学校简介"/>
+        <TextView
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="历史沿革"/>
+        <TextView
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学校标志"/>
+    </LinearLayout>
+
+</LinearLayout>
