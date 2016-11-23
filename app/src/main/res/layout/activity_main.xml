@@ -17,5 +17,5 @@
 	<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ê®Ò»ÔÂ22ºÅ!" />
+        android:text="xingxing"/>
 </RelativeLayout>
