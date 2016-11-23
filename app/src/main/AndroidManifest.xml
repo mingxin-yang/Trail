@@ -72,7 +72,7 @@
             android:enabled="true"
             android:process=":remote"
             />
-        <activity android:name=".Scenery">
+        <activity android:name=".zhenfeng.Scenery">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
