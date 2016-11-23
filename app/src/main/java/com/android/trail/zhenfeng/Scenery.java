@@ -1,4 +1,4 @@
-package com.android.trail;
+package com.android.trail.zhenfeng;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ZoomControls;
 
+import com.android.trail.R;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
