@@ -90,7 +90,7 @@ public class Scenery extends AppCompatActivity {
             child.setVisibility(View.INVISIBLE);
         }
         // 设置标注覆盖物的监听
-       // setMarkerListener();
+        setMarkerListener();
 
     }
 
@@ -220,7 +220,6 @@ public class Scenery extends AppCompatActivity {
         });
     }
 
-
     @Override
     protected void onStart()
     {
@@ -243,19 +242,18 @@ public class Scenery extends AppCompatActivity {
 
         super.onStop();
     }
-   /* @Override
+    @Override
     protected void onDestroy() {
         // 移除监听
-        mRadarSearchManager.removeNearbyInfoListener(mRadarSerchListener);
+      //  mRadarSearchManager.removeNearbyInfoListener(mRadarSerchListener);
         // 释放资源
-        mRadarSearchManager.destroy();
-        mRadarSearchManager = null;
+     //   mRadarSearchManager.destroy();
+     //   mRadarSearchManager = null;
         super.onDestroy();
         // 在 activity 执行 onDestroy时执行mMapView.onDestroy() ，实现地图生命周期管理
         mMapView.onDestroy();
 
     }
-*/
     @Override
     protected void onResume() {
         super.onResume();
