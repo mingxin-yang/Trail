@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">师大轨迹</string>
+    <string name="btn1">万达广场</string>
+    <string name="btn2">新百广场</string>
+    <string name="btn3">勒泰/北国</string>
+    <string name="btn4">火车站</string>
 </resources>
