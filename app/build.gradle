@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
     sourceSets {
@@ -8,6 +9,7 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
+
     signingConfigs {
         config {
             keyAlias 'Key'
