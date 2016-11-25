@@ -6,9 +6,9 @@
 
     <com.android.trail.xizheng.CircleImageEx
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="centerInside"
-        android:src="@drawable/mm" />
+        android:src="@drawable/mm1" />
 
 </LinearLayout>
