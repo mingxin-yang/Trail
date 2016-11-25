@@ -73,7 +73,8 @@
             android:process=":remote"
             />
         <!--<activity android:name=".zhenfeng.Scenery">-->
-        <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">
+        <!--<activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">-->
+        <activity android:name=".xizheng.PersonalActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -81,6 +82,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".zhenfeng.Scenery"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
     </application>
 
 </manifest>
