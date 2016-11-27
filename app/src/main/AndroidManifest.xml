@@ -83,6 +83,7 @@
         </activity>
         <activity android:name=".zhenfeng.Scenery"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
+        <activity android:name=".com.adroid.huizhao.Test"/>
     </application>
 
 </manifest>
