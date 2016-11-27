@@ -9,7 +9,7 @@
     <com.android.trail.xizheng.CircleImageEx
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/mm1"/>
+        android:src="@drawable/mm"/>
 
     <com.android.trail.com.adroid.huizhao.XCRoundImageView
         android:id="@+id/t2"
