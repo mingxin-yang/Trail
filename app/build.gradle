@@ -12,10 +12,10 @@ android {
 
     signingConfigs {
         config {
-            keyAlias 'Key'
-            keyPassword '1234560'
-            storeFile file('E:/Program Files (x86)/miyao/keystore.jks')
-            storePassword '1234560'
+            keyAlias 'key'
+            keyPassword '654321'
+            storeFile file('E:/AndroidSDK/keystore.jks')
+            storePassword '123456'
         }
     }
 
