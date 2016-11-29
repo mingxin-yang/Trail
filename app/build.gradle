@@ -1,6 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
+    sourceSets{
+        main{
+            jniLibs.srcDirs=['libs']
+        }
+    }
     signingConfigs {
         config {
             keyAlias 'key'
