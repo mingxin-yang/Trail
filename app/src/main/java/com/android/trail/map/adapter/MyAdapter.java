@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.trail.R;
+import com.android.trail.map.shop;
 
 import java.util.ArrayList;
 import java.util.List;
