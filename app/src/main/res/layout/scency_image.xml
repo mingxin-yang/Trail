@@ -7,5 +7,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="第三方库实现图片三列显示"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shiguang"/>
 
 </LinearLayout>
