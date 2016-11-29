@@ -72,22 +72,19 @@
             android:enabled="true"
             android:process=":remote"
             />
-
-
-
-<!--//贺振丰文件注册-->
-        <activity android:name=".zhenfeng.FJTabview">
+        <!--<activity android:name=".zhenfeng.Scenery">-->
+        <!--<activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">-->
+        <activity android:name=".zhenfeng.Scenery">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <!--<activity android:name=".Map.Map"/>-->
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
         <activity android:name=".com.adroid.huizhao.Test"/>
+        <activity android:name=".hongxue.Discuss"/>
 
     </application>
 
