@@ -1,127 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_marginLeft="10sp"
-            android:layout_width="25sp"
-            android:layout_height="35sp"
-            android:src="@drawable/back"/>
-        <TextView
-            android:id="@+id/textView"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="师大介绍"
-            android:textSize="25sp" />
-    </RelativeLayout>
 
     <LinearLayout
         android:orientation="vertical"
-        android:background="@drawable/bei_jing"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <!--<com.android.trail.com.adroid.huizhao.XCRoundImageView-->
-            <!--android:id="@+id/viewpager"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="325dp"-->
-            <!--android:src="@drawable/mm"/>-->
-        <FrameLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="325dip" >
-
-            <android.support.v4.view.ViewPager
-                android:id="@+id/vp"
-                android:layout_width="match_parent"
-                android:layout_height="325sp" />
-
-            <LinearLayout
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="10sp"
+                android:layout_width="25sp"
+                android:layout_height="35sp"
+                android:src="@drawable/back"/>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
-                android:layout_height="35dip"
-                android:layout_gravity="center|bottom"
-                android:background="#33000000"
-                android:gravity="center"
-                android:orientation="vertical" >
+                android:layout_height="wrap_content"
+                android:text="师大介绍"
+                android:textSize="25sp" />
+        </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="图片标题"
-                    android:textColor="@android:color/white" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/bei_jing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<com.android.trail.com.adroid.huizhao.XCRoundImageView-->
+                <!--android:id="@+id/viewpager"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="325dp"-->
+                <!--android:src="@drawable/mm"/>-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="325dip" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="325sp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dip"
-                    android:orientation="horizontal" >
+                    android:layout_height="35dip"
+                    android:layout_gravity="center|bottom"
+                    android:background="#33000000"
+                    android:gravity="center"
+                    android:orientation="vertical" >
 
-                    <View
-                        android:id="@+id/dot_0"
-                        android:layout_width="5dip"
-                        android:layout_height="5dip"
-                        android:layout_marginLeft="2dip"
-                        android:layout_marginRight="2dip"
-                        />
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="图片标题"
+                        android:textColor="@android:color/white" />
 
-                    <View
-                        android:id="@+id/dot_1"
-                        android:layout_width="5dip"
-                        android:layout_height="5dip"
-                        android:layout_marginLeft="2dip"
-                        android:layout_marginRight="2dip"
-                        />
-                    <View
-                        android:id="@+id/dot_2"
-                        android:layout_width="5dip"
-                        android:layout_height="5dip"
-                        android:layout_marginLeft="2dip"
-                        android:layout_marginRight="2dip"
-                        />
-                    <View
-                        android:id="@+id/dot_3"
-                        android:layout_width="5dip"
-                        android:layout_height="5dip"
-                        android:layout_marginLeft="2dip"
-                        android:layout_marginRight="2dip"
-                        />
-                    <View
-                        android:id="@+id/dot_4"
-                        android:layout_width="5dip"
-                        android:layout_height="5dip"
-                        android:layout_marginLeft="2dip"
-                        android:layout_marginRight="2dip"
-                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dip"
+                        android:orientation="horizontal" >
 
+                        <View
+                            android:id="@+id/dot_0"
+                            android:layout_width="5dip"
+                            android:layout_height="5dip"
+                            android:layout_marginLeft="2dip"
+                            android:layout_marginRight="2dip"
+                            />
+
+                        <View
+                            android:id="@+id/dot_1"
+                            android:layout_width="5dip"
+                            android:layout_height="5dip"
+                            android:layout_marginLeft="2dip"
+                            android:layout_marginRight="2dip"
+                            />
+                        <View
+                            android:id="@+id/dot_2"
+                            android:layout_width="5dip"
+                            android:layout_height="5dip"
+                            android:layout_marginLeft="2dip"
+                            android:layout_marginRight="2dip"
+                            />
+                        <View
+                            android:id="@+id/dot_3"
+                            android:layout_width="5dip"
+                            android:layout_height="5dip"
+                            android:layout_marginLeft="2dip"
+                            android:layout_marginRight="2dip"
+                            />
+                        <View
+                            android:id="@+id/dot_4"
+                            android:layout_width="5dip"
+                            android:layout_height="5dip"
+                            android:layout_marginLeft="2dip"
+                            android:layout_marginRight="2dip"
+                            />
+
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-        </FrameLayout>
-        <TextView
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="45sp"
-            android:textSize="25sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="学校简介"/>
-        <TextView
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="45sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:text="历史沿革"/>
-        <TextView
-            android:layout_marginLeft="30sp"
-            android:layout_marginTop="45sp"
-            android:layout_width="wrap_content"
-            android:textSize="25sp"
-            android:layout_height="wrap_content"
-            android:text="学校标志"/>
+            </FrameLayout>
+            <TextView
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="45sp"
+                android:textSize="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学校简介"/>
+            <TextView
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="45sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="历史沿革"/>
+            <TextView
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="45sp"
+                android:layout_width="wrap_content"
+                android:textSize="25sp"
+                android:layout_height="wrap_content"
+                android:text="学校标志"/>
+        </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

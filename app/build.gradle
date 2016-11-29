@@ -1,24 +1,22 @@
 apply plugin: 'com.android.application'
 
 android {
-
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
-        }
-    }
-
     signingConfigs {
         config {
             keyAlias 'key'
+<<<<<<< HEAD
+            keyPassword 'daohaode'
+            storeFile file('D:/Users/key.jks')
+            storePassword 'daohaode'
+=======
             keyPassword '123456'
             storeFile file('E:/Program Files (x86)/miyao/keystore.jks')
             storePassword '123456'
+>>>>>>> 12ebedf3e535d94b675133d9f9d1441814fd1139
         }
     }
-
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
     defaultConfig {
         applicationId "com.android.trail"
         minSdkVersion 19
@@ -26,12 +24,18 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    productFlavors {
     }
 }
 

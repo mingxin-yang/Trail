@@ -43,6 +43,7 @@ public class JieShaoActivity extends Activity {
             "师大~哎",
 
     };
+
     private TextView title;
     private ViewPagerAdapter adapter;
     private ScheduledExecutorService scheduledExecutorService;
