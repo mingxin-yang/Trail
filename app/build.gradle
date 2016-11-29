@@ -2,17 +2,23 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
+        compileSdkVersion 24
+        buildToolsVersion "24.0.2"
+
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
         config {
             keyAlias 'key'
-
-            keyPassword '123456'
-            storeFile file('D:/askey/keystore.jks')
-            storePassword '123456'
+            keyPassword '1234560'
+            storeFile file('E:/Program Files (x86)/miyao/keystore.jks')
+            storePassword '1234560'
 
         }
     }
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+
     defaultConfig {
         applicationId "com.android.trail"
         minSdkVersion 19
@@ -44,3 +50,4 @@ dependencies {
     compile project(':PullToRefresh')
     compile files('libs/BaiduLBS_Android.jar')
 }
+
