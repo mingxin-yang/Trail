@@ -74,7 +74,7 @@
             />
         <!--<activity android:name=".zhenfeng.Scenery">-->
         <!--<activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">-->
-        <activity android:name=".zhenfeng.Scenery">
+        <activity android:name=".zhenfeng.FJTabview">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

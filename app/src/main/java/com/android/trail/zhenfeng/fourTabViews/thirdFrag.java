@@ -16,7 +16,7 @@ public class thirdFrag extends Fragment{
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.jie_shao, container, false);
+        View view = inflater.inflate(R.layout.scency_share, container, false);
         return view;
     }
 
