@@ -11,6 +11,9 @@ import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.Display;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
@@ -20,6 +23,10 @@ import android.widget.ImageView;
 
 public class CircleImageEx extends ImageView {
 
+
+    private static PersonalActivity m;
+    private static int width;
+    private static int height;
 
     public CircleImageEx(Context context) {
         super(context);
@@ -31,6 +38,28 @@ public class CircleImageEx extends ImageView {
 
     public CircleImageEx(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+    }
+
+    public static void getScreenHW(Context context){
+        WindowManager manager = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
+//        Display display = manager.getDefaultDisplay();
+//        int width =display.getWidth();
+//        int height=display.getHeight();
+//        Log.d("width", String.valueOf(width));
+//        Log.d("height", String.valueOf(height));        //第一种
+        DisplayMetrics dm=new DisplayMetrics();
+        manager.getDefaultDisplay().getMetrics(dm);
+        width=dm.widthPixels;
+        height=dm.heightPixels;
+        Log.d("width", String.valueOf(width));
+        Log.d("height", String.valueOf(height));     //第二种
+    }
+
+    //获取屏幕的宽度
+    public static int getScreenWidth(Context context) {
+        WindowManager manager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = manager.getDefaultDisplay();
+        return display.getWidth();
     }
 
     @Override
@@ -88,7 +117,7 @@ public class CircleImageEx extends ImageView {
 
         //  绘制一个多边形
         //paint.setColor(Color.BLACK);
-        //得到当前屏幕宽度
+
         WindowManager wm = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
         int w = wm.getDefaultDisplay().getWidth();
         int h = wm.getDefaultDisplay().getHeight();
