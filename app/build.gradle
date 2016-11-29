@@ -4,15 +4,15 @@ android {
     signingConfigs {
         config {
             keyAlias 'key'
-<<<<<<< HEAD
+
             keyPassword 'daohaode'
             storeFile file('D:/Users/key.jks')
             storePassword 'daohaode'
-=======
+
             keyPassword '123456'
             storeFile file('E:/Program Files (x86)/miyao/keystore.jks')
             storePassword '123456'
->>>>>>> 12ebedf3e535d94b675133d9f9d1441814fd1139
+
         }
     }
     compileSdkVersion 24

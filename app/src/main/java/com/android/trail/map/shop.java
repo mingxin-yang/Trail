@@ -1,4 +1,4 @@
-package com.android.trail.map;
+package com.android.trail.Map;
 
 /**
  * Created by mingx_000 on 2016/11/29 0029.
