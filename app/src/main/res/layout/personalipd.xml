@@ -3,5 +3,19 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <com.android.trail.xizheng.CircleImageEx
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mm"/>
+
+    <com.android.trail.com.adroid.huizhao.XCRoundImageView
+        android:id="@+id/t2"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:src="@drawable/mm1"/>
+    </FrameLayout>
 
 </LinearLayout>

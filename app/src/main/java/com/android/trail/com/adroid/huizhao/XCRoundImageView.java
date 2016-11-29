@@ -11,6 +11,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 /**
@@ -76,8 +77,13 @@ public class XCRoundImageView extends ImageView{
         canvas.drawARGB(0, 0, 0, 0);
         paint.setColor(color);
         int x = bitmap.getWidth();
+        int y = bitmap.getHeight();
 
-        canvas.drawCircle(x / 2, x / 2, x / 2, paint);
+        WindowManager wm = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
+        int w = wm.getDefaultDisplay().getWidth();
+        int h = wm.getDefaultDisplay().getHeight();
+
+        canvas.drawCircle(x/2, y/2, x /3, paint);
         paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
         canvas.drawBitmap(bitmap, rect, rect, paint);
         return output;

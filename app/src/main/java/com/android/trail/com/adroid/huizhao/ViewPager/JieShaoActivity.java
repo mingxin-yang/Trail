@@ -33,8 +33,8 @@ public class JieShaoActivity extends Activity {
     //存放图片的id
     private int[] imageIds = new int[]{
             R.drawable.p1,
-            R.drawable.p2,
-            R.drawable.p3
+            R.drawable.jieshao2,
+            R.drawable.jieshao3
     };
     //存放图片的标题
     private String[]  titles = new String[]{
