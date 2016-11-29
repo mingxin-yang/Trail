@@ -290,14 +290,14 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content">
 
-                    <com.example.lenovo.test_one.FlowLayout
+                    <com.android.trail.xizheng.FlowLayout
                         android:id="@+id/id_flowlayout"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:background="#FFFFFF"
                         android:layout_marginLeft="52sp"
                         android:padding="10dp" >
-                    </com.example.lenovo.test_one.FlowLayout>
+                    </com.android.trail.xizheng.FlowLayout>
 
                 </LinearLayout>
 
