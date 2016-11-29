@@ -1,21 +1,406 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <FrameLayout
+        android:id="@+id/m_framelayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <com.android.trail.xizheng.CircleImageEx
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/mm"/>
 
-    <com.android.trail.com.adroid.huizhao.XCRoundImageView
-        android:id="@+id/t2"
-        android:layout_width="145sp"
-        android:layout_height="145sp"
-        android:src="@drawable/mm1"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.lenovo.test_one.CircleImageEx
+                android:id="@+id/t1"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mm"/>
+
+            <com.android.trail.com.adroid.huizhao.XCRoundImageView
+                android:id="@+id/t2"
+                android:layout_width="145sp"
+                android:layout_height="145sp"
+                android:src="@drawable/mm"/>
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_alignBottom="@id/t1"
+                android:layout_marginTop="25sp"
+                android:layout_marginBottom="50sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45sp"
+                android:text="保密"/>
+
+            <TextView
+                android:id="@+id/t5"
+                android:layout_marginBottom="50sp"
+                android:layout_alignBottom="@id/t1"
+                android:layout_toRightOf="@id/t4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45sp"
+                android:text="暂无"/>
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_above="@id/t4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45sp"
+                android:textSize="25sp"
+                android:text="Sandra"/>
+
+            <LinearLayout
+                android:layout_below="@id/t1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true">
+
+                <!--个人信息-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/Iv1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_marginTop="3sp"
+                        android:layout_marginLeft="10sp"
+                        android:src="@drawable/geren_xinxi"/>
+                    <TextView
+                        android:layout_toRightOf="@id/Iv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:layout_marginLeft="10sp"
+                        android:text="个人信息"/>
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_marginTop="3sp"
+                        android:layout_marginRight="8sp"
+                        android:src="@drawable/geren_xinxi"/>
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_marginTop="2sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="1sp"
+                    android:background="#000000"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="真实姓名"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="徐歌阳"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="出生日期"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="1996年8月30日"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="@string/xuexiao"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="保密"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="入学年份"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="暂无"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="恋爱状态"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="秘密"/>
+
+                </LinearLayout>
+
+                <!--个性签名-->
+                <RelativeLayout
+                    android:layout_marginTop="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/Iv2"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_marginTop="3sp"
+                        android:layout_marginLeft="10sp"
+                        android:src="@drawable/qian_ming"/>
+                    <TextView
+                        android:layout_toRightOf="@id/Iv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:layout_marginLeft="10sp"
+                        android:text="个性签名"/>
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_marginTop="3sp"
+                        android:layout_marginRight="8sp"
+                        android:src="@drawable/geren_xinxi"/>
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_marginTop="2sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="1dip"
+                    android:background="#000000"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="不潮不用花钱"/>
+
+                </LinearLayout>
+
+                <!--兴趣爱好-->
+                <RelativeLayout
+                    android:layout_marginTop="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/Iv3"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_marginTop="3sp"
+                        android:layout_marginLeft="10sp"
+                        android:src="@drawable/ai_hao"/>
+                    <TextView
+                        android:layout_toRightOf="@id/Iv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:layout_marginLeft="10sp"
+                        android:text="兴趣爱好"/>
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_marginTop="3sp"
+                        android:layout_marginRight="8sp"
+                        android:src="@drawable/geren_xinxi"/>
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_marginTop="2sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="1dip"
+                    android:background="#000000"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8sp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.example.lenovo.test_one.FlowLayout
+                        android:id="@+id/id_flowlayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:layout_marginLeft="52sp"
+                        android:padding="10dp" >
+                    </com.example.lenovo.test_one.FlowLayout>
+
+                </LinearLayout>
+
+                <!--社交信息-->
+                <RelativeLayout
+                    android:layout_marginTop="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/Iv4"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_marginTop="3sp"
+                        android:layout_marginLeft="10sp"
+                        android:src="@drawable/geren_xinxi"/>
+                    <TextView
+                        android:layout_toRightOf="@id/Iv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:layout_marginLeft="10sp"
+                        android:text="社交信息"/>
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_marginTop="3sp"
+                        android:layout_marginRight="8sp"
+                        android:src="@drawable/geren_xinxi"/>
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_marginTop="2sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginRight="20sp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="1dip"
+                    android:background="#000000"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8sp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="微信"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="未绑定"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8sp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="QQ"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="未绑定"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8sp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="新浪微博"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52sp"
+                        android:text="未绑定"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
     </FrameLayout>
 
-</LinearLayout>
+</ScrollView>
