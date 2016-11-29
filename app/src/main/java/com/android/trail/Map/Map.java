@@ -51,7 +51,7 @@ public class Map extends Activity{
         MapStatusUpdate msu = MapStatusUpdateFactory.zoomTo(17.0f);
         mBaiduMap.setMapStatus(msu);
         mUiSettings = mBaiduMap.getUiSettings();
-
+        //显示指南针
         mUiSettings.setCompassEnabled(true);
     }
 
