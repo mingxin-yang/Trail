@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/bg_Gray"
     android:orientation="vertical">
 
     <!--2. 存放四个Fragment-->
@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/colorPrimary"></FrameLayout>
+        android:background="@color/result_image_border"></FrameLayout>
 
     <!--3. 底部的四个选项菜单-->
     <LinearLayout
@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="分享"
+                    android:text="风景"
                     android:textColor="#7597B3" />
             </LinearLayout>
         </RelativeLayout>
@@ -65,7 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="收藏"
+                    android:text="图片"
                     android:textColor="#7597B3" />
             </LinearLayout>
         </RelativeLayout>
@@ -90,7 +90,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="点评"
+                    android:text="随手记"
                     android:textColor="#7597B3" />
             </LinearLayout>
         </RelativeLayout>

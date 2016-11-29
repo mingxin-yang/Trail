@@ -5,7 +5,7 @@
     >
     <com.baidu.mapapi.map.MapView
         android:id="@+id/bmapView"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="300dp"
         android:clickable="true" />
     <ImageView
