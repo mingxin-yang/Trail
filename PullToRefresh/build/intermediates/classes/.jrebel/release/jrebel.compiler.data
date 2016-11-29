@@ -233,7 +233,7 @@ Icom.handmark.pulltorefresh.library.PullToRefreshListView$InternalListView$'"
 java.lang.Enum+* 2 : 2¤
 8com.handmark.pulltorefresh.library.PullToRefreshGridView,*!-35535bfcb4fab90757872bbcab5bf0622 -4e28b658e1f93a8788dc575359b9096:!-2be2732670ff4dfb167ff6671307bd822·
 Kcom.handmark.pulltorefresh.library.PullToRefreshWebView$InternalWebViewSDK9* 38e1d12244f5a6e7f6a98a580e50178a2!-1b3b7c6937b30d70e4461cf2acfd697d:!-2cbffc3ccda215b3494c1e20c588a5532©
-4com.handmark.pulltorefresh.library.PullToRefreshBase  G,"
+4com.handmark.pulltorefresh.library.PullToRefreshBase G ,"
 *!-10dfbb6f600b308d90e3d3e6344151fd2!-15027c9382ecacfe692931f202c40e32: 6c3ddd873e8915dbdce286070e01712f2!
 android.webkit.WebView* 2 : 2¥
 :com.handmark.pulltorefresh.library.PullToRefreshListView$1H* 10d06dce10be1f6d959c6a1f6e360beb2!-2be2732670ff4dfb167ff6671307bd82: 38004a7c787725bb75b6eb3383450c3b2«
@@ -259,7 +259,7 @@ $com.handmark.pulltorefresh.library.RH* 5b30387b0e2f4fd6bafc062b8efc800d2!-2be2
 1com.handmark.pulltorefresh.library.internal.UtilsH*!-5c0893c5238fba8dc53d0db38763d0832!-2be2732670ff4dfb167ff6671307bd82: 2ddbd9150155733f8e4a361a5b0acc4e2«
 ?com.handmark.pulltorefresh.library.internal.FlipLoadingLayout$1H*!-60cddaa2aa7d2459a915547abd3ae1802!-2be2732670ff4dfb167ff6671307bd82: 38004a7c787725bb75b6eb3383450c3b2¤
 9com.handmark.pulltorefresh.library.PullToRefreshBase$Mode* 385f0e615b5b2d23ccefd3bc700705202!-2be2732670ff4dfb167ff6671307bd82: 277976259e609ac63eb23649a93e317d2²
-?com.handmark.pulltorefresh.library.PullToRefreshAdapterViewBase/B"C* 769d662b42455e490c3296e675b0d25e2 05d22f8bcb42ca5ecc6b423c4134275e:!-2be2732670ff4dfb167ff6671307bd822²
+?com.handmark.pulltorefresh.library.PullToRefreshAdapterViewBaseB/"C* 769d662b42455e490c3296e675b0d25e2 05d22f8bcb42ca5ecc6b423c4134275e:!-2be2732670ff4dfb167ff6671307bd822²
 Fcom.handmark.pulltorefresh.library.PullToRefreshBase$OnRefreshListenerH* 1fd96754e54fabb749be4bfac725fc2c2!-2be2732670ff4dfb167ff6671307bd82:!-2be2732670ff4dfb167ff6671307bd822£
 5com.handmark.pulltorefresh.library.LoadingLayoutProxyH"L* 6f875bff4d6ef034b2dbacba8fe47d1a2!-2be2732670ff4dfb167ff6671307bd82: 0d12c6d437fc20ec2cf06126cb00c02b2®
 Bcom.handmark.pulltorefresh.library.PullToRefreshExpandableListView,*!-7d76a65233f4a9253afe6cc7bbf442472 081aecddf937df506f9ea7ee7907b90f:!-2be2732670ff4dfb167ff6671307bd822§
@@ -287,8 +287,8 @@ Ncom.handmark.pulltorefresh.library.PullToRefreshBase$OnLastItemVisibleListener
 .com.handmark.pulltorefresh.library.BuildConfigH* 6f483efd2b7d13556929ef08990c33682!-2be2732670ff4dfb167ff6671307bd82:!-2be2732670ff4dfb167ff6671307bd822•
 )com.handmark.pulltorefresh.library.R$animH*!-3c5d8457f375163478b94225db48dc912!-2be2732670ff4dfb167ff6671307bd82: 23bdaf59ea54763e9a21e2bf7f3702f22¯
 Dcom.handmark.pulltorefresh.library.PullToRefreshHorizontalScrollView* 2d2439c8177e953883de64898effa19d2 25d54893bd7b4f1e8d33f2c27cdd5ff9:!-2be2732670ff4dfb167ff6671307bd822@
-java.lang.Object&;
-?0>!FE*M-L=:9	A)J2(#<8.375"* 2 : 2ª
+java.lang.Object&	39FA?L>J=;
+0-"ME(87*:!<52)#.* 2 : 2ª
 ?com.handmark.pulltorefresh.library.extras.PullToRefreshWebView2 *!-36078bbadc203c1f1bd3e61d5186586d2 3858f443d70c8514547c9648aec20422: 1d76da28a06006c9c955c5e09f7fc5882£
 6com.handmark.pulltorefresh.library.PullToRefreshBase$4H*!-7c6b479cb0bd6f56c1325c926c39dcd92!-2be2732670ff4dfb167ff6671307bd82:!-3da1f5a16714144555fe6e082ef551a52,
 !android.widget.ExpandableListView* 2 : 2
@@ -359,62 +359,62 @@ wF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\han
 F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\Utils.class1com.handmark.pulltorefresh.library.internal.UtilsB×
 F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshExpandableListView.classBcom.handmark.pulltorefresh.library.PullToRefreshExpandableListViewB®
 |F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\BuildConfig.class.com.handmark.pulltorefresh.library.BuildConfigBÁ
-…F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshWebView.class7com.handmark.pulltorefresh.library.PullToRefreshWebView²J
-constantfieldsŸJ
-„@
-
-9com.handmark.pulltorefresh.library.internal.LoadingLayouta
-LOG_TAGPullToRefresh-LoadingLayout9com.handmark.pulltorefresh.library.internal.LoadingLayout
-§
-?com.handmark.pulltorefresh.library.internal.RotateLoadingLayoutd
-ROTATION_ANIMATION_DURATION1200?com.handmark.pulltorefresh.library.internal.RotateLoadingLayout
-â
-.com.handmark.pulltorefresh.library.BuildConfigE
-VERSION_NAME2.1.1.com.handmark.pulltorefresh.library.BuildConfigd
-APPLICATION_ID"com.handmark.pulltorefresh.library.com.handmark.pulltorefresh.library.BuildConfigE
-
-BUILD_TYPErelease.com.handmark.pulltorefresh.library.BuildConfigD
-VERSION_CODE2110.com.handmark.pulltorefresh.library.BuildConfig:
-DEBUG0.com.handmark.pulltorefresh.library.BuildConfig:
-FLAVOR .com.handmark.pulltorefresh.library.BuildConfig
+…F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshWebView.class7com.handmark.pulltorefresh.library.PullToRefreshWebViewÊ?
+constantfields·?
+œ5
 €
-1com.handmark.pulltorefresh.library.internal.UtilsK
-LOG_TAGPullToRefresh1com.handmark.pulltorefresh.library.internal.Utils
-¨
-Kcom.handmark.pulltorefresh.library.PullToRefreshWebView$InternalWebViewSDK9l
-OVERSCROLL_FUZZY_THRESHOLD2Kcom.handmark.pulltorefresh.library.PullToRefreshWebView$InternalWebViewSDK9k
-OVERSCROLL_SCALE_FACTOR1.5Kcom.handmark.pulltorefresh.library.PullToRefreshWebView$InternalWebViewSDK9
-œ
-?com.handmark.pulltorefresh.library.extras.PullToRefreshWebView2€
-DEF_JS_READY_PULL_DOWN_CALL javascript:isReadyForPullDown();?com.handmark.pulltorefresh.library.extras.PullToRefreshWebView2|
-DEF_JS_READY_PULL_UP_CALLjavascript:isReadyForPullUp();?com.handmark.pulltorefresh.library.extras.PullToRefreshWebView2X
-JS_INTERFACE_PKGptr?com.handmark.pulltorefresh.library.extras.PullToRefreshWebView2
-İ
-3com.handmark.pulltorefresh.library.OverscrollHelperP
-LOG_TAGOverscrollHelper3com.handmark.pulltorefresh.library.OverscrollHelperT
-DEFAULT_OVERSCROLL_SCALE1.03com.handmark.pulltorefresh.library.OverscrollHelper
-	
-4com.handmark.pulltorefresh.library.PullToRefreshBaseE
-FRICTION2.04com.handmark.pulltorefresh.library.PullToRefreshBaseN
-LOG_TAGPullToRefresh4com.handmark.pulltorefresh.library.PullToRefreshBaseV
-SMOOTH_SCROLL_DURATION_MS2004com.handmark.pulltorefresh.library.PullToRefreshBaseN
-STATE_STATE	ptr_state4com.handmark.pulltorefresh.library.PullToRefreshBaseL
+9com.handmark.pulltorefresh.library.internal.LoadingLayoutC
+LOG_TAGPullToRefresh-LoadingLayoutPullToRefresh-LoadingLayout
+l
+?com.handmark.pulltorefresh.library.internal.RotateLoadingLayout)
+ROTATION_ANIMATION_DURATION12001200
+
+.com.handmark.pulltorefresh.library.BuildConfig
 
-STATE_MODEptr_mode4com.handmark.pulltorefresh.library.PullToRefreshBaseN
-STATE_SUPER	ptr_super4com.handmark.pulltorefresh.library.PullToRefreshBase[
-SMOOTH_SCROLL_LONG_DURATION_MS3254com.handmark.pulltorefresh.library.PullToRefreshBase@
-DEBUG14com.handmark.pulltorefresh.library.PullToRefreshBase\
-STATE_CURRENT_MODEptr_current_mode4com.handmark.pulltorefresh.library.PullToRefreshBaseQ
-DEMO_SCROLL_INTERVAL2254com.handmark.pulltorefresh.library.PullToRefreshBaseq
-"STATE_SCROLLING_REFRESHING_ENABLEDptr_disable_scrolling4com.handmark.pulltorefresh.library.PullToRefreshBaseH
-USE_HW_LAYERS04com.handmark.pulltorefresh.library.PullToRefreshBasel
-STATE_SHOW_REFRESHING_VIEWptr_show_refreshing_view4com.handmark.pulltorefresh.library.PullToRefreshBase
-
-=com.handmark.pulltorefresh.library.internal.FlipLoadingLayout]
-FLIP_ANIMATION_DURATION150=com.handmark.pulltorefresh.library.internal.FlipLoadingLayout
-¦
-;com.handmark.pulltorefresh.library.internal.IndicatorLayoutg
-#DEFAULT_ROTATION_ANIMATION_DURATION150;com.handmark.pulltorefresh.library.internal.IndicatorLayoutJ
+BUILD_TYPEreleaserelease
+VERSION_NAME2.1.12.1.1
+VERSION_CODE21102110
+DEBUG00X
+APPLICATION_ID"com.handmark.pulltorefresh.library"com.handmark.pulltorefresh.library
+FLAVOR  
+\
+1com.handmark.pulltorefresh.library.internal.Utils'
+LOG_TAGPullToRefreshPullToRefresh
+–
+Kcom.handmark.pulltorefresh.library.PullToRefreshWebView$InternalWebViewSDK9"
+OVERSCROLL_FUZZY_THRESHOLD22#
+OVERSCROLL_SCALE_FACTOR1.51.5
+Ÿ
+?com.handmark.pulltorefresh.library.extras.PullToRefreshWebView2a
+DEF_JS_READY_PULL_DOWN_CALL javascript:isReadyForPullDown(); javascript:isReadyForPullDown();[
+DEF_JS_READY_PULL_UP_CALLjavascript:isReadyForPullUp();javascript:isReadyForPullUp();
+JS_INTERFACE_PKGptrptr
+Š
+3com.handmark.pulltorefresh.library.OverscrollHelper-
+LOG_TAGOverscrollHelperOverscrollHelper$
+DEFAULT_OVERSCROLL_SCALE1.01.0
+Ü
+4com.handmark.pulltorefresh.library.PullToRefreshBase
+FRICTION2.02.0'
+LOG_TAGPullToRefreshPullToRefresh%
+SMOOTH_SCROLL_DURATION_MS200200#
+STATE_STATE	ptr_state	ptr_state 
+
+STATE_MODEptr_modeptr_mode#
+STATE_SUPER	ptr_super	ptr_super*
+SMOOTH_SCROLL_LONG_DURATION_MS325325
+DEBUG118
+STATE_CURRENT_MODEptr_current_modeptr_current_mode 
+DEMO_SCROLL_INTERVAL225225R
+"STATE_SCROLLING_REFRESHING_ENABLEDptr_disable_scrollingptr_disable_scrolling
+USE_HW_LAYERS00P
+STATE_SHOW_REFRESHING_VIEWptr_show_refreshing_viewptr_show_refreshing_view
+d
+=com.handmark.pulltorefresh.library.internal.FlipLoadingLayout#
+FLIP_ANIMATION_DURATION150150
+n
+;com.handmark.pulltorefresh.library.internal.IndicatorLayout/
+#DEFAULT_ROTATION_ANIMATION_DURATION150150J
 Hcom.handmark.pulltorefresh.library.PullToRefreshBase$OnPullEventListener^
 ?com.handmark.pulltorefresh.library.internal.RotateLoadingLayoutROTATION_ANIMATION_DURATION_
 ]com.handmark.pulltorefresh.library.PullToRefreshExpandableListView$InternalExpandableListView>
@@ -565,7 +565,7 @@ J
 €
 ?com.handmark.pulltorefresh.library.internal.FlipLoadingLayout$1=com.handmark.pulltorefresh.library.internal.FlipLoadingLayout
 ‹
-9com.handmark.pulltorefresh.library.PullToRefreshBase$Mode:com.handmark.pulltorefresh.library.PullToRefreshListView$19com.handmark.pulltorefresh.library.internal.LoadingLayoutHcom.handmark.pulltorefresh.library.PullToRefreshBase$OnPullEventListener?com.handmark.pulltorefresh.library.internal.RotateLoadingLayoutCcom.handmark.pulltorefresh.library.PullToRefreshBase$AnimationStyle@com.handmark.pulltorefresh.library.extras.SoundPullEventListener?com.handmark.pulltorefresh.library.internal.FlipLoadingLayout$1;com.handmark.pulltorefresh.library.internal.LoadingLayout$11com.handmark.pulltorefresh.library.IPullToRefreshAcom.handmark.pulltorefresh.library.PullToRefreshAdapterViewBase$13com.handmark.pulltorefresh.library.OverscrollHelper=com.handmark.pulltorefresh.library.internal.IndicatorLayout$1;com.handmark.pulltorefresh.library.internal.IndicatorLayout?com.handmark.pulltorefresh.library.PullToRefreshAdapterViewBase8com.handmark.pulltorefresh.library.PullToRefreshListViewBcom.handmark.pulltorefresh.library.PullToRefreshExpandableListViewDcom.handmark.pulltorefresh.library.PullToRefreshHorizontalScrollView:com.handmark.pulltorefresh.library.PullToRefreshScrollView7com.handmark.pulltorefresh.library.PullToRefreshWebView8com.handmark.pulltorefresh.library.PullToRefreshGridView?com.handmark.pulltorefresh.library.extras.PullToRefreshWebView26com.handmark.pulltorefresh.library.PullToRefreshBase$44com.handmark.pulltorefresh.library.PullToRefreshBase=com.handmark.pulltorefresh.library.internal.FlipLoadingLayout
+9com.handmark.pulltorefresh.library.PullToRefreshBase$ModeHcom.handmark.pulltorefresh.library.PullToRefreshBase$OnPullEventListener?com.handmark.pulltorefresh.library.internal.RotateLoadingLayout@com.handmark.pulltorefresh.library.extras.SoundPullEventListener?com.handmark.pulltorefresh.library.internal.FlipLoadingLayout$1;com.handmark.pulltorefresh.library.internal.LoadingLayout$11com.handmark.pulltorefresh.library.IPullToRefresh?com.handmark.pulltorefresh.library.PullToRefreshAdapterViewBaseBcom.handmark.pulltorefresh.library.PullToRefreshExpandableListView8com.handmark.pulltorefresh.library.PullToRefreshGridView4com.handmark.pulltorefresh.library.PullToRefreshBase:com.handmark.pulltorefresh.library.PullToRefreshListView$19com.handmark.pulltorefresh.library.internal.LoadingLayoutCcom.handmark.pulltorefresh.library.PullToRefreshBase$AnimationStyleAcom.handmark.pulltorefresh.library.PullToRefreshAdapterViewBase$13com.handmark.pulltorefresh.library.OverscrollHelper=com.handmark.pulltorefresh.library.internal.IndicatorLayout$1;com.handmark.pulltorefresh.library.internal.IndicatorLayout8com.handmark.pulltorefresh.library.PullToRefreshListViewDcom.handmark.pulltorefresh.library.PullToRefreshHorizontalScrollView:com.handmark.pulltorefresh.library.PullToRefreshScrollView7com.handmark.pulltorefresh.library.PullToRefreshWebView?com.handmark.pulltorefresh.library.extras.PullToRefreshWebView26com.handmark.pulltorefresh.library.PullToRefreshBase$4=com.handmark.pulltorefresh.library.internal.FlipLoadingLayout
 ¼
 ?com.handmark.pulltorefresh.library.PullToRefreshAdapterViewBase8com.handmark.pulltorefresh.library.PullToRefreshListViewBcom.handmark.pulltorefresh.library.PullToRefreshExpandableListView8com.handmark.pulltorefresh.library.PullToRefreshGridViewAcom.handmark.pulltorefresh.library.PullToRefreshAdapterViewBase$1
 ¥
@@ -632,76 +632,76 @@ n
 6com.handmark.pulltorefresh.library.PullToRefreshBase$34com.handmark.pulltorefresh.library.PullToRefreshBase
 Å
 =com.handmark.pulltorefresh.library.internal.FlipLoadingLayoutCcom.handmark.pulltorefresh.library.PullToRefreshBase$AnimationStyle?com.handmark.pulltorefresh.library.internal.FlipLoadingLayout$1*b
-SE:\android-sdk_r24.3.2-windows\android-sdk-windows\platforms\android-24\android.jarøËùªíUºÆ¡Á2š
-ŠF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\ViewCompat$SDK16.classÒ‚¸¡•V”Èç2
-F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\IPullToRefresh.class¨µ²¡•VºÓˆ¨2
-F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\RotateLoadingLayout.classÂ¸¡•V’Ê’Ô
-2ˆ
-yF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$layout.classÔê±¡•V–”Á®2š
-ŠF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\ViewCompat$SDK11.class‚‚¸¡•V„ò—ù2ˆ
-yF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$string.classÜî±¡•Vˆÿø±2–
-‡F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshWebView$2.classôü·¡•Vàêú72„
-uF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$id.classÌê±¡•Vø‘€®2
-F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\Utils.classÎ¸¡•Vª¦‹î2
-rF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R.class¼÷±¡•V“á§	2§
-—F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshListView$InternalListView.classÂõ·¡•VÈĞ®2—
-‡F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\LoadingLayout.classäØ·¡•V¢ìŠç2›
-‹F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\IndicatorLayout$1.class–ã·¡•V¨¹‚Ï2”
-„F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$3.classŠ®²¡•V€õ³ì2™
-‰F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\IndicatorLayout.classĞã·¡•VÔü²2§
-—F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$SmoothScrollRunnable.classŒ²²¡•VÎõŸä2Š
-|F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$styleable.class„ñ±¡•V–˜W2
-F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\extras\PullToRefreshWebView2.classÂş·¡•VšÈÄê2”
-„F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\ViewCompat.classò‚¸¡•Vº§Û2“
-ƒF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\LoadingLayoutProxy.classÔÛ·¡•VšŠÕÂ2–
-†F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshGridView.classÔí·¡•VÄ£Ÿı2”
-„F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$2.classä­²¡•VæÛÓë
-2‹
-|F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\BuildConfig.classòÏ±¡•VäÔÛå2
-F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$Orientation.class´±²¡•V¶ÕÇ2¦
+SE:\android-sdk_r24.3.2-windows\android-sdk-windows\platforms\android-24\android.jarøËùªíUºÆ¡Á2
+F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$Orientation.class´±²¡•V¶ÕÇ2¯
+ŸF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshScrollView$InternalScrollViewSDK9.class’ø·¡•VÂ›µÑ	2¦
 –F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$OnPullEventListener.classÈ°²¡•VøÏÙë2Ÿ
 F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshAdapterViewBase$1.classôà·¡•Vì˜„ü
+2™
+‰F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\LoadingLayout$1.classÜ×·¡•Všëø˜2
+rF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R.class¼÷±¡•V“á§	2‡
+xF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$dimen.class²æ±¡•VÂ‘Íó2§
+—F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshListView$InternalListView.classÂõ·¡•VÈĞ®2š
+ŠF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\ViewCompat$SDK16.classÒ‚¸¡•V”Èç2”
+„F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$4.class´²²¡•VîÙ²2—
+‡F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\LoadingLayout.classäØ·¡•V¢ìŠç2¡
+‘F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\EmptyViewMethodAccessor.classÆê·¡•VÈÈ›ö
 2”
-„F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$4.class´²²¡•VîÙ²2’
-‚F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase.class¦´²¡•VÊèÙá2¬
+„F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$1.classŞ­²¡•V ÙŒê2˜
+ˆF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshListView$1.classÊõ·¡•Vú·±‹2«
+›F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshListView$InternalListViewSDK9.classşó·¡•VØÜ…×2›
+‹F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\IndicatorLayout$1.class–ã·¡•V¨¹‚Ï2—
+‡F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshWebView$1.classêü·¡•V„Œ·œ2
+F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\FlipLoadingLayout$1.classì€¸¡•VÊó½Ò2¤
+•F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$OnRefreshListener2.classÖ°²¡•VÀÜá92
+F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\IPullToRefresh.class¨µ²¡•VºÓˆ¨2¿
+¯F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshExpandableListView$InternalExpandableListViewSDK9.classüé·¡•Vœ¢‘ô2Š
+{F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$drawable.class¸æ±¡•VÄ“¯å2
+F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\ILoadingLayout.class¸ú±¡•V¸ş£Æ	2”
+„F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$3.classŠ®²¡•V€õ³ì2–
+†F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshListView.class–ö·¡•Vâì§ú2
+F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\RotateLoadingLayout.classÂ¸¡•V’Ê’Ô
+2§
+—F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshGridView$InternalGridView.classœí·¡•V¶ú°¤2˜
+ˆF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshScrollView.classœø·¡•VÚ€ï2’
+‚F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase.class¦´²¡•VÊèÙá2©
+™F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshWebView$InternalWebViewSDK9.classüü·¡•VæËøÚ2“
+ƒF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\OverscrollHelper$1.classÌÜ·¡•VŠš¸¹2ˆ
+yF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$layout.classÔê±¡•V–”Á®2ˆ
+yF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$string.classÜî±¡•Vˆÿø±2–
+‡F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshWebView$2.classôü·¡•Vàêú72­
+F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\extras\PullToRefreshWebView2$JsValueCallback.class¶ş·¡•V¦üüÊ2»
+«F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshExpandableListView$InternalExpandableListView.classöé·¡•V‚©½2™
+‰F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\IndicatorLayout.classĞã·¡•VÔü²2§
+—F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$SmoothScrollRunnable.classŒ²²¡•VÎõŸä2¬
 œF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$OnLastItemVisibleListener.classÂ°²¡•VÜ ûÊ2Ã
 ³F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshHorizontalScrollView$InternalHorizontalScrollViewSDK9.classÌï·¡•V†İ›õ2¡
-‘F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$AnimationStyle.classä¯²¡•V®ğÂ2‘
-F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\OverscrollHelper.classšİ·¡•Vôœíë2
+‘F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$AnimationStyle.classä¯²¡•V®ğÂ2«
+›F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshGridView$InternalGridViewSDK9.class¢í·¡•Vä³²é2
+F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshAdapterViewBase.class¢â·¡•V‚û‘Ò2Š
+|F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$styleable.class„ñ±¡•V–˜W2š
+ŠF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\ViewCompat$SDK11.class‚‚¸¡•V„ò—ù2‘
+F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\OverscrollHelper.classšİ·¡•Vôœíë2†
+wF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$attr.class†å±¡•V¼Ô˜—2
+F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\extras\PullToRefreshWebView2.classÂş·¡•VšÈÄê2¡
+’F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshHorizontalScrollView.classöğ·¡•Vú¦Å2”
+„F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\ViewCompat.classò‚¸¡•Vº§Û2„
+uF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$id.classÌê±¡•Vø‘€®2“
+ƒF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\LoadingLayoutProxy.classÔÛ·¡•VšŠÕÂ2
 F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\extras\SoundPullEventListener.class°€¸¡•V«µ2›
-‹F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\FlipLoadingLayout.class²¸¡•VÆŒöÄ2˜
-ˆF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$State.classä±²¡•VâÔÏü2™
-‰F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\LoadingLayout$1.classÜ×·¡•Všëø˜2¡
-‘F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\EmptyViewMethodAccessor.classÆê·¡•VÈÈ›ö
-2Š
-{F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$drawable.class¸æ±¡•VÄ“¯å2
-F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\ILoadingLayout.class¸ú±¡•V¸ş£Æ	2˜
-ˆF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshScrollView.classœø·¡•VÚ€ï2©
-™F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshWebView$InternalWebViewSDK9.classüü·¡•VæËøÚ2«
-›F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshGridView$InternalGridViewSDK9.class¢í·¡•Vä³²é2”
-„F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$1.classŞ­²¡•V ÙŒê2—
-‡F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshWebView$1.classêü·¡•V„Œ·œ2¿
-¯F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshExpandableListView$InternalExpandableListViewSDK9.classüé·¡•Vœ¢‘ô2­
-F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\extras\PullToRefreshWebView2$JsValueCallback.class¶ş·¡•V¦üüÊ2
-F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshAdapterViewBase.class¢â·¡•V‚û‘Ò2”
-…F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshWebView.class²ı·¡•V”ªÊ2¯
-ŸF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshScrollView$InternalScrollViewSDK9.class’ø·¡•VÂ›µÑ	2‡
-xF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$dimen.class²æ±¡•VÂ‘Íó2˜
-ˆF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshListView$1.classÊõ·¡•Vú·±‹2«
-›F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshListView$InternalListViewSDK9.classşó·¡•VØÜ…×2“
-ƒF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\OverscrollHelper$1.classÌÜ·¡•VŠš¸¹2…
-wF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$anim.classÔà±¡•V¨üş,2
-F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\FlipLoadingLayout$1.classì€¸¡•VÊó½Ò2¤
-•F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$OnRefreshListener2.classÖ°²¡•VÀÜá92–
-†F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshListView.class–ö·¡•Vâì§ú2§
-—F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshGridView$InternalGridView.classœí·¡•V¶ú°¤2»
-«F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshExpandableListView$InternalExpandableListView.classöé·¡•V‚©½2†
-wF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$attr.class†å±¡•V¼Ô˜—2¡
-’F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshHorizontalScrollView.classöğ·¡•Vú¦Å2¤
-”F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$OnRefreshListener.classÎ°²¡•VÀâºê2—
-‡F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$Mode.class¼°²¡•VÆÒşÍ2±
-¡F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$OnSmoothScrollFinishedListener.class’²²¡•V®ÔÀ¢2 
-F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshExpandableListView.classÀê·¡•VúæÌÃ	:{
+‹F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\FlipLoadingLayout.class²¸¡•VÆŒöÄ2¤
+”F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$OnRefreshListener.classÎ°²¡•VÀâºê2…
+wF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\R$anim.classÔà±¡•V¨üş,2—
+‡F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$Mode.class¼°²¡•VÆÒşÍ2–
+†F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshGridView.classÔí·¡•VÄ£Ÿı2”
+„F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$2.classä­²¡•VæÛÓë
+2±
+¡F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$OnSmoothScrollFinishedListener.class’²²¡•V®ÔÀ¢2˜
+ˆF:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshBase$State.classä±²¡•VâÔÏü2
+F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\internal\Utils.classÎ¸¡•Vª¦‹î2 
+F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshExpandableListView.classÀê·¡•VúæÌÃ	2‹
+|F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\BuildConfig.classòÏ±¡•VäÔÛå2”
+…F:\Java\Android\Trail\PullToRefresh\build\intermediates\classes\release\com\handmark\pulltorefresh\library\PullToRefreshWebView.class²ı·¡•V”ªÊ:{
 lF:\Java\Android\Trail\PullToRefresh\src\com\handmark\pulltorefresh\library\PullToRefreshAdapterViewBase.java í ®“OÌÀË«
 :€
 qF:\Java\Android\Trail\PullToRefresh\src\com\handmark\pulltorefresh\library\PullToRefreshHorizontalScrollView.java í ®“OÌ¶ÍÔ:p
