@@ -5,12 +5,8 @@ android {
         config {
             keyAlias 'key'
 
-            keyPassword 'daohaode'
-            storeFile file('D:/Users/key.jks')
-            storePassword 'daohaode'
-
             keyPassword '123456'
-            storeFile file('E:/Program Files (x86)/miyao/keystore.jks')
+            storeFile file('D:/askey/keystore.jks')
             storePassword '123456'
 
         }

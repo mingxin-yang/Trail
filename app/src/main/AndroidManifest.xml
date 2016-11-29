@@ -74,7 +74,7 @@
             />
         <!--<activity android:name=".zhenfeng.Scenery">-->
         <!--<activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">-->
-        <activity android:name=".zhenfeng.FJTabview">
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -82,9 +82,10 @@
             </intent-filter>
         </activity>
         <!--<activity android:name=".Map.Map"/>-->
-        <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
+
         <activity android:name=".com.adroid.huizhao.Test"/>
         <activity android:name=".hongxue.Discuss"/>
+        <activity android:name=".zhenfeng.FJTabview"/>
 
     </application>
 
