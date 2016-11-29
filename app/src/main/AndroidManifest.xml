@@ -72,15 +72,15 @@
             android:enabled="true"
             android:process=":remote"
             />
-        <!--<activity android:name=".zhenfeng.Scenery">-->
-        <!--<activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">-->
-        <activity android:name=".zhenfeng.FJTabview">
+        <activity android:name=".map.Map">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--<activity android:name=".zhenfeng.Scenery">-->
+        <!--<activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">-->
         <!--<activity android:name=".Map.Map"/>-->
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
         <activity android:name=".com.adroid.huizhao.Test"/>
