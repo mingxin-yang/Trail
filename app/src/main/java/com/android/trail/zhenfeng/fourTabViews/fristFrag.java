@@ -22,6 +22,7 @@ import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
+import com.baidu.mapapi.map.TextureMapView;
 import com.baidu.mapapi.map.UiSettings;
 import com.baidu.mapapi.model.LatLng;
 
@@ -39,7 +40,7 @@ public class fristFrag extends Fragment{
 
 
     //继承Fragment
-    private MapView mMapView;
+    private TextureMapView mMapView;
 
     private BaiduMap mBaiduMap =null;
     private UiSettings mUiSettings = null;
@@ -74,7 +75,7 @@ public class fristFrag extends Fragment{
         SDKInitializer.initialize(getActivity().getApplicationContext());
 
         View view = inflater.inflate(R.layout.trail_scenery, container, false);
-        mMapView = (MapView)view.findViewById(R.id.bmapView);
+        mMapView = (TextureMapView)view.findViewById(R.id.bmapView);
 
         initBaiduMap();
         initLocation();
