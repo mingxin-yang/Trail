@@ -1,24 +1,21 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        compileSdkVersion 24
-        buildToolsVersion "24.0.2"
-
-        sourceSets {
-            main {
-                jniLibs.srcDirs = ['libs']
-            }
-        }
-        config {
-            keyAlias 'key'
-            keyPassword '1234560'
-            storeFile file('E:/Program Files (x86)/miyao/keystore.jks')
-            storePassword '1234560'
-
+    sourceSets{
+        main{
+            jniLibs.srcDirs=['libs']
         }
     }
-
+    signingConfigs {
+        config {
+            keyAlias 'key'
+            keyPassword '654321'
+            storeFile file('E:/AndroidSDK/keystore.jks')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
     defaultConfig {
         applicationId "com.android.trail"
         minSdkVersion 19
@@ -42,6 +39,7 @@ android {
 }
 
 dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
