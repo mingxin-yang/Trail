@@ -1,4 +1,4 @@
-package com.android.trail.Map.adapter;
+package com.android.trail.map.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,8 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.trail.Map.shop;
 import com.android.trail.R;
+import com.android.trail.map.shop;
 
 import java.util.ArrayList;
 import java.util.List;

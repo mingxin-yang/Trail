@@ -1,18 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
+    sourceSets{
+        main{
+            jniLibs.srcDirs=['libs']
+        }
+    }
     signingConfigs {
         config {
             keyAlias 'key'
-
-            keyPassword 'daohaode'
-            storeFile file('D:/Users/key.jks')
-            storePassword 'daohaode'
-
-            keyPassword '123456'
+            keyPassword '1234560'
             storeFile file('E:/Program Files (x86)/miyao/keystore.jks')
-            storePassword '123456'
-
+            storePassword '1234560'
         }
     }
     compileSdkVersion 24
@@ -40,6 +39,7 @@ android {
 }
 
 dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })

@@ -6,8 +6,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="第三方库实现图片三列显示"/>
+        android:layout_marginLeft="15sp"
+        android:textSize="25sp"
+        android:text="历史沿革"/>
 
-    <!--提交测试-->
+    <ImageView
+        android:layout_margin="5sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/lishi_yange"/>
 
 </LinearLayout>
