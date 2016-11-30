@@ -8,12 +8,6 @@
         android:layout_height="wrap_content"
         android:text="第三方库实现图片三列显示"/>
 
-
-
-
-   <!-- 提交测试-->
-
-
-
+    <!--提交测试-->
 
 </LinearLayout>
