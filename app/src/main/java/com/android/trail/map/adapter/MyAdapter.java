@@ -14,15 +14,16 @@ import com.android.trail.map.shop;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * Created by mingx_000 on 2016/11/29 0029.
  */
 
 public class MyAdapter extends BaseAdapter{
     private Context context;
-    private List<com.android.trail.map.shop> mshop=new ArrayList<>();
+    private List<shop> mshop=new ArrayList<>();
 
-    public MyAdapter(Context context, List<com.android.trail.map.shop> mshop) {
+    public MyAdapter(Context context, List<shop> mshop) {
         this.context = context;
         this.mshop = mshop;
     }
@@ -58,5 +59,4 @@ public class MyAdapter extends BaseAdapter{
     public long getItemId(int i) {
         return Long.parseLong(mshop.get(i).getId());
     }
-
 }

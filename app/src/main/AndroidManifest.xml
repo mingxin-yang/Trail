@@ -68,11 +68,14 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />
+            android:value="09zAMprT8D4b2MB0R1wD5n09xZEC4WS2"/>
         <service android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote"
             />
-        <activity android:name=".map.Map">
+        <!--<activity android:name=".zhenfeng.Scenery">-->
+        <!--<activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">-->
+        <activity android:name=".zhenfeng.FJTabview">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -85,6 +88,7 @@
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
         <activity android:name=".com.adroid.huizhao.Test"/>
         <activity android:name=".hongxue.Discuss"/>
+        <!--<activity android:name=".Map.Map"/>-->
 
     </application>
 
