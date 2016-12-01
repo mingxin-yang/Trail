@@ -12,7 +12,6 @@ import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
-import com.baidu.mapapi.map.TextureMapView;
 import com.baidu.mapapi.map.UiSettings;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.model.LatLngBounds;
@@ -22,8 +21,8 @@ import com.baidu.mapapi.model.LatLngBounds;
  */
 
 public class Map extends Activity{
-    private TextureMapView mMapView=null;
-    private BaiduMap mBaiduMap=null;
+    MapView mMapView=null;
+    BaiduMap mBaiduMap=null;
     private UiSettings mUiSettings = null;
 
     @Override
@@ -37,7 +36,7 @@ public class Map extends Activity{
     }
 
     private void initBaiduMap() {
-        mMapView = (TextureMapView) findViewById(R.id.amapView);
+        mMapView = (MapView) findViewById(R.id.amapView);
         mBaiduMap = mMapView.getMap();
         LatLng southwestLatLng = new LatLng(37.998882,114.519803);
         LatLng northeastLatLng = new LatLng(38.0069,114.535829);
