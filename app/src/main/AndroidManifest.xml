@@ -67,7 +67,7 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="09zAMprT8D4b2MB0R1wD5n09xZEC4WS2"/>
+            android:value="4lrDd2HeLqg8aeso9YoYAj9IjjX88h8C"/>
      <!--   android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />-->
             <!--android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />-->
 
@@ -76,13 +76,7 @@
             android:process=":remote"
             />
         <!--<activity android:name=".zhenfeng.Scenery">-->
-        <activity android:name=".xizheng.PersonalActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".xizheng.PersonalActivity"/>
         <activity android:name=".zhenfeng.Scenery"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
         <activity android:name=".com.adroid.huizhao.Test"/>
@@ -90,6 +84,15 @@
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao1"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao2"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao3"/>
+        <activity android:name=".welcomepage.First"/>
+        <activity android:name=".homepage.MainActivity"/>
+        <activity android:name=".welcomepage.NotFirst">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
