@@ -74,8 +74,6 @@
             android:enabled="true"
             android:process=":remote"
             />
-        <!--<activity android:name=".zhenfeng.Scenery">-->
-        <!--<activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">-->
         <activity android:name=".zhenfeng.FJTabview">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -83,14 +81,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity android:name=".zhenfeng.Scenery">-->
-        <!--<activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">-->
-        <!--<activity android:name=".Map.Map"/>-->
+        <activity android:name=".zhenfeng.Scenery"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
         <activity android:name=".com.adroid.huizhao.Test"/>
         <activity android:name=".hongxue.Discuss"/>
-        <!--<activity android:name=".Map.Map"/>-->
-
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao1"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao2"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao3"/>
     </application>
 
 </manifest>
