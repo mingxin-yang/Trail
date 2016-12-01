@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.com.android.trail.xizheng.CircleImageEx
+            <com.android.trail.xizheng.CircleImageEx
                 android:id="@+id/t1"
                 android:layout_alignParentTop="true"
                 android:layout_width="match_parent"

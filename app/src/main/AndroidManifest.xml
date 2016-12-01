@@ -76,7 +76,7 @@
             android:process=":remote"
             />
         <!--<activity android:name=".zhenfeng.Scenery">-->
-        <activity android:name=".zhenfeng.FJTabview">
+        <activity android:name=".xizheng.PersonalActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

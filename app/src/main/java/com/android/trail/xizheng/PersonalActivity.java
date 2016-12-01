@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TableLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.trail.R;
@@ -57,8 +57,9 @@ public class PersonalActivity extends Activity {
             public void onDoubleClick() {
                 //处理双击事件
                 final TextView tv_nick = (TextView) findViewById(R.id.t3);
-                final EditText et_nick = (EditText) findViewById(R.id.et_cgnick);
-                TableLayout change1 = (TableLayout) getLayoutInflater().inflate(R.layout.datachange1,null);
+
+                LinearLayout change1 = (LinearLayout) getLayoutInflater().inflate(R.layout.datachange1,null);
+                final EditText et_nick = (EditText) change1.findViewById(R.id.et_cgnick);
                 new AlertDialog.Builder(PersonalActivity.this)
                         //设置对话框的标题
                         .setTitle("昵称修改")
@@ -69,7 +70,7 @@ public class PersonalActivity extends Activity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 //此处可执行保存操作
-                                tv_nick.setText(et_nick.getText());
+                                tv_nick.setText(et_nick.getText().toString());
                             }
                         })
                         .setNegativeButton("取消", new DialogInterface.OnClickListener() {
