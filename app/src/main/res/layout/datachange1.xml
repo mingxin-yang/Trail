@@ -10,9 +10,4 @@
         android:layout_height="wrap_content"
         android:hint="请输入昵称"
         android:textColorHint="@color/hint_color" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dc_nickname"
-        android:textColor="@color/zhujie"/>
 </LinearLayout>
