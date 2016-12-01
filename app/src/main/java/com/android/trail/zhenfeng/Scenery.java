@@ -22,12 +22,13 @@ import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
+import com.baidu.mapapi.map.TextureMapView;
 import com.baidu.mapapi.map.UiSettings;
 import com.baidu.mapapi.model.LatLng;
 
 public class Scenery extends AppCompatActivity {
 
-    private MapView mMapView = null;
+    private TextureMapView mMapView = null;
     //MapView 不能用 换为Textture
     private BaiduMap mBaiduMap =null;
     private UiSettings mUiSettings = null;
@@ -73,7 +74,7 @@ public class Scenery extends AppCompatActivity {
     private void initBaiduMap(){
         // 获取地图控件引用
 
-        mMapView = (MapView) findViewById(R.id.bmapView);
+        mMapView = (TextureMapView) findViewById(R.id.bmapView);
         //获取百度地图控制器
         mBaiduMap=mMapView.getMap();
         // 设置比例尺为 500M

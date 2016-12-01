@@ -1,6 +1,7 @@
 package com.android.trail.com.adroid.huizhao.ViewPager;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
@@ -24,6 +25,7 @@ import java.util.concurrent.TimeUnit;
  */
 
 public class JieShaoActivity extends Activity {
+
     private ViewPager mViewPaper;
     private List<ImageView> images;
     private List<View> dots;
@@ -48,6 +50,25 @@ public class JieShaoActivity extends Activity {
     private ViewPagerAdapter adapter;
     private ScheduledExecutorService scheduledExecutorService;
 
+    //介绍界面的跳转
+    public void pay1 (){
+        Intent intent = new Intent();
+        intent.setClass(JieShaoActivity.this,JieShao1.class);
+        startActivity(intent);
+    }
+
+    public void pay2 (){
+        Intent intent = new Intent();
+        intent.setClass(JieShaoActivity.this,JieShao2.class);
+        startActivity(intent);
+    }
+
+    public void pay3 (){
+        Intent intent = new Intent();
+        intent.setClass(JieShaoActivity.this,JieShao3.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +89,14 @@ public class JieShaoActivity extends Activity {
 //        dots.add(findViewById(R.id.dot_2));
 //        dots.add(findViewById(R.id.dot_3));
 //        dots.add(findViewById(R.id.dot_4));
+
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        };
+
 
         title = (TextView) findViewById(R.id.title);
         title.setText(titles[0]);
