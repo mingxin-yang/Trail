@@ -106,6 +106,8 @@
                 </LinearLayout>
             </FrameLayout>
             <TextView
+                android:id="@+id/jie_shao_t1"
+                android:onClick="pay1"
                 android:layout_marginLeft="30sp"
                 android:layout_marginTop="45sp"
                 android:textSize="25sp"
@@ -113,6 +115,8 @@
                 android:layout_height="wrap_content"
                 android:text="学校简介"/>
             <TextView
+                android:id="@+id/jie_shao_t2"
+                android:onClick="pay2"
                 android:layout_marginLeft="30sp"
                 android:layout_marginTop="45sp"
                 android:layout_width="wrap_content"
@@ -120,6 +124,8 @@
                 android:textSize="25sp"
                 android:text="历史沿革"/>
             <TextView
+                android:id="@+id/jie_shao_t3"
+                android:onClick="pay3"
                 android:layout_marginLeft="30sp"
                 android:layout_marginTop="45sp"
                 android:layout_width="wrap_content"

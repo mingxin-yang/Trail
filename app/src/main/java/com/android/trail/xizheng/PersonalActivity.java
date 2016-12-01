@@ -1,15 +1,24 @@
 package com.android.trail.xizheng;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
 import com.android.trail.R;
+
+import java.nio.channels.DatagramChannel;
 
 /**
  * Created by Lenovo on 2016/11/25.
@@ -64,6 +73,35 @@ public class PersonalActivity extends Activity {
             });
             mFlowLayout.addView(tv);//添加到父View
         }
+    }
+    //修改以对话框出现，未完成点击昵称监听器注册及定义
+    public void customList(View source){
+        final TextView tv_nick = (TextView) findViewById(R.id.t3);
+        final EditText et_nick = (EditText) findViewById(R.id.et_cgnick);
+        TableLayout change1 = (TableLayout) getLayoutInflater().inflate(R.layout.datachange1,null);
+        new AlertDialog.Builder(this)
+                //设置对话框的标题
+                .setTitle("昵称修改")
+                //设置对话框显示的view对象
+                .setView(change1)
+                //为对话框设置保存按钮
+                .setPositiveButton("保存", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //此处可执行保存操作
+                        tv_nick.setText(et_nick.getText());
+                    }
+                })
+                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //此处可执行取消操作，不做任何事情
+                    }
+                })
+                //创建并显示对话框
+                .create()
+                .show();
+
     }
 
 //    TimerTask task = new TimerTask() {
