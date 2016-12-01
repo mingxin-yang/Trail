@@ -9,8 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="请输入昵称"
-        android:textColorHint="@color/hint_color"
-        android:singleLine="true"/>
+        android:textColorHint="@color/hint_color" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
