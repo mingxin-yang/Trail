@@ -19,7 +19,6 @@ import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
-import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.map.TextureMapView;
@@ -31,14 +30,6 @@ import com.baidu.mapapi.model.LatLng;
  */
 
 public class fristFrag extends Fragment{
-
-
-
-
-
-
-
-
     //继承Fragment
     private TextureMapView mMapView;
 
@@ -285,9 +276,5 @@ public class fristFrag extends Fragment{
         // 在activity执行onPause时执行mMapView. onPause ()，实现地图生命周期管理
         mMapView.onPause();
     }
-
-
-
-
 
 }
