@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TableLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.trail.R;
@@ -58,7 +58,7 @@ public class PersonalActivity extends Activity {
                 //处理双击事件
                 final TextView tv_nick = (TextView) findViewById(R.id.t3);
 
-                TableLayout change1 = (TableLayout) getLayoutInflater().inflate(R.layout.datachange1,null);
+                LinearLayout change1 = (LinearLayout) getLayoutInflater().inflate(R.layout.datachange1,null);
                 final EditText et_nick = (EditText) change1.findViewById(R.id.et_cgnick);
                 new AlertDialog.Builder(PersonalActivity.this)
                         //设置对话框的标题
