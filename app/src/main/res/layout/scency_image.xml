@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <ImageSwitcher
+        android:id="@+id/imageswitcher"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="第三方库实现图片三列显示"/>
+        android:layout_height="match_parent"
+        />
+    <Gallery
+        android:id="@+id/gallery"
+        android:layout_width="match_parent"
+        android:layout_height="145sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:background="#55000000"
+        />
 
-
-
-   <!-- 提交测试-->
-
-
-
-
-</LinearLayout>
+</RelativeLayout>
