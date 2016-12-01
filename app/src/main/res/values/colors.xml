@@ -348,4 +348,7 @@
     <color name="viewfinder_mask">#60000000</color>
     <color name="header">#58567D</color>
     <color name="grgray">#686868</color>
+    <color name="personalchange">#ff4b4b4b</color>
+    <color name="hint_color">#50000000</color>
+    <color name="zhujie">#808080</color>
 </resources>
