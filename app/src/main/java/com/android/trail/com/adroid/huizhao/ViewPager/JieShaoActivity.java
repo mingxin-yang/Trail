@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -95,6 +96,14 @@ public class JieShaoActivity extends Activity {
         tv3.setOnClickListener(listener);
         img = (ImageView)findViewById(R.id.jie_shao_back);
         img.setOnClickListener(listener);
+
+        img.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                img.setBackgroundResource(R.color.paleturquoise);
+                return false;
+            }
+        });
     }
 
 
