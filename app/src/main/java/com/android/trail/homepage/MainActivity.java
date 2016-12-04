@@ -2,6 +2,7 @@ package com.android.trail.homepage;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.android.trail.R;
+import com.android.trail.com.adroid.huizhao.ViewPager.JieShaoActivity;
 
 
 public class MainActivity extends Activity {
@@ -49,7 +51,7 @@ public class MainActivity extends Activity {
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
+    public class PlaceholderFragment extends Fragment {
 
         private Activity mactivity;
 
@@ -78,8 +80,17 @@ public class MainActivity extends Activity {
 
             @Override
             public void onClick(View v) {
+                switch (v.getId()){
+                    case R.id.telId1:
+                        Intent intent = new Intent();
+                        intent.setClass(MainActivity.this, JieShaoActivity.class);
+                        startActivity(intent);
+                        break;
+                    default:
+                        break;
+                }
 
-                Toast.makeText(mactivity, v.getTag().toString(), 1*1000).show();
+                Toast.makeText(mactivity, v.getTag().toString(),Toast.LENGTH_LONG).show();
 
             }
         };
