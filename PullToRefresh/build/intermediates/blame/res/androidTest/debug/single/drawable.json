@@ -22,5 +22,13 @@
     {
         "merged": "D:\\android_project\\Trail\\PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
         "source": "D:\\android_project\\Trail\\PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Loktar\\Trail\\PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "C:\\Users\\Loktar\\Trail\\PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Loktar\\Trail\\PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "C:\\Users\\Loktar\\Trail\\PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
     }
 ]
