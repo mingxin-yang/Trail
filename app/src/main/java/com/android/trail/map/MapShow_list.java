@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.android.trail.R;
+import com.android.trail.map.adapter.Adapter_Detail;
 import com.android.trail.map.adapter.MyAdapter;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -21,10 +22,10 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by mingx_000 on 2016/11/29 0029.
+ * Created by mingx_000 on 2016/12/5 0005.
  */
 
-public class Map_list extends Activity{
+public class MapShow_list extends Activity{
     private PullToRefreshListView mPullToRefreshListView;
     private ListView lv;
     private MyAdapter myadapter;
@@ -48,7 +49,7 @@ public class Map_list extends Activity{
 
                 refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(label);
 
-                new GetDataTask().execute();
+                new MapShow_list.GetDataTask().execute();
             }
         });
         adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data);
@@ -60,11 +61,12 @@ public class Map_list extends Activity{
         lv=mPullToRefreshListView.getRefreshableView();
         lv.setAdapter(myadapter);
 
+
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i>=0){
-                    Intent intent=new Intent(Map_list.this,MapShow_list.class);
+                    Intent intent=new Intent(MapShow_list.this,Detail.class);
                     startActivity(intent);
                 }
             }

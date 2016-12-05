@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="F:\Java\Android\Trail\PullToRefresh\src\main\jniLibs"/></dataSet><dataSet config="release"><source path="F:\Java\Android\Trail\PullToRefresh\src\release\jniLibs"/></dataSet></merger>
-=======
-<merger version="3"><dataSet config="main"><source path="D:\apps\Trail\PullToRefresh\src\main\jniLibs"/></dataSet><dataSet config="release"><source path="D:\apps\Trail\PullToRefresh\src\release\jniLibs"/></dataSet></merger>
->>>>>>> fab2ba4112ca9472643cd3d47fa068b665a07a9a

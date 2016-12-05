@@ -68,7 +68,7 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />
-            android:value="09zAMprT8D4b2MB0R1wD5n09xZEC4WS2"/>
+
             <!--android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />-->
 
         <service android:name="com.baidu.location.f"
@@ -89,7 +89,11 @@
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
         <activity android:name=".com.adroid.huizhao.Test"/>
         <activity android:name=".hongxue.Discuss"/>
-        <!--<activity android:name=".Map.Map"/>-->
+        <activity android:name=".map.Map_list"/>
+        <activity android:name=".map.MapShow_list"/>
+        <activity android:name=".map.Detail"/>
+        <activity android:name=".map.Rate"/>
+        <activity android:name=".map.Rounting"/>
 
     </application>
 
