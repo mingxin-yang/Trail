@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.android.trail.R;
 import com.android.trail.com.adroid.huizhao.ViewPager.JieShaoActivity;
+import com.android.trail.zhenfeng.FJTabview;
 
 
 public class MainActivity extends Activity {
@@ -86,11 +87,16 @@ public class MainActivity extends Activity {
                         intent.setClass(MainActivity.this, JieShaoActivity.class);
                         startActivity(intent);
                         break;
+                    case R.id.telId4:
+                        Intent intent4 = new Intent();
+                        intent4.setClass(MainActivity.this, FJTabview.class);
+                        startActivity(intent4);
+                        break;
                     default:
                         break;
                 }
 
-                Toast.makeText(mactivity, v.getTag().toString(),Toast.LENGTH_LONG).show();
+                Toast.makeText(mactivity,"烈火燃烧",Toast.LENGTH_LONG).show();
 
             }
         };
