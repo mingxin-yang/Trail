@@ -7,7 +7,6 @@ import android.text.format.DateUtils;
 import android.widget.ListView;
 
 import com.android.trail.R;
-import com.android.trail.map.adapter.MyAdapter;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 

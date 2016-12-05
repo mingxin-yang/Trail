@@ -1,7 +1,6 @@
 package com.android.trail.wangyang;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,10 +20,6 @@ public class MoveList extends Activity {
         Iv.setImageResource(id);
         TextView tv = (TextView) findViewById(R.id.tv_message);
         tv.setText(journey);
-
-
-
-
     }
 
 }

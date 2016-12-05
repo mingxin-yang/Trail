@@ -100,11 +100,24 @@ public class MainActivity extends Activity {
                         intent.setClass(MainActivity.this, PersonalActivity.class);
                         startActivity(intent);
                         break;
+                    //风景页
                     case R.id.telId4:
                         Intent intent4 = new Intent();
                         intent4.setClass(MainActivity.this, FJTabview.class);
                         startActivity(intent4);
                         break;
+                    //留言
+                    case R.id.telId3:
+                        Intent intent3 = new Intent();
+                        intent3.setClass(MainActivity.this, Discuss.class);
+                        startActivity(intent3);
+                        break;
+                    //出行
+                    case R.id.telId5:
+                        Intent intent5 = new Intent();
+                        intent5.setClass(MainActivity.this, BusStopActivity.class);
+                        startActivity(intent5);
+
                     default:
                         break;
                 }
