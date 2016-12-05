@@ -27,25 +27,6 @@
       </value>
     </option>
   </component>
-<<<<<<< HEAD
-=======
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Android</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
->>>>>>> 2db93d7321b8f56ae68552500d00dbcebbf96469
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -62,10 +43,4 @@
   <component name="ProjectType">
     <option name="id" value="Android" />
   </component>
-<<<<<<< HEAD
-=======
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\20160316\AppData\Roaming\Subversion</configuration>
-  </component>
->>>>>>> 2db93d7321b8f56ae68552500d00dbcebbf96469
 </project>

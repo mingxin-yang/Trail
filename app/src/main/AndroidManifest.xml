@@ -67,7 +67,8 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="09zAMprT8D4b2MB0R1wD5n09xZEC4WS2"/>
+            android:value="4lrDd2HeLqg8aeso9YoYAj9IjjX88h8C"/>
+        <!--android:value="4lrDd2HeLqg8aeso9YoYAj9IjjX88h8C"/>-->
 
             <!--android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />-->
 
@@ -76,6 +77,8 @@
             android:process=":remote"
             />
         <!--<activity android:name=".zhenfeng.Scenery">-->
+        <activity android:name=".hongxue.Discuss"/>
+        <activity android:name=".wangyang.BusStopActivity"/>
         <activity android:name=".xizheng.PersonalActivity"/>
         <activity android:name=".zhenfeng.FJTabview"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
@@ -84,6 +87,11 @@
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao1"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao2"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao3"/>
+        <activity android:name=".wangyang.BusStopActivity"/>
+        <activity android:name=".wangyang.BGActivity"/>
+        <activity android:name=".wangyang.MoveList"/>
+        <activity android:name=".wangyang.HCZActivity"/>
+        <activity android:name=".wangyang.WDActivity"/>
         <activity android:name=".welcomepage.First"/>
         <activity android:name=".homepage.MainActivity"/>
         <activity android:name=".welcomepage.NotFirst">

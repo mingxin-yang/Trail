@@ -1,4 +1,4 @@
-package com.android.trail.map;
+package com.android.trail.Map;
 
 import android.app.Activity;
 import android.os.Bundle;

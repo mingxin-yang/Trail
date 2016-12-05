@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.contextmenu.MainActivity" >
+    <!--listview绑定上下文菜单 上传者songhongxue-->
+    <item
+        android:id="@+id/edit"
+        android:orderInCategory="100"
+        android:title="查看个人资料"/>
+    <item
+        android:id="@+id/share"
+        android:orderInCategory="100"
+        android:title="点赞"/>
+    <item
+        android:id="@+id/delete"
+        android:title="举报"/>
+
+</menu>
