@@ -1,17 +1,20 @@
 package com.android.trail.com.adroid.huizhao.ViewPager;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.trail.R;
+import com.android.trail.homepage.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +27,10 @@ import java.util.concurrent.TimeUnit;
  */
 
 public class JieShaoActivity extends Activity {
+
+    private TextView tv1,tv2,tv3;
+    private ImageView img;
+
     private ViewPager mViewPaper;
     private List<ImageView> images;
     private List<View> dots;
@@ -48,11 +55,65 @@ public class JieShaoActivity extends Activity {
     private ViewPagerAdapter adapter;
     private ScheduledExecutorService scheduledExecutorService;
 
+    public View.OnClickListener listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            switch (view.getId()){
+                case R.id.jie_shao_t1:
+                    Intent intent = new Intent();
+                    intent.setClass(JieShaoActivity.this,JieShao1.class);
+                    startActivity(intent);
+                    break;
+                case R.id.jie_shao_t2:
+                    Intent intent1 = new Intent();
+                    intent1.setClass(JieShaoActivity.this,JieShao2.class);
+                    startActivity(intent1);
+                    break;
+                case R.id.jie_shao_t3:
+                    Intent intent2 = new Intent();
+                    intent2.setClass(JieShaoActivity.this,JieShao3.class);
+                    startActivity(intent2);
+                    break;
+                case R.id.jie_shao_back:
+                    Intent intent3 = new Intent();
+                    intent3.setClass(JieShaoActivity.this,MainActivity.class);
+                    startActivity(intent3);
+                    finish();
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
+
+    //介绍界面的跳转
+    public void getID (){
+        tv1 = (TextView)findViewById(R.id.jie_shao_t1);
+        tv2 = (TextView)findViewById(R.id.jie_shao_t2);
+        tv3 = (TextView)findViewById(R.id.jie_shao_t3);
+        tv1.setOnClickListener(listener);
+        tv2.setOnClickListener(listener);
+        tv3.setOnClickListener(listener);
+        img = (ImageView)findViewById(R.id.jie_shao_back);
+        img.setOnClickListener(listener);
+
+        img.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                img.setBackgroundResource(R.color.paleturquoise);
+                return false;
+            }
+        });
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.jie_shao);
         mViewPaper = (ViewPager) findViewById(R.id.vp);
+
+        getID();
 
         //显示的图片
         images = new ArrayList<ImageView>();
@@ -68,6 +129,7 @@ public class JieShaoActivity extends Activity {
 //        dots.add(findViewById(R.id.dot_2));
 //        dots.add(findViewById(R.id.dot_3));
 //        dots.add(findViewById(R.id.dot_4));
+
 
         title = (TextView) findViewById(R.id.title);
         title.setText(titles[0]);

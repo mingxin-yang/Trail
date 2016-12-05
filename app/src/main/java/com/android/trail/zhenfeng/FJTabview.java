@@ -6,11 +6,9 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.android.trail.R;
 import com.android.trail.zhenfeng.fourTabViews.fouthFrag;
@@ -61,7 +59,7 @@ public class FJTabview extends AppCompatActivity {
         setListenerID();
 
         //首页的图片切换
-        img1.setBackgroundResource(R.drawable.guide_tfaccount_on);
+        img1.setImageResource(R.drawable.guide_tfaccount_k);
 
     }
 
@@ -140,31 +138,31 @@ public class FJTabview extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.first_layout:
-                    img1.setBackgroundResource(R.drawable.guide_tfaccount_on);
-                    img2.setBackgroundResource(R.drawable.guide_discover_nm);
-                    img3.setBackgroundResource(R.drawable.guide_cart_nm);
-                    img4.setBackgroundResource(R.drawable.guide_account_nm);
+                    img1.setImageResource(R.drawable.guide_tfaccount_k);
+                    img2.setImageResource(R.drawable.guide_discover_g);
+                    img3.setImageResource(R.drawable.guide_cart_g);
+                    img4.setImageResource(R.drawable.guide_account_g);
                     switchFragment(fragment1);
                     break;
                 case R.id.second_layout:
-                    img1.setBackgroundResource(R.drawable.guide_tfaccount_nm);
-                    img2.setBackgroundResource(R.drawable.guide_discover_on);
-                    img3.setBackgroundResource(R.drawable.guide_cart_nm);
-                    img4.setBackgroundResource(R.drawable.guide_account_nm);
+                    img1.setImageResource(R.drawable.guide_tfaccount_g);
+                    img2.setImageResource(R.drawable.guide_discover_k);
+                    img3.setImageResource(R.drawable.guide_cart_g);
+                    img4.setImageResource(R.drawable.guide_account_g);
                     switchFragment(fragment2);
                     break;
                 case R.id.third_layout:
-                    img1.setBackgroundResource(R.drawable.guide_tfaccount_nm);
-                    img2.setBackgroundResource(R.drawable.guide_discover_nm);
-                    img3.setBackgroundResource(R.drawable.guide_cart_on);
-                    img4.setBackgroundResource(R.drawable.guide_account_nm);
+                    img1.setImageResource(R.drawable.guide_tfaccount_g);
+                    img2.setImageResource(R.drawable.guide_discover_g);
+                    img3.setImageResource(R.drawable.guide_cart_k);
+                    img4.setImageResource(R.drawable.guide_account_g);
                     switchFragment(fragment3);
                     break;
                 case R.id.fourth_layout:
-                    img1.setBackgroundResource(R.drawable.guide_tfaccount_nm);
-                    img2.setBackgroundResource(R.drawable.guide_discover_nm);
-                    img3.setBackgroundResource(R.drawable.guide_cart_nm);
-                    img4.setBackgroundResource(R.drawable.guide_account_on);
+                    img1.setImageResource(R.drawable.guide_tfaccount_g);
+                    img2.setImageResource(R.drawable.guide_discover_g);
+                    img3.setImageResource(R.drawable.guide_cart_g);
+                    img4.setImageResource(R.drawable.guide_account_k);
                     switchFragment(fragment4);
                     break;
                 default:
@@ -174,7 +172,7 @@ public class FJTabview extends AppCompatActivity {
         }
     };
 
-    //实现双击退出
+   /* //实现双击退出
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (KeyEvent.KEYCODE_BACK == keyCode) {
             // 判断是否在两秒之内连续点击返回键，是则退出，否则不退出
@@ -188,6 +186,6 @@ public class FJTabview extends AppCompatActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
-    }
+    }*/
 
 }
