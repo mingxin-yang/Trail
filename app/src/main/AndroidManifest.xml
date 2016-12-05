@@ -102,7 +102,7 @@
         </activity>
         <!--<activity android:name=".zhenfeng.Scenery">-->
         <!--<activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">-->
-        <!--<activity android:name=".Map.Map"/>-->
+        <activity android:name=".map.Map"/>
 
         <activity android:name=".map.Map_list"/>
         <activity android:name=".map.MapShow_list"/>

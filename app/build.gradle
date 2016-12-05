@@ -45,6 +45,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
     compile project(':PullToRefresh')
-    compile files('lib/BaiduLBS_Android.jar')
+    compile files('libs/BaiduLBS_Android.jar')
 }
 

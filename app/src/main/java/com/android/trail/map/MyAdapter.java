@@ -49,7 +49,7 @@ public class MyAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         if (view==null){
 
-            view = LayoutInflater.from(context).inflate(R.layout.map_shop, null);
+            view = LayoutInflater.from(context).inflate(R.layout.map_shop_adapter, null);
 
         }
 
