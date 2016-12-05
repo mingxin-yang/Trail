@@ -59,7 +59,7 @@ public class FJTabview extends AppCompatActivity {
         setListenerID();
 
         //首页的图片切换
-        img1.setBackgroundResource(R.drawable.guide_tfaccount_on);
+        img1.setImageResource(R.drawable.guide_tfaccount_k);
 
     }
 
@@ -138,31 +138,31 @@ public class FJTabview extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.first_layout:
-                    img1.setBackgroundResource(R.drawable.guide_tfaccount_on);
-                    img2.setBackgroundResource(R.drawable.guide_discover_nm);
-                    img3.setBackgroundResource(R.drawable.guide_cart_nm);
-                    img4.setBackgroundResource(R.drawable.guide_account_nm);
+                    img1.setImageResource(R.drawable.guide_tfaccount_k);
+                    img2.setImageResource(R.drawable.guide_discover_g);
+                    img3.setImageResource(R.drawable.guide_cart_g);
+                    img4.setImageResource(R.drawable.guide_account_g);
                     switchFragment(fragment1);
                     break;
                 case R.id.second_layout:
-                    img1.setBackgroundResource(R.drawable.guide_tfaccount_nm);
-                    img2.setBackgroundResource(R.drawable.guide_discover_on);
-                    img3.setBackgroundResource(R.drawable.guide_cart_nm);
-                    img4.setBackgroundResource(R.drawable.guide_account_nm);
+                    img1.setImageResource(R.drawable.guide_tfaccount_g);
+                    img2.setImageResource(R.drawable.guide_discover_k);
+                    img3.setImageResource(R.drawable.guide_cart_g);
+                    img4.setImageResource(R.drawable.guide_account_g);
                     switchFragment(fragment2);
                     break;
                 case R.id.third_layout:
-                    img1.setBackgroundResource(R.drawable.guide_tfaccount_nm);
-                    img2.setBackgroundResource(R.drawable.guide_discover_nm);
-                    img3.setBackgroundResource(R.drawable.guide_cart_on);
-                    img4.setBackgroundResource(R.drawable.guide_account_nm);
+                    img1.setImageResource(R.drawable.guide_tfaccount_g);
+                    img2.setImageResource(R.drawable.guide_discover_g);
+                    img3.setImageResource(R.drawable.guide_cart_k);
+                    img4.setImageResource(R.drawable.guide_account_g);
                     switchFragment(fragment3);
                     break;
                 case R.id.fourth_layout:
-                    img1.setBackgroundResource(R.drawable.guide_tfaccount_nm);
-                    img2.setBackgroundResource(R.drawable.guide_discover_nm);
-                    img3.setBackgroundResource(R.drawable.guide_cart_nm);
-                    img4.setBackgroundResource(R.drawable.guide_account_on);
+                    img1.setImageResource(R.drawable.guide_tfaccount_g);
+                    img2.setImageResource(R.drawable.guide_discover_g);
+                    img3.setImageResource(R.drawable.guide_cart_g);
+                    img4.setImageResource(R.drawable.guide_account_k);
                     switchFragment(fragment4);
                     break;
                 default:

@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:src="@drawable/guide_account_nm" />
+            android:src="@drawable/guide_account_g" />
 
         <TextView
             android:layout_width="0dp"
