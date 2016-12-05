@@ -67,7 +67,7 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="49X90Be3McyA5jPO20uuqfGEsKR05Uui"/>
         <!-- android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" /> -->
-            android:value="09zAMprT8D4b2MB0R1wD5n09xZEC4WS2"/>
+            <!--android:value="09zAMprT8D4b2MB0R1wD5n09xZEC4WS2"/>-->
 
             <!--android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />-->
 
@@ -91,20 +91,14 @@
             android:process=":remote"/>
         <!-- <activity android:name=".zhenfeng.Scenery"> -->
         <!-- <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"> -->
-        <activity android:name=".wangyang.BusStopActivity">
+        <activity android:name=".homepage.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- <activity android:name=".zhenfeng.Scenery"> -->
-        <!-- <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"> -->
-        <!-- <activity android:name=".Map.Map"/> -->
-        <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
-        <activity android:name=".com.adroid.huizhao.Test"/>
-        <activity android:name=".hongxue.Discuss"/>
-        <!-- <activity android:name=".Map.Map"/> -->
+
 
         <activity android:name=".wangyang.WDActivity">
         </activity>

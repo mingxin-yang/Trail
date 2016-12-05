@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import com.android.trail.R;
 import com.android.trail.com.adroid.huizhao.ViewPager.JieShaoActivity;
+import com.android.trail.wangyang.BusStopActivity;
 import com.android.trail.zhenfeng.FJTabview;
 import com.android.trail.xizheng.PersonalActivity;
 
@@ -105,6 +106,10 @@ public class MainActivity extends Activity {
                         intent4.setClass(MainActivity.this, FJTabview.class);
                         startActivity(intent4);
                         break;
+                    case R.id.telId5:
+                        Intent intent5 = new Intent();
+                        intent5.setClass(MainActivity.this, BusStopActivity.class);
+                        startActivity(intent5);
                     default:
                         break;
                 }
