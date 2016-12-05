@@ -13,6 +13,6 @@ public class JieShao3 extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.jie_shao_1);
+        setContentView(R.layout.jie_shao_3);
     }
 }

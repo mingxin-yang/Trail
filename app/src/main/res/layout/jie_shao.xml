@@ -6,13 +6,16 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
+        android:background="@color/mintcream"
         android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_marginLeft="10sp"
-                android:layout_width="25sp"
+                android:id="@+id/jie_shao_back"
+                android:paddingLeft="25sp"
+                android:paddingRight="25sp"
+                android:layout_width="70sp"
                 android:layout_height="35sp"
                 android:src="@drawable/back"/>
             <TextView
@@ -26,7 +29,7 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:background="@drawable/bei_jing"
+            android:background="@drawable/jie_shao_bj"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -46,9 +49,8 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="35dip"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center|bottom"
-                    android:background="#33000000"
                     android:gravity="center"
                     android:orientation="vertical" >
 
@@ -58,51 +60,6 @@
                         android:layout_height="wrap_content"
                         android:text="图片标题"
                         android:textColor="@android:color/white" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dip"
-                        android:orientation="horizontal" >
-
-                        <View
-                            android:id="@+id/dot_0"
-                            android:layout_width="5dip"
-                            android:layout_height="5dip"
-                            android:layout_marginLeft="2dip"
-                            android:layout_marginRight="2dip"
-                            />
-
-                        <View
-                            android:id="@+id/dot_1"
-                            android:layout_width="5dip"
-                            android:layout_height="5dip"
-                            android:layout_marginLeft="2dip"
-                            android:layout_marginRight="2dip"
-                            />
-                        <View
-                            android:id="@+id/dot_2"
-                            android:layout_width="5dip"
-                            android:layout_height="5dip"
-                            android:layout_marginLeft="2dip"
-                            android:layout_marginRight="2dip"
-                            />
-                        <View
-                            android:id="@+id/dot_3"
-                            android:layout_width="5dip"
-                            android:layout_height="5dip"
-                            android:layout_marginLeft="2dip"
-                            android:layout_marginRight="2dip"
-                            />
-                        <View
-                            android:id="@+id/dot_4"
-                            android:layout_width="5dip"
-                            android:layout_height="5dip"
-                            android:layout_marginLeft="2dip"
-                            android:layout_marginRight="2dip"
-                            />
-
-                    </LinearLayout>
                 </LinearLayout>
             </FrameLayout>
             <TextView
@@ -128,6 +85,7 @@
                 android:onClick="pay3"
                 android:layout_marginLeft="30sp"
                 android:layout_marginTop="45sp"
+                android:layout_marginBottom="20sp"
                 android:layout_width="wrap_content"
                 android:textSize="25sp"
                 android:layout_height="wrap_content"

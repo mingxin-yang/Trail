@@ -14,5 +14,6 @@ public class JieShao1 extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.jie_shao_1);
+
     }
 }
