@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import com.android.trail.R;
 import com.android.trail.com.adroid.huizhao.ViewPager.JieShaoActivity;
+import com.android.trail.hongxue.Discuss;
 import com.android.trail.zhenfeng.FJTabview;
 import com.android.trail.xizheng.PersonalActivity;
 
@@ -100,10 +101,17 @@ public class MainActivity extends Activity {
                         intent.setClass(MainActivity.this, PersonalActivity.class);
                         startActivity(intent);
                         break;
+                    //风景页
                     case R.id.telId4:
                         Intent intent4 = new Intent();
                         intent4.setClass(MainActivity.this, FJTabview.class);
                         startActivity(intent4);
+                        break;
+                    //留言
+                    case R.id.telId3:
+                        Intent intent3 = new Intent();
+                        intent3.setClass(MainActivity.this, Discuss.class);
+                        startActivity(intent3);
                         break;
                     default:
                         break;
