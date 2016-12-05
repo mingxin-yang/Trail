@@ -1,15 +1,20 @@
 package com.android.trail.xizheng;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.trail.R;
+import com.android.trail.xizheng.listener.OnDoubleClickListener;
 
 /**
  * Created by Lenovo on 2016/11/25.
@@ -44,6 +49,41 @@ public class PersonalActivity extends Activity {
 //
 //        timer.schedule(task, 1000, 1000);       // timeTask
 
+        //获取昵称控件
+        TextView nick_tv = (TextView)findViewById(R.id.t3);
+        //注册昵称点击事件监听器
+        nick_tv.setOnTouchListener(new OnDoubleClickListener(new OnDoubleClickListener.DoubleClickCallback() {
+            @Override
+            public void onDoubleClick() {
+                //处理双击事件
+                final TextView tv_nick = (TextView) findViewById(R.id.t3);
+
+                LinearLayout change1 = (LinearLayout) getLayoutInflater().inflate(R.layout.datachange1,null);
+                final EditText et_nick = (EditText) change1.findViewById(R.id.et_cgnick);
+                new AlertDialog.Builder(PersonalActivity.this)
+                        //设置对话框的标题
+                        .setTitle("昵称修改")
+                        //设置对话框显示的view对象
+                        .setView(change1)
+                        //为对话框设置保存按钮
+                        .setPositiveButton("保存", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //此处可执行保存操作
+                                tv_nick.setText(et_nick.getText().toString());
+                            }
+                        })
+                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //此处可执行取消操作，不做任何事情
+                            }
+                        })
+                        //创建并显示对话框
+                        .create()
+                        .show();
+            }
+        }));
     }
 
     public void initData() {
@@ -65,6 +105,9 @@ public class PersonalActivity extends Activity {
             mFlowLayout.addView(tv);//添加到父View
         }
     }
+
+
+
 
 //    TimerTask task = new TimerTask() {
 //        @Override
