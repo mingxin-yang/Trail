@@ -100,6 +100,7 @@ public class MainActivity extends Activity {
                         intent.setClass(MainActivity.this, PersonalActivity.class);
                         startActivity(intent);
                         break;
+                    //风景页
                     case R.id.telId4:
                         Intent intent4 = new Intent();
                         intent4.setClass(MainActivity.this, FJTabview.class);
