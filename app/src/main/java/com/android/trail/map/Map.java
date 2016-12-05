@@ -38,7 +38,7 @@ public class Map extends Activity{
         super.onCreate(savedInstanceState);
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.map);
-        // 获取地图控件引用
+
         initBaiduMap();
         addMarkerOverlay();
 
