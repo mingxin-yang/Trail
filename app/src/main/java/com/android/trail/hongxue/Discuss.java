@@ -16,6 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.android.trail.R;
+import com.android.trail.homepage.MainActivity;
 
 import java.util.ArrayList;
 
@@ -40,7 +41,7 @@ public class Discuss extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-
+                intent.setClass(Discuss.this, MainActivity.class);
                 startActivity(intent);
             }
         });
