@@ -9,14 +9,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
-
 import com.android.trail.R;
 import com.android.trail.com.adroid.huizhao.ViewPager.JieShaoActivity;
 import com.android.trail.zhenfeng.FJTabview;
+import com.android.trail.xizheng.PersonalActivity;
 
 
 public class MainActivity extends Activity {
+
+    //添加个人中心页
+    private ImageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +75,8 @@ public class MainActivity extends Activity {
             rootView.findViewById(R.id.telId3).setOnClickListener(onclick);
             rootView.findViewById(R.id.telId4).setOnClickListener(onclick);
             rootView.findViewById(R.id.telId5).setOnClickListener(onclick);
+            //个人中心监听
+            rootView.findViewById(R.id.imageView2).setOnClickListener(onclick);
 
 
             return rootView;
@@ -82,9 +88,16 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 switch (v.getId()){
+                    //介绍页
                     case R.id.telId1:
+                        Intent intent1 = new Intent();
+                        intent1.setClass(MainActivity.this, JieShaoActivity.class);
+                        startActivity(intent1);
+                        break;
+                    //个人中心首页
+                    case R.id.imageView2:
                         Intent intent = new Intent();
-                        intent.setClass(MainActivity.this, JieShaoActivity.class);
+                        intent.setClass(MainActivity.this, PersonalActivity.class);
                         startActivity(intent);
                         break;
                     case R.id.telId4:
