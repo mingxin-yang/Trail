@@ -85,6 +85,11 @@
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao1"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao2"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao3"/>
+        <activity android:name=".wangyang.BusStopActivity"/>
+        <activity android:name=".wangyang.BGActivity"/>
+        <activity android:name=".wangyang.MoveList"/>
+        <activity android:name=".wangyang.HCZActivity"/>
+        <activity android:name=".wangyang.WDActivity"/>
         <activity android:name=".welcomepage.First"/>
         <activity android:name=".homepage.MainActivity"/>
         <activity android:name=".welcomepage.NotFirst">
