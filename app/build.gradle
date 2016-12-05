@@ -9,10 +9,9 @@ android {
     signingConfigs {
         config {
             keyAlias 'key'
-            keyPassword 'daohaode'
-            storeFile file('D:/Users/key.jks')
-            storePassword 'daohaode'
-
+            keyPassword '1234560'
+            storeFile file('E:/Program Files (x86)/miyao/keystore.jks')
+            storePassword '1234560'
         }
     }
     compileSdkVersion 24
@@ -48,3 +47,4 @@ dependencies {
     compile project(':PullToRefresh')
     compile files('lib/BaiduLBS_Android.jar')
 }
+
