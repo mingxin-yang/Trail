@@ -29,8 +29,8 @@ import com.baidu.mapapi.model.LatLngBounds;
  */
 
 public class Map extends Activity{
-    TextureMapView mMapView=null;
-    BaiduMap mBaiduMap=null;
+    private TextureMapView mMapView=null;
+    private BaiduMap mBaiduMap=null;
     private UiSettings mUiSettings = null;
 
     @Override
