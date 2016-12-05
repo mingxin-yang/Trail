@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.android.trail.R;
 import com.android.trail.homepage.MainActivity;
+import com.android.trail.xizheng.PersonalActivity;
 
 import java.util.ArrayList;
 
@@ -113,6 +114,9 @@ public class Discuss extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.edit:
                 Toast.makeText(Discuss.this, "查看个人资料", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setClass(Discuss.this,PersonalActivity.class);
+                startActivity(intent);
                 break;
             case R.id.share:
                 Toast.makeText(Discuss.this, "点赞成功", Toast.LENGTH_SHORT).show();
