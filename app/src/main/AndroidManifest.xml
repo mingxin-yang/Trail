@@ -77,6 +77,8 @@
             android:process=":remote"
             />
         <!--<activity android:name=".zhenfeng.Scenery">-->
+        <activity android:name=".hongxue.Discuss"/>
+        <activity android:name=".wangyang.BusStopActivity"/>
         <activity android:name=".xizheng.PersonalActivity"/>
         <activity android:name=".zhenfeng.FJTabview"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
