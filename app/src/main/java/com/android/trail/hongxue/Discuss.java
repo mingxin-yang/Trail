@@ -5,8 +5,11 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -14,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.trail.R;
 import com.android.trail.homepage.MainActivity;
@@ -89,11 +93,37 @@ public class Discuss extends AppCompatActivity {
 
         // 将MainListAdapter对象传递给ListView视图
         mListView.setAdapter(adapter);
+        //给listview注册上下文菜单
+        registerForContextMenu(mListView);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.discuss, menu);
         return true;
+    }
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo){
+        //加载xml中的上下文菜单
+        super.onCreateContextMenu(menu,v,menuInfo);
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.main,menu);
+    }
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.edit:
+                Toast.makeText(Discuss.this, "查看个人资料", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.share:
+                Toast.makeText(Discuss.this, "点赞成功", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.delete:
+                Toast.makeText(Discuss.this, "举报成功", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+        }
+        return super.onContextItemSelected(item);
     }
     /**
      * 定义ListView适配器MainListViewAdapter
