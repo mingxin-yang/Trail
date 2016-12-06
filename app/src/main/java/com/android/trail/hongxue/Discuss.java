@@ -107,7 +107,7 @@ public class Discuss extends AppCompatActivity {
         //加载xml中的上下文菜单
         super.onCreateContextMenu(menu,v,menuInfo);
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.main,menu);
+        menuInflater.inflate(R.menu.discuss_menu,menu);
     }
     @Override
     public boolean onContextItemSelected(MenuItem item) {
