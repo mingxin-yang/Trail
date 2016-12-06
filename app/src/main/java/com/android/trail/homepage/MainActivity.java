@@ -131,6 +131,8 @@ public class MainActivity extends Activity {
                         break;
                 }
 
+                Toast.makeText(mactivity,"烈火燃烧",Toast.LENGTH_LONG).show();
+
             }
         };
     }
