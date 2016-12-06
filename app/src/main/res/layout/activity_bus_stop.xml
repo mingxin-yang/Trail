@@ -14,20 +14,42 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFCC00">
+        <Button
+            android:id="@+id/bstop_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/goback"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="13dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape"
             android:id="@+id/btn1"
             android:text="@string/btn1_str"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
         <Button
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/shape"
             android:id="@+id/btn2"
             android:text="@string/btn2_str"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"/>
         <Button
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape"
             android:id="@+id/btn3"
             android:text="@string/btn3_str"
             android:layout_width="0dp"
@@ -38,5 +60,8 @@
     <ListView
         android:id="@+id/Lv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:dividerHeight="5dp"
+        android:divider="#ffffff"/>
 </LinearLayout>

@@ -67,7 +67,7 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />
+            android:value="4lrDd2HeLqg8aeso9YoYAj9IjjX88h8C" />
 
             <!--android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />-->
 
@@ -87,10 +87,7 @@
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao2"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao3"/>
 
-        <activity android:name=".wangyang.BGActivity"/>
         <activity android:name=".wangyang.MoveList"/>
-        <activity android:name=".wangyang.HCZActivity"/>
-        <activity android:name=".wangyang.WDActivity"/>
         <activity android:name=".welcomepage.First"/>
         <activity android:name=".homepage.MainActivity"/>
         <activity android:name=".welcomepage.NotFirst">

@@ -1,10 +1,5 @@
 package com.android.trail.wangyang;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,11 +12,17 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.android.trail.R;
+import com.android.trail.homepage.MainActivity;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class BusStopActivity extends Activity {
     private ListView Lv = null;
-    private Button btn1,btn2,btn3;
+    private Button btn1,btn2,btn3,bstop_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +50,11 @@ public class BusStopActivity extends Activity {
         btn1 = (Button)findViewById(R.id.btn1);
         btn2 = (Button)findViewById(R.id.btn2);
         btn3 = (Button)findViewById(R.id.btn3);
+        bstop_back = (Button)findViewById(R.id.bstop_back);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BusStopActivity.this,WDActivity.class);
+                Intent intent = new Intent(BusStopActivity.this,MoveList.class);
                 startActivity(intent);
 
             }
@@ -60,7 +62,7 @@ public class BusStopActivity extends Activity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BusStopActivity.this,BGActivity.class);
+                Intent intent = new Intent(BusStopActivity.this,MoveList.class);
                 startActivity(intent);
 
             }
@@ -68,13 +70,18 @@ public class BusStopActivity extends Activity {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BusStopActivity.this,HCZActivity.class);
+                Intent intent = new Intent(BusStopActivity.this,MoveList.class);
                 startActivity(intent);
 
             }
         });
-
-
+        bstop_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BusStopActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         List<Map<String, Object>> data = new ArrayList<>();
