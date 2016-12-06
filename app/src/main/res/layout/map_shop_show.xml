@@ -11,6 +11,7 @@
     android:background="@android:color/white"
    >
     <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true">
@@ -69,28 +70,32 @@
                     android:text="宝贝评价"
                     android:textSize="20sp"
                     android:textColor="@android:color/black"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="37dp"
-                        android:layout_height="37dp"
-                        android:src="@drawable/tou"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="陈**"
-                        android:textSize="20sp"
-                        android:gravity="center"/>
-                </LinearLayout>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="这款商品很好这款商品很好这款商品很好这款商品很好这款商品很好这款商品很好这款商品很好这款商品很好这款商品很好"/>
 
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+            <com.android.trail.map.MyListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+            </com.android.trail.map.MyListView>
 
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+    >
+        <Button
+            android:id="@+id/showBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交评价"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
 </RelativeLayout>

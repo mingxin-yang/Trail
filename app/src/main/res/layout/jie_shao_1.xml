@@ -12,11 +12,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
-            android:textSize="25sp"
+            android:textSize="45sp"
             android:text="学校简历"/>
 
         <TextView
             android:layout_margin="10sp"
+            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="河北师范大学是河北省人民政府与教育部共建的省属重点大学，具有一百余年的发展历史和光荣的办学传统。学校起源于1902年创建于北京的顺天府学堂和1906年创建于天津的北洋女师范学堂。1996年6月，原河北师范大学、河北师范学院与创建于1952年的河北教育学院、创建于1984年的河北职业技术师范学院合并，组建成新的河北师范大学。校友中有老一代革命家邓颖超、刘清扬、郭隆真、杨秀峰、康世恩、荣高棠等，有学界名人梁漱溟、张申府、汤用彤等，有中科院院士严陆光、郝柏林、李树深等，也有许绍发、蔡振华等一批体育界精英。新中国成立以来，学校共为国家培养了20余万名各类专业人才。

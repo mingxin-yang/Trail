@@ -10,11 +10,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
+
 import com.android.trail.R;
 import com.android.trail.com.adroid.huizhao.ViewPager.JieShaoActivity;
-import com.android.trail.zhenfeng.FJTabview;
+import com.android.trail.hongxue.Discuss;
+import com.android.trail.map.Map;
+import com.android.trail.wangyang.BusStopActivity;
 import com.android.trail.xizheng.PersonalActivity;
+import com.android.trail.zhenfeng.FJTabview;
+
+import static com.android.trail.R.menu.main;
 
 
 public class MainActivity extends Activity {
@@ -37,7 +42,7 @@ public class MainActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
 
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(main, menu);
         return true;
     }
 
@@ -117,7 +122,11 @@ public class MainActivity extends Activity {
                         Intent intent5 = new Intent();
                         intent5.setClass(MainActivity.this, BusStopActivity.class);
                         startActivity(intent5);
-
+                        break;
+                    //商家
+                    case R.id.telId2:
+                        Intent intent2=new Intent(MainActivity.this,Map.class);
+                        startActivity(intent2);
                     default:
                         break;
                 }

@@ -22,10 +22,12 @@ import java.util.List;
 public class MyAdapter extends BaseAdapter{
     private Context context;
     private List<shop> mshop=new ArrayList<>();
+    private LayoutInflater layoutInflater;
 
     public MyAdapter(Context context, List<shop> mshop) {
         this.context = context;
         this.mshop = mshop;
+        this.layoutInflater =LayoutInflater.from(context);
     }
 
     @Override
@@ -35,9 +37,12 @@ public class MyAdapter extends BaseAdapter{
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+        shop s=null;
         if (view==null){
+            s=new shop();
+            view = layoutInflater.inflate(R.layout.map_shop_adapter, null);
 
-            view = LayoutInflater.from(context).inflate(R.layout.map_shop, null);
+            view.setTag(s);
 
         }
 
@@ -57,6 +62,6 @@ public class MyAdapter extends BaseAdapter{
 
     @Override
     public long getItemId(int i) {
-        return Long.parseLong(mshop.get(i).getId());
+        return i;
     }
 }

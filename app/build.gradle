@@ -3,16 +3,15 @@ apply plugin: 'com.android.application'
 android {
     sourceSets{
         main{
-            jniLibs.srcDirs=['lib']
+            jniLibs.srcDirs=['libs']
         }
     }
     signingConfigs {
         config {
             keyAlias 'key'
-            keyPassword 'daohaode'
-            storeFile file('D:/Users/key.jks')
-            storePassword 'daohaode'
-
+            keyPassword '123456'
+            storeFile file('C:/Android/android-studio/keystore.jks')
+            storePassword '123456'
         }
     }
     compileSdkVersion 24
@@ -46,5 +45,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
     compile project(':PullToRefresh')
-    compile files('lib/BaiduLBS_Android.jar')
+    compile files('libs/BaiduLBS_Android.jar')
 }
+
