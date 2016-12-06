@@ -3,15 +3,15 @@ apply plugin: 'com.android.application'
 android {
     sourceSets{
         main{
-            jniLibs.srcDirs=['lib']
+            jniLibs.srcDirs=['libs']
         }
     }
     signingConfigs {
         config {
             keyAlias 'key'
-            keyPassword '654321'
-            storeFile file('E:/AndroidSDK/keystore.jks')
-            storePassword '123456'
+            keyPassword '1234560'
+            storeFile file('E:/Program Files (x86)/miyao/keystore.jks')
+            storePassword '1234560'
         }
     }
     compileSdkVersion 24
@@ -47,4 +47,3 @@ dependencies {
     compile project(':PullToRefresh')
     compile files('libs/BaiduLBS_Android.jar')
 }
-

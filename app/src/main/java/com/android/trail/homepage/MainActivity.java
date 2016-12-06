@@ -16,8 +16,6 @@ import com.android.trail.R;
 import com.android.trail.com.adroid.huizhao.ViewPager.JieShaoActivity;
 import com.android.trail.hongxue.Discuss;
 import com.android.trail.map.Map;
-import com.android.trail.map.MapShow_list;
-import com.android.trail.map.Map_list;
 import com.android.trail.wangyang.BusStopActivity;
 import com.android.trail.xizheng.PersonalActivity;
 import com.android.trail.zhenfeng.FJTabview;
@@ -134,7 +132,7 @@ public class MainActivity extends Activity {
                         break;
                 }
 
-                Toast.makeText(mactivity,"烈火燃烧",Toast.LENGTH_LONG).show();
+                Toast.makeText(mactivity,"点击跳转",Toast.LENGTH_LONG).show();
 
             }
         };
