@@ -55,11 +55,6 @@ public class shop {
 
     @Override
     public String toString() {
-        return "shop{" +
-                "src='" + src + '\'' +
-                ", Id='" + Id + '\'' +
-                ", Name='" + Name + '\'' +
-                ", Message='" + Message + '\'' +
-                '}';
+        return "shop{" + "src='" + src + '\'' + ", Id='" + Id + '\'' + ", Name='" + Name + '\'' + ", Message='" + Message + '\'' + '}';
     }
 }

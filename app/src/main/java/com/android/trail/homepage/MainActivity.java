@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.android.trail.R;
 import com.android.trail.com.adroid.huizhao.ViewPager.JieShaoActivity;
@@ -132,7 +131,6 @@ public class MainActivity extends Activity {
                         break;
                 }
 
-                Toast.makeText(mactivity,"烈火燃烧", Toast.LENGTH_LONG).show();
 
             }
         };
