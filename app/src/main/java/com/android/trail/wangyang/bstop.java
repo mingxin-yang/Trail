@@ -6,7 +6,7 @@ package com.android.trail.wangyang;
 
 public class bstop {
     private String bstop_src;  //图片
-    private Long id;
+    private int id;
     private  String bstop_name;
     private String first_time;   //首班车时间
     private String last_time;   //末班车时间
@@ -24,11 +24,11 @@ public class bstop {
         this.bstop_src = src;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -64,7 +64,7 @@ public class bstop {
         this.price = price;
     }
 
-    public bstop(Long id,String Bstop_src,String Bstop_name,String First_time,String Last_time,String Price){
+    public bstop(int id,String Bstop_src,String Bstop_name,String First_time,String Last_time,String Price){
         this.id = id;
         bstop_src = Bstop_src;
         bstop_name = Bstop_name;
