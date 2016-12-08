@@ -83,12 +83,17 @@ public class Map extends Activity{
         mBaiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
             public boolean onMarkerClick(Marker marker) {
                 // 点击处理
-                Toast.makeText(Map.this,
-                        marker.getTitle(),
-                        Toast.LENGTH_SHORT)
-                        .show();
-                Intent intent=new Intent(Map.this,Map_list.class);
-                startActivity(intent);
+                int value = marker.getExtraInfo().getInt("short");
+                switch (value){
+                    case 1:
+                        Toast.makeText(Map.this,
+                                marker.getTitle(),
+                                Toast.LENGTH_SHORT)
+                                .show();
+                        Intent intent=new Intent(Map.this,Map_list.class);
+                        startActivity(intent);
+                        break;
+                }
                 return false;
             }
         });
@@ -134,8 +139,12 @@ public class Map extends Activity{
         // 构建Marker图标
         BitmapDescriptor bitmap = BitmapDescriptorFactory
                 .fromResource(R.drawable.marker);
+        //使用bundle来标识不同marker
+        Bundle bunshop = new Bundle();
+        bunshop.putInt("short",1);
         // 构建MarkerOption，用于在地图上添加Marker
         OverlayOptions option = new MarkerOptions()
+                .extraInfo(bunshop)   //设置marker标识
                 .position(point)    // 设置marker的位置
                 .draggable(true)    // 设置是否允许拖拽
                 .title("商业区")       // 设置marker的title
