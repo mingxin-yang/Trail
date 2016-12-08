@@ -132,7 +132,7 @@ public class MainActivity extends Activity {
                         break;
                 }
 
-                Toast.makeText(mactivity,"点击跳转",Toast.LENGTH_LONG).show();
+                Toast.makeText(mactivity,"烈火燃烧", Toast.LENGTH_LONG).show();
 
             }
         };

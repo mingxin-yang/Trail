@@ -7,58 +7,6 @@
     <string name="xuexiao">学&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;校</string>
     <string name="dc_nickname">一个炫酷的名字总会引人注目</string>
     <string name="action_settings">Settings</string>
-    <string name="list_30">
-        30路\n
-        1 . 南焦客运站\n
-2 . 裕华区政府\n
-3 . 裕翔园\n
-4 . 华兴花园\n
-5 . 怀特家居城(现代女子医院)\n
-6 . 四十三中\n
-7 . 翰墨儒林小区\n
-8 . 怀特商城\n
-9 . 槐底\n
-10 . 宾南花园\n
-11 . 石门公园(临时站)\n
-12 . 老年病医院(临时站)\n
-13 . 河北报社(临时站)\n
-14 . 市一院(临时站)\n
-15 . 人民广场\n
-16 . 北国商城\n
-17 . 平安中山路口(石家庄一中)\n
-18 . 南三条\n
-19 . 解放广场\n
-20 . 新百广场(东)(习三内画博物馆)\n
-21 . 新百广场(西)\n
-22 . 维明中山路口(兴业银行)\n
-23 . 市二院</string>
-    <string name="list_65">
-        65路\n
-        1 南焦客运站\n
-        2 南二环体育\n
-        3 赵卜口\n
-        4 建华塔南路口\n
-        5 南王\n
-        6 大石门\n
-        7 世纪公园东\n
-        8 万达广场
-    </string>
-    <string name="list_215">
-        215路\n
-        1. 南焦客运站\n
-        2. 润丰五金城\n
-        3. 汇祥路东口\n
-        4. 火车站(东广场)
-    </string>
-    <string name="list_72">
-        72路\n
-        1. 南焦客运站\n
-        2. 河北师大\n
-        3. 润丰五金城\n
-        4. 维明新石南\n
-        5. 火车站(西广场)
-    </string>
-
     <string name="btn1_str">万达广场</string>
     <string name="btn2_str">新百/北国/勒泰</string>
     <string name="btn3_str">火车站</string>
