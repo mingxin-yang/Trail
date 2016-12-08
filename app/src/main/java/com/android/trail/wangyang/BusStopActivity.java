@@ -11,11 +11,13 @@ import android.widget.ListView;
 
 import com.android.trail.R;
 import com.android.trail.homepage.MainActivity;
+import com.android.trail.json.BusRequestJson;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
 public class BusStopActivity extends Activity {
@@ -29,6 +31,11 @@ public class BusStopActivity extends Activity {
     private List<bstop> lb =new ArrayList<>();
     private BstopAdapter bstop_adapter;
     private ListView bstop_lv;
+
+    private BusRequestJson brj;
+    List<Map<String, String>> list;
+    private String url = "http://10.7.88.6:8989/bus/json";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,14 +63,23 @@ public class BusStopActivity extends Activity {
             }
         });
 
-        getData();
+        try {
+            list = brj.getJSONObject(url);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        getData(list);
         bstop_adapter = new BstopAdapter(this,lb);
         bstop_lv = bsopPullToRefreshListView.getRefreshableView();
         bstop_lv.setAdapter(bstop_adapter);
     }
 
-    private void getData() {
-        lb.add(new bstop(0L,"http://img.dongqiudi.com/uploads/avatar/2014/10/20/8MCTb0WBFG_thumb_1413805282863.jpg","ssss","1.00","12.00","1"));
+    private void getData(List<Map<String, String>> list) {
+        for(int i = 0;i < list.size();i++){
+            lb.add(new bstop(Integer.valueOf(list.get(i).get("id")).intValue(),"http://img.dongqiudi.com/uploads/avatar/2014/10/20/8MCTb0WBFG_thumb_1413805282863.jpg",list.get(i).get("busnumber"), list.get(i).get("firsttime"),list.get(i).get("enftime"),list.get(i).get("charge")));
+        }
+//        lb.add(new bstop(0,"http://img.dongqiudi.com/uploads/avatar/2014/10/20/8MCTb0WBFG_thumb_1413805282863.jpg","ssss","1.00","12.00","1"));
     }
 
     public View.OnClickListener bstop_onclick =new View.OnClickListener() {

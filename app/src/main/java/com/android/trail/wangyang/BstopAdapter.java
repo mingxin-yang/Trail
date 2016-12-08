@@ -3,6 +3,7 @@ package com.android.trail.wangyang;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import com.android.trail.R;
 
 import java.io.BufferedInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -26,6 +28,7 @@ import java.util.List;
 
 public class BstopAdapter extends BaseAdapter{
     private Bitmap bm;
+    private LoadPicture lp;
 
     private Context context;
     private List<bstop> lbstop= new ArrayList<>();
@@ -56,9 +59,30 @@ public class BstopAdapter extends BaseAdapter{
             convertView = LayoutInflater.from(context).inflate(R.layout.item,null);
         }
         //车辆图片
-        ImageView BstopImage = (ImageView)convertView.findViewById(R.id.tv_photo);
-        bm = getBitmap(lbstop.get(position).getSrc());
-        BstopImage.setImageBitmap(bm);
+        final ImageView BstopImage = (ImageView)convertView.findViewById(R.id.tv_photo);
+        final Handler handler = new Handler() {
+            public void handleMessage(android.os.Message msg) {
+                switch (msg.what) {
+                    case 0:
+                        BstopImage.setImageBitmap(bm);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        };
+
+        new Thread(){
+            public void run(){
+                try{
+                    bm = lp.getBitmap("http://img3.redocn.com/20140604/Redocn_2014060222115144.jpg");
+                    handler.sendEmptyMessage(0);
+                }catch (IOException e){
+                    e.getMessage();
+                }
+            }
+        }.start();
+
         //车辆名字
         TextView BstopName = (TextView) convertView.findViewById(R.id.tv_journey);
         BstopName.setText(lbstop.get(position).getBstop_name());
