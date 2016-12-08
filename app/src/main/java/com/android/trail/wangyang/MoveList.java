@@ -20,6 +20,7 @@ public class MoveList extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(MoveList.this, BusStopActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
