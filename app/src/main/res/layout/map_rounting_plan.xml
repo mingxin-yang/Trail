@@ -23,8 +23,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minLines="1"
-                android:hint="我的位置"
-                android:textColorHint="#ffffff"/>
+                android:hint="输入起点"
+                android:id="@+id/edt_begin"
+                android:textColorHint="#CCCCCC"
+                android:background="@drawable/bg_edittext_normal"/>
             <LinearLayout
                 android:layout_width="290dp"
                 android:background="#CCCCCC"
@@ -35,15 +37,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minLines="1"
+                android:id="@+id/edt_end"
                 android:hint="输入终点"
                 android:textColorHint="#CCCCCC"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edittext_normal"/>
         </LinearLayout>
     </LinearLayout>
 
-    <ImageView
+    <LinearLayout
+        android:paddingTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:src="@drawable/walk"
-        />
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#3F51B5"
+            android:id="@+id/btn_serch"
+            android:text="查询"
+            /></LinearLayout>
 </LinearLayout>
