@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +35,7 @@ public class BusStopActivity extends Activity {
 
     private BusRequestJson brj;
     List<Map<String, String>> list;
-    private String url = "http://10.7.88.6:8989/bus/json";
+    private String url = "http://10.7.88.59/bus/json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,16 +64,35 @@ public class BusStopActivity extends Activity {
             }
         });
 
-        try {
-            list = brj.getJSONObject(url);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        final Handler handler = new Handler() {
+            public void handleMessage(android.os.Message msg) {
+                switch (msg.what) {
+                    case 0:
+                        getData(list);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        };
 
-        getData(list);
+        //获取网络资源
+        final String path = "http://10.7.88.59/bus/json";//
+        new Thread() {//创建子线程进行网络访问的操作
+            public void run() {
+                try {
+                    list = brj.getJSONObject(path);
+                    handler.sendEmptyMessage(0);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+
         bstop_adapter = new BstopAdapter(this,lb);
         bstop_lv = bsopPullToRefreshListView.getRefreshableView();
         bstop_lv.setAdapter(bstop_adapter);
+
     }
 
     private void getData(List<Map<String, String>> list) {
