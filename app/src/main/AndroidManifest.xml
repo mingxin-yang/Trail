@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.android.trail">
 
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
@@ -101,11 +107,34 @@
         <!--<activity android:name=".zhenfeng.Scenery">-->
         <!--<activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">-->
         <activity android:name=".map.Map"/>
-
         <activity android:name=".map.Map_list"/>
         <activity android:name=".map.MapShow_list"/>
         <activity android:name=".map.Detail"/>
         <activity android:name=".map.Rate"/>
+        <activity
+            android:name="com.android.trail.map.activity.ImageGridActivity" android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.android.trail.map.activity.TestPicActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.trail.map.activity.PhotoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.android.trail.map.activity.AlbumActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.android.trail.map.activity.ImageFile" >
+        </activity>
+        <activity
+            android:name="com.android.trail.map.activity.ShowAllPhoto" >
+        </activity>
+        <activity
+            android:name="com.android.trail.map.activity.GalleryActivity">
+        </activity>
         <activity android:name=".map.Rounting"/>
 
     </application>
