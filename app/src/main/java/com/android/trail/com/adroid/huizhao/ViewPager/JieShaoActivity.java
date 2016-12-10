@@ -2,6 +2,7 @@ package com.android.trail.com.adroid.huizhao.ViewPager;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
@@ -21,6 +22,8 @@ import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * Created by Lenovo on 2016/11/24.
@@ -112,7 +115,7 @@ public class JieShaoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.jie_shao);
         mViewPaper = (ViewPager) findViewById(R.id.vp);
-
+        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
         getID();
 
         //显示的图片

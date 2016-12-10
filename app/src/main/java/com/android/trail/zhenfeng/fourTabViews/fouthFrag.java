@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 
 import com.android.trail.R;
 
+import qiu.niorgai.StatusBarCompat;
+
 /**
  * Created by 20160316 on 2016/11/29.
  */

@@ -1,1 +1,1 @@
-include ':app',":PullToRefresh"
+include ':app',':PullToRefresh',':StatusBar'

@@ -32,6 +32,8 @@ import com.android.trail.map.util.ImageItem;
 import com.android.trail.map.util.PublicWay;
 import com.android.trail.map.util.Res;
 
+import qiu.niorgai.StatusBarCompat;
+
 /**
  * 这个是进入相册显示所有图片的界面
  * 
@@ -73,6 +75,7 @@ public class AlbumActivity extends Activity {
 		initListener();
 		//这个函数主要用来控制预览和完成按钮的状态
 		isShowOkBt();
+		StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
 	}
 	
 	BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {  

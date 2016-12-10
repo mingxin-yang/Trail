@@ -18,6 +18,8 @@ import com.android.trail.homepage.MainActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import qiu.niorgai.StatusBarCompat;
+
 public class First extends AppCompatActivity {
     private ViewPager vp;
     private ImageView iv1;
@@ -38,6 +40,7 @@ public class First extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+        StatusBarCompat.translucentStatusBar(this,false);
         assignViews();
         initData();
         initView();

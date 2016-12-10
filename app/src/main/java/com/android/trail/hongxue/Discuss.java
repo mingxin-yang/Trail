@@ -2,6 +2,7 @@ package com.android.trail.hongxue;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +26,8 @@ import com.android.trail.xizheng.PersonalActivity;
 
 import java.util.ArrayList;
 
+import qiu.niorgai.StatusBarCompat;
+
 
 /**
  * Created by Loktar on 2016/11/22.
@@ -41,6 +44,7 @@ public class Discuss extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discuss);
+        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
         btn = (Button)findViewById(R.id.btn_discuss);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

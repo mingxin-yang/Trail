@@ -2,6 +2,7 @@ package com.android.trail.wangyang;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,6 +20,8 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import qiu.niorgai.StatusBarCompat;
 
 
 public class BusStopActivity extends Activity {
@@ -41,7 +44,7 @@ public class BusStopActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bus_stop);
-
+        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
         //监听
         bstop_back = (Button)findViewById(R.id.bstop_back);
         bstop_btn1 = (Button)findViewById(R.id.bstop_btn1);

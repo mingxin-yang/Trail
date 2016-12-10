@@ -25,6 +25,9 @@ import com.android.trail.map.util.Bimp;
 import com.android.trail.map.util.ImageItem;
 import com.android.trail.map.util.PublicWay;
 import com.android.trail.map.util.Res;
+
+import qiu.niorgai.StatusBarCompat;
+
 /**
  * 这个是显示一个文件夹里面的所有图片时的界面
  *
@@ -72,6 +75,7 @@ public class ShowAllPhoto extends Activity {
 		init();
 		initListener();
 		isShowOkBt();
+		StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
 	}
 	
 	BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {  

@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/PullToRefresh" />
+            <option value="$PROJECT_DIR$/StatusBar" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
