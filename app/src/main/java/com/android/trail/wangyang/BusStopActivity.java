@@ -44,7 +44,7 @@ public class BusStopActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bus_stop);
-        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
+
         //监听
         bstop_back = (Button)findViewById(R.id.bstop_back);
         bstop_btn1 = (Button)findViewById(R.id.bstop_btn1);
