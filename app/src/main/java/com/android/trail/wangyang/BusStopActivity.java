@@ -35,7 +35,6 @@ public class BusStopActivity extends Activity {
 
     private BusRequestJson brj;
     List<Map<String, String>> list;
-    private String url = "http://10.7.88.59/bus/json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
