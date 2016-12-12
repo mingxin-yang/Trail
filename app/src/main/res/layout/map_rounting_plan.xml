@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#3F51B5">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 从\n\n ┆\n\n 到"
+            android:layout_margin="20dp"
+            android:textColor="#CCCCCC"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="7dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="1"
+                android:hint="输入起点"
+                android:id="@+id/edt_begin"
+                android:textColorHint="#CCCCCC"
+                android:background="@drawable/bg_edittext_normal"/>
+            <LinearLayout
+                android:layout_width="290dp"
+                android:background="#CCCCCC"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp">
+            </LinearLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="1"
+                android:id="@+id/edt_end"
+                android:hint="输入终点"
+                android:textColorHint="#CCCCCC"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edittext_normal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#3F51B5"
+            android:id="@+id/btn_serch"
+            android:text="查询"
+            /></LinearLayout>
+</LinearLayout>
