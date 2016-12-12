@@ -21,10 +21,6 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="5dp"/>
     </LinearLayout>
-    <com.handmark.pulltorefresh.library.PullToRefreshListView
-        android:id="@+id/pull_to_refresh_listview_bstop"
-        android:layout_height="fill_parent"
-        android:layout_width="match_parent" />
     <LinearLayout
         android:orientation="vertical"
         android:paddingBottom="@dimen/activity_horizontal_margin"
