@@ -2,6 +2,7 @@ package com.android.trail.map;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,8 @@ import com.android.trail.map.adapter.Adapter_Detail;
 
 import java.util.*;
 import java.util.Map;
+
+import qiu.niorgai.StatusBarCompat;
 
 import static com.baidu.location.d.j.S;
 
@@ -26,7 +29,7 @@ public class Detail extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map_shop_show);
-
+        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
         ScrollView mScrollView=(ScrollView)findViewById(R.id.scroll);
         mScrollView.smoothScrollTo(0,20);
 

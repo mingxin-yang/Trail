@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,8 @@ import android.widget.TextView;
 
 import com.android.trail.R;
 import com.android.trail.xizheng.listener.OnDoubleClickListener;
+
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * Created by Lenovo on 2016/11/25.
@@ -32,7 +35,7 @@ public class PersonalActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.personalipd);
-
+        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
         mInflater = LayoutInflater.from(this);
         mFlowLayout = (FlowLayout) findViewById(R.id.id_flowlayout);
         initData();
