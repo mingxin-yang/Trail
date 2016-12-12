@@ -82,7 +82,8 @@
             android:process=":remote"
             />
         <!--<activity android:name=".zhenfeng.Scenery">-->
-        <activity android:name=".hongxue.Discuss"/>
+        <activity android:name=".hongxue.Discuss"
+            android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".wangyang.BusStopActivity"/>
         <activity android:name=".xizheng.PersonalActivity"/>
         <activity android:name=".zhenfeng.FJTabview"/>
