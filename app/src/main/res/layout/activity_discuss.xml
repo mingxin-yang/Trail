@@ -9,27 +9,37 @@
     <!-- 留言板layout songhongxue上传-->
     <LinearLayout
         android:id="@+id/top"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="45dp"
+        android:background="#FFCC00">
         <Button
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/arrow"
-            android:id="@+id/btn_discuss"/>
+            android:id="@+id/btn_discuss"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/goback"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
     </LinearLayout>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pull_to_refresh_listview_bstop"
+        android:layout_height="fill_parent"
+        android:layout_width="match_parent" />
     <LinearLayout
+        android:orientation="vertical"
         android:paddingBottom="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_horizontal_margin"
         android:layout_below="@+id/top"
         android:layout_above="@+id/bottom"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ListView
-            android:id="@+id/listView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/pull_to_refresh_listview_dis"
+            android:layout_height="fill_parent"
+            android:layout_width="match_parent" />
     </LinearLayout>
     <RelativeLayout
+        android:background="#FFCC00"
         android:paddingBottom="5dp"
         android:id="@+id/bottom"
         android:layout_width="match_parent"
@@ -37,6 +47,10 @@
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
         <Button
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="5dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
@@ -44,8 +58,11 @@
             android:id="@+id/btn"/>
         <EditText
             android:layout_toLeftOf="@+id/btn"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:hint="请输入您的留言....."
             android:background="@drawable/bg_edittext_normal"/>
 
 
