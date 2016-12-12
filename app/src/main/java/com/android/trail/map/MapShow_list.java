@@ -2,6 +2,7 @@ package com.android.trail.map;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.format.DateUtils;
@@ -21,6 +22,8 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import qiu.niorgai.StatusBarCompat;
+
 /**
  * Created by mingx_000 on 2016/12/5 0005.
  */
@@ -39,7 +42,7 @@ public class MapShow_list extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map_list);
-
+        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
         mPullToRefreshListView = (PullToRefreshListView) findViewById(R.id.pull_to_refresh_listview);
         mPullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
             @Override

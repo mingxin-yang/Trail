@@ -4,6 +4,7 @@ package com.android.trail.map.activity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -17,6 +18,8 @@ import com.android.trail.map.adapter.FolderAdapter;
 import com.android.trail.map.util.Bimp;
 import com.android.trail.map.util.PublicWay;
 import com.android.trail.map.util.Res;
+
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * 这个类主要是用来进行显示包含图片的文件夹
@@ -43,6 +46,7 @@ public class ImageFile extends Activity {
 		textView.setText(Res.getString("photo"));
 		folderAdapter = new FolderAdapter(this);
 		gridView.setAdapter(folderAdapter);
+		StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
 	}
 
 	private class CancelListener implements OnClickListener {// 取消按钮的监听

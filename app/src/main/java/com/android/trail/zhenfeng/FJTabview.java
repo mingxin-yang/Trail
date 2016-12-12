@@ -1,5 +1,6 @@
 package com.android.trail.zhenfeng;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -15,6 +16,8 @@ import com.android.trail.zhenfeng.fourTabViews.fouthFrag;
 import com.android.trail.zhenfeng.fourTabViews.fristFrag;
 import com.android.trail.zhenfeng.fourTabViews.secndFrag;
 import com.android.trail.zhenfeng.fourTabViews.thirdFrag;
+
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * Created by 20160316 on 2016/11/23.
@@ -60,6 +63,7 @@ public class FJTabview extends AppCompatActivity {
 
         //首页的图片切换
         img1.setImageResource(R.drawable.guide_tfaccount_k);
+        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
 
     }
 

@@ -26,6 +26,8 @@ import com.android.trail.map.util.Res;
 import com.android.trail.map.zoom.PhotoView;
 import com.android.trail.map.zoom.ViewPagerFixed;
 
+import qiu.niorgai.StatusBarCompat;
+
 /**
  * 这个是用于进行图片浏览时的界面
  *
@@ -87,6 +89,7 @@ public class GalleryActivity extends Activity {
 		pager.setPageMargin((int)getResources().getDimensionPixelOffset(Res.getDimenID("ui_10_dip")));
 		int id = intent.getIntExtra("ID", 0);
 		pager.setCurrentItem(id);
+		StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
 	}
 	
 	private OnPageChangeListener pageChangeListener = new OnPageChangeListener() {

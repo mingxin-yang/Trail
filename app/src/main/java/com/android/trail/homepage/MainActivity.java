@@ -19,6 +19,8 @@ import com.android.trail.wangyang.BusStopActivity;
 import com.android.trail.xizheng.PersonalActivity;
 import com.android.trail.zhenfeng.FJTabview;
 
+import qiu.niorgai.StatusBarCompat;
+
 import static com.android.trail.R.menu.main;
 
 
@@ -31,7 +33,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        StatusBarCompat.translucentStatusBar(this,false);
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment()).commit();

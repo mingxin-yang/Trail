@@ -23,6 +23,8 @@ import com.baidu.mapapi.map.UiSettings;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.model.LatLngBounds;
 
+import qiu.niorgai.StatusBarCompat;
+
 /**
  * Created by mingx_000 on 2016/11/23 0023.
  */
@@ -37,6 +39,7 @@ public class Map extends Activity{
         super.onCreate(savedInstanceState);
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.map);
+        StatusBarCompat.translucentStatusBar(this,false);
         // 获取地图控件引用
         initBaiduMap();
         addMarkerOverlay();

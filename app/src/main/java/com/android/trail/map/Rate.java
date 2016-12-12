@@ -41,6 +41,8 @@ import com.android.trail.map.util.ImageItem;
 import com.android.trail.map.util.PublicWay;
 import com.android.trail.map.util.Res;
 
+import qiu.niorgai.StatusBarCompat;
+
 //import static com.baidu.location.d.j.R;
 
 
@@ -70,6 +72,7 @@ public class Rate extends Activity {
         parentView = getLayoutInflater().inflate(R.layout.map_shop_rate, null);
         setContentView(parentView);
         Init();
+        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
     }
 
     public void Init() {
