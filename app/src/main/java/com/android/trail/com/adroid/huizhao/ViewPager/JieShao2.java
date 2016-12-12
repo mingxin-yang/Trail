@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.ViewTreeObserver;
@@ -14,6 +15,8 @@ import com.android.trail.com.adroid.huizhao.BitmapUtil;
 import com.android.trail.com.adroid.huizhao.DragImageView;
 
 import java.io.InputStream;
+
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * Created by Lenovo on 2016/12/1.
@@ -31,6 +34,7 @@ public class JieShao2 extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.jie_shao_2);
+        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
 /** 获取可見区域高度 **/
         WindowManager manager = getWindowManager();
         window_width = manager.getDefaultDisplay().getWidth();

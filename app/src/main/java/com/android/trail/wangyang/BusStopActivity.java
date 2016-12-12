@@ -2,6 +2,7 @@ package com.android.trail.wangyang;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,6 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import qiu.niorgai.StatusBarCompat;
+
 
 public class BusStopActivity extends Activity {
 
@@ -35,6 +38,7 @@ public class BusStopActivity extends Activity {
 
     private BusRequestJson brj;
     List<Map<String, String>> list;
+    private String url = "http://10.7.88.6:8989/bus/json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +80,7 @@ public class BusStopActivity extends Activity {
         };
 
         //获取网络资源
-        final String path = "http://10.7.88.59/bus/json";//
+        final String path = "http://10.7.88.6:8989/bus/json";//
         new Thread() {//创建子线程进行网络访问的操作
             public void run() {
                 try {
@@ -87,16 +91,24 @@ public class BusStopActivity extends Activity {
                 }
             }
         }.start();
-
         bstop_adapter = new BstopAdapter(this,lb);
         bstop_lv = bsopPullToRefreshListView.getRefreshableView();
         bstop_lv.setAdapter(bstop_adapter);
-
     }
 
     private void getData(List<Map<String, String>> list) {
         for(int i = 0;i < list.size();i++){
-            lb.add(new bstop(Integer.valueOf(list.get(i).get("id")).intValue(),"http://img.dongqiudi.com/uploads/avatar/2014/10/20/8MCTb0WBFG_thumb_1413805282863.jpg",list.get(i).get("busnumber"), list.get(i).get("firsttime"),list.get(i).get("enftime"),list.get(i).get("charge")));
+            lb.add(new bstop(Integer.valueOf(list.get(i).get("id")).intValue(),
+                    list.get(i)
+                            .get("busimage"),
+                    list.get(i)
+                            .get("busnumber"),
+                    list.get(i)
+                            .get("firsttime"),
+                    list.get(i)
+                            .get("enftime"),
+                    list.get(i)
+                            .get("charge")));
         }
 //        lb.add(new bstop(0,"http://img.dongqiudi.com/uploads/avatar/2014/10/20/8MCTb0WBFG_thumb_1413805282863.jpg","ssss","1.00","12.00","1"));
     }

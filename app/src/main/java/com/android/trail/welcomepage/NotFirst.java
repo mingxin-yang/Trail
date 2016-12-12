@@ -9,6 +9,8 @@ import android.os.Handler;
 import com.android.trail.R;
 import com.android.trail.homepage.MainActivity;
 
+import qiu.niorgai.StatusBarCompat;
+
 
 public class NotFirst extends Activity {
     private SharedPreferences sharepreferences;     //实例化 SharedPreferences
@@ -18,7 +20,7 @@ public class NotFirst extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_not_first);
-
+        StatusBarCompat.translucentStatusBar(this,false);
         sharepreferences=this.getSharedPreferences("check", MODE_PRIVATE);// 初始化 SharedPreferences 储存
         editor=sharepreferences.edit();//将SharedPreferences 储存 可编辑化
         boolean fristload=sharepreferences.getBoolean("fristload", true);//从SharedPreferences中获取是否第一次启动   默认为true

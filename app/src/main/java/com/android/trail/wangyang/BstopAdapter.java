@@ -75,7 +75,7 @@ public class BstopAdapter extends BaseAdapter{
         new Thread(){
             public void run(){
                 try{
-                    bm = lp.getBitmap("http://img3.redocn.com/20140604/Redocn_2014060222115144.jpg");
+                    bm = lp.getBitmap(lbstop.get(position).getSrc());
                     handler.sendEmptyMessage(0);
                 }catch (IOException e){
                     e.getMessage();

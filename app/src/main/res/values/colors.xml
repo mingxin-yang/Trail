@@ -351,4 +351,8 @@
     <color name="personalchange">#ff4b4b4b</color>
     <color name="hint_color">#50000000</color>
     <color name="zhujie">#808080</color>
+
+    <color name="albumback">#E1E0DE</color>
+    <color name="plugin_camera_black">#000000</color>
+    <color name="none_color">#00000000</color>
 </resources>
