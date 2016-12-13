@@ -20,6 +20,7 @@ public class NotFirst extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_not_first);
+        //沉浸式状态栏实现
         StatusBarCompat.translucentStatusBar(this,false);
         sharepreferences=this.getSharedPreferences("check", MODE_PRIVATE);// 初始化 SharedPreferences 储存
         editor=sharepreferences.edit();//将SharedPreferences 储存 可编辑化

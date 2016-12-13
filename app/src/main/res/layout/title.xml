@@ -17,7 +17,7 @@
         android:layout_height="45dp"
         android:background="#FFCC00">
         <Button
-            android:id="@+id/bstop_back"
+            android:id="@+id/fanhui"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:background="@drawable/goback"

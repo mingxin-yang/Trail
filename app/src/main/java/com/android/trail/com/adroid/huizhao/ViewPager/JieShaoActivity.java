@@ -8,9 +8,9 @@ import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,8 +31,8 @@ import qiu.niorgai.StatusBarCompat;
 
 public class JieShaoActivity extends Activity {
 
-    private TextView tv1,tv2,tv3;
-    private ImageView img;
+    private TextView tv1,tv2,tv3,tv4,tv5,tv6,tv_more;
+    private Button img;
 
     private ViewPager mViewPaper;
     private List<ImageView> images;
@@ -41,20 +41,17 @@ public class JieShaoActivity extends Activity {
     //记录上一次点的位置
     private int oldPosition = 0;
     //存放图片的id
-    private int[] imageIds = new int[]{
-            R.drawable.p1,
-            R.drawable.jieshao2,
-            R.drawable.jieshao3
+    private  int[] imageIds = new int[]{
+            R.drawable.jshao_top1,
+            R.drawable.jshao_top2,
+            R.drawable.jshao_top3
     };
-    //存放图片的标题
-    private String[]  titles = new String[]{
-            "师大你好",
-            "我爱师大",
-            "师大~哎",
+  //  private int[] imageIds = new int[]{
+   //         R.drawable.p1,
+    //        R.drawable.jieshao2,
+    //        R.drawable.jieshao3
+    //};
 
-    };
-
-    private TextView title;
     private ViewPagerAdapter adapter;
     private ScheduledExecutorService scheduledExecutorService;
 
@@ -63,24 +60,44 @@ public class JieShaoActivity extends Activity {
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.jie_shao_t1:
-                    Intent intent = new Intent();
-                    intent.setClass(JieShaoActivity.this,JieShao1.class);
-                    startActivity(intent);
-                    break;
-                case R.id.jie_shao_t2:
                     Intent intent1 = new Intent();
-                    intent1.setClass(JieShaoActivity.this,JieShao2.class);
+                    intent1.setClass(JieShaoActivity.this,JieShao1.class);
                     startActivity(intent1);
                     break;
-                case R.id.jie_shao_t3:
+                case R.id.jie_shao_t2:
                     Intent intent2 = new Intent();
-                    intent2.setClass(JieShaoActivity.this,JieShao3.class);
+                    intent2.setClass(JieShaoActivity.this,JieShao2.class);
                     startActivity(intent2);
                     break;
-                case R.id.jie_shao_back:
+                case R.id.jie_shao_t3:
                     Intent intent3 = new Intent();
-                    intent3.setClass(JieShaoActivity.this,MainActivity.class);
+                    intent3.setClass(JieShaoActivity.this,JieShao3.class);
                     startActivity(intent3);
+                    break;
+                case R.id.jie_shao_t4:
+                    Intent intent4 = new Intent();
+                    intent4.setClass(JieShaoActivity.this,JieShao4.class);
+                    startActivity(intent4);
+                    break;
+                case R.id.jie_shao_t5:
+                    Intent intent5 = new Intent();
+                    intent5.setClass(JieShaoActivity.this,Jieshao5.class);
+                    startActivity(intent5);
+                    break;
+                case R.id.jie_shao_t6:
+                    Intent intent6 = new Intent();
+                    intent6.setClass(JieShaoActivity.this,JieShao6.class);
+                    startActivity(intent6);
+                    break;
+                case R.id.jie_shao_more:
+                    Intent intentm = new Intent();
+                    intentm.setClass(JieShaoActivity.this,JieShaoMore.class);
+                    startActivity(intentm);
+                    break;
+                case R.id.jie_shao_back:
+                    Intent intentb = new Intent();
+                    intentb.setClass(JieShaoActivity.this,MainActivity.class);
+                    startActivity(intentb);
                     finish();
                     break;
                 default:
@@ -94,19 +111,23 @@ public class JieShaoActivity extends Activity {
         tv1 = (TextView)findViewById(R.id.jie_shao_t1);
         tv2 = (TextView)findViewById(R.id.jie_shao_t2);
         tv3 = (TextView)findViewById(R.id.jie_shao_t3);
+        tv4 = (TextView)findViewById(R.id.jie_shao_t4);
+        tv5 = (TextView)findViewById(R.id.jie_shao_t5);
+        tv6 = (TextView)findViewById(R.id.jie_shao_t6);
+        tv_more = (TextView)findViewById(R.id.jie_shao_more);
+
         tv1.setOnClickListener(listener);
         tv2.setOnClickListener(listener);
         tv3.setOnClickListener(listener);
-        img = (ImageView)findViewById(R.id.jie_shao_back);
+        tv4.setOnClickListener(listener);
+        tv5.setOnClickListener(listener);
+        tv6.setOnClickListener(listener);
+        tv_more.setOnClickListener(listener);
+
+        img = (Button)findViewById(R.id.jie_shao_back);
         img.setOnClickListener(listener);
 
-        img.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                img.setBackgroundResource(R.color.paleturquoise);
-                return false;
-            }
-        });
+
     }
 
 
@@ -115,6 +136,7 @@ public class JieShaoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.jie_shao);
         mViewPaper = (ViewPager) findViewById(R.id.vp);
+        //沉浸式状态栏
         StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
         getID();
 
@@ -134,8 +156,6 @@ public class JieShaoActivity extends Activity {
 //        dots.add(findViewById(R.id.dot_4));
 
 
-        title = (TextView) findViewById(R.id.title);
-        title.setText(titles[0]);
 
         adapter = new ViewPagerAdapter();
         mViewPaper.setAdapter(adapter);
@@ -145,7 +165,7 @@ public class JieShaoActivity extends Activity {
 
             @Override
             public void onPageSelected(int position) {
-                title.setText(titles[position]);
+               // title.setText(titles[position]);
 //                dots.get(position).setBackgroundResource(R.drawable.dot_focused);
 //                dots.get(oldPosition).setBackgroundResource(R.drawable.dot_normal);
 

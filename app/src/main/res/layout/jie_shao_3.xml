@@ -7,6 +7,20 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <!-- 黄色标题栏以及返回按钮-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#FFCC00">
+            <Button
+                android:id="@+id/jshao3_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/goback"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
