@@ -1,95 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:background="@color/mintcream"
-        android:layout_height="fill_parent">
-        <RelativeLayout
+    <!-- 黄色标题栏以及返回按钮-->
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
+            android:layout_height="45dp"
+            android:background="#FFCC00">
+            <Button
                 android:id="@+id/jie_shao_back"
-                android:paddingLeft="25sp"
-                android:paddingRight="25sp"
-                android:layout_width="70sp"
-                android:layout_height="35sp"
-                android:src="@drawable/back"/>
-            <TextView
-                android:id="@+id/textView"
-                android:layout_centerInParent="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="师大介绍"
-                android:textSize="25sp" />
-        </RelativeLayout>
-
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/goback"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
-            android:background="@drawable/jie_shao_bj"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <!--<com.android.trail.com.adroid.huizhao.XCRoundImageView-->
-                <!--android:id="@+id/viewpager"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="325dp"-->
-                <!--android:src="@drawable/mm"/>-->
-            <FrameLayout
+            <!-- 轮播图-->
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="325dip" >
+                android:layout_height="0dp"
+                android:layout_weight="2">
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/vp"
                     android:layout_width="match_parent"
-                    android:layout_height="325sp" />
+                    android:layout_height="match_parent" />
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:gravity="center"
-                    android:orientation="vertical" >
-
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
                     <TextView
-                        android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="图片标题"
-                        android:textColor="@android:color/white" />
+                        android:text="Hebei Normal University"
+                        android:textSize="18dp"
+                        android:paddingLeft="3dp"
+                        android:textColor="@color/bg_Black"/>
+                    <TextView
+                        android:id="@+id/jie_shao_more"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text=">>more"
+                        android:textSize="13dp"
+                        android:gravity="right"
+                        android:paddingRight="5dp"/>
                 </LinearLayout>
-            </FrameLayout>
-            <TextView
-                android:id="@+id/jie_shao_t1"
-                android:onClick="pay1"
-                android:layout_marginLeft="30sp"
-                android:layout_marginTop="45sp"
-                android:textSize="25sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="学校简介"/>
-            <TextView
-                android:id="@+id/jie_shao_t2"
-                android:onClick="pay2"
-                android:layout_marginLeft="30sp"
-                android:layout_marginTop="45sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:text="历史沿革"/>
-            <TextView
-                android:id="@+id/jie_shao_t3"
-                android:onClick="pay3"
-                android:layout_marginLeft="30sp"
-                android:layout_marginTop="45sp"
-                android:layout_marginBottom="20sp"
-                android:layout_width="wrap_content"
-                android:textSize="25sp"
-                android:layout_height="wrap_content"
-                android:text="学校标志"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="30dp">
+                    <TextView
+                        android:id="@+id/jie_shao_t1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="▪ 历史沿革"
+                        android:textSize="18dp"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/jie_shao_t2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="▪ 学术研究"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/jie_shao_t3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="▪ 办学规模"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/jie_shao_t4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="▪ 学校领导"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/jie_shao_t5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="▪ 知名校友"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/jie_shao_t6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="▪ 学校校区"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>
