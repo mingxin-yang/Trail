@@ -2,10 +2,10 @@ package com.android.trail.wangyang;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.format.DateUtils;
+import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -14,8 +14,7 @@ import android.widget.ListView;
 import com.android.trail.R;
 import com.android.trail.homepage.MainActivity;
 import com.android.trail.json.BusRequestJson;
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.android.trail.pulltorefresh.RefreshableView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,17 +24,16 @@ import java.util.Map;
 public class BusStopActivity extends Activity {
 
     //返回
-    private Button bstop_back,bstop_btn1,bstop_btn2,bstop_btn3;
-    //下拉刷新
-    private PullToRefreshListView bsopPullToRefreshListView;
+    private Button bstop_back, bstop_btn1, bstop_btn2, bstop_btn3;
 
     //自定义 adapter 从数据库获取数据
-    private List<bstop> lb =new ArrayList<>();
+    private List<bstop> lb = new ArrayList<>();
     private BstopAdapter bstop_adapter;
     private ListView bstop_lv;
 
-    private BusRequestJson brj;
     List<Map<String, String>> list;
+
+    private RefreshableView refreshableView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,78 +41,52 @@ public class BusStopActivity extends Activity {
         setContentView(R.layout.activity_bus_stop);
 
         //监听
-        bstop_back = (Button)findViewById(R.id.bstop_back);
-        bstop_btn1 = (Button)findViewById(R.id.bstop_btn1);
-        bstop_btn2 = (Button)findViewById(R.id.bstop_btn2);
-        bstop_btn3 = (Button)findViewById(R.id.bstop_btn3);
+        bstop_back = (Button) findViewById(R.id.bstop_back);
+        bstop_btn1 = (Button) findViewById(R.id.bstop_btn1);
+        bstop_btn2 = (Button) findViewById(R.id.bstop_btn2);
+        bstop_btn3 = (Button) findViewById(R.id.bstop_btn3);
         bstop_back.setOnClickListener(bstop_onclick);
         bstop_btn1.setOnClickListener(bstop_onclick);
         bstop_btn2.setOnClickListener(bstop_onclick);
         bstop_btn3.setOnClickListener(bstop_onclick);
 
-
-        //下拉刷新
-        bsopPullToRefreshListView = (PullToRefreshListView) findViewById(R.id.pull_to_refresh_listview_bstop);
-        bsopPullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
+        bstop_lv = (ListView) findViewById(R.id.listview_bstop);
+        refreshableView = (RefreshableView) findViewById(R.id.refreshable_view);
+        refreshableView.setOnRefreshListener(new RefreshableView.PullToRefreshListener() {
             @Override
-            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
-                String btsoplabel = DateUtils.formatDateTime(getApplicationContext(), System.currentTimeMillis(),
-                        DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_ALL);
-                new bstopGetDataTask().execute();
-                refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(btsoplabel);
+            public void onRefresh() {
+                try {
+                    Thread.sleep(3000);
+                    new Thread(networkTask).start();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                refreshableView.finishRefreshing();
             }
-        });
-        getData();
-        bstop_adapter = new BstopAdapter(this,lb);
-        bstop_lv = bsopPullToRefreshListView.getRefreshableView();
-        bstop_lv.setAdapter(bstop_adapter);
+        }, 0);
+
+        new Thread(networkTask).start();
+
+        //item的点击事件
         bstop_lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent bstop_btn_intent= new Intent();
+                Intent bstop_btn_intent = new Intent();
                 bstop_btn_intent.setClass(BusStopActivity.this, MoveList.class);
                 startActivity(bstop_btn_intent);
             }
         });
     }
 
-    private void getData(){
-        final Handler handler = new Handler() {
-            public void handleMessage(android.os.Message msg) {
-                switch (msg.what) {
-                    case 0:
-                        for(int i = 0;i < list.size();i++){
-                            lb.add(new bstop(Integer.valueOf(list.get(i).get("id")).intValue(),list.get(i).get("busimage"),list.get(i).get("busnumber"), list.get(i).get("firsttime"),list.get(i).get("enftime"),list.get(i).get("charge")));
-                        }
-                        break;
-                    default:
-                        break;
-                }
-            }
-        };
-        //获取网络资源
-        final String path = "http://10.7.88.7:8990/bus/json";//
-        new Thread() {                           //创建子线程进行网络访问的操作
-            public void run() {
-                try {
-                    list = brj.getJSONObject(path);
-                    handler.sendEmptyMessage(0);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }.start();
-    }
 
-
-    public View.OnClickListener bstop_onclick =new View.OnClickListener() {
+    public View.OnClickListener bstop_onclick = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent bstop_btn_intent= new Intent();
+            Intent bstop_btn_intent = new Intent();
             bstop_btn_intent.setClass(BusStopActivity.this, MoveList.class);
-            switch (v.getId()){
+            switch (v.getId()) {
                 case R.id.bstop_back:
-                    Intent bstop_back_intent= new Intent();
+                    Intent bstop_back_intent = new Intent();
                     bstop_back_intent.setClass(BusStopActivity.this, MainActivity.class);
                     startActivity(bstop_back_intent);
                     finish();
@@ -125,33 +97,53 @@ public class BusStopActivity extends Activity {
                 case R.id.bstop_btn2:
                     startActivity(bstop_btn_intent);
                     break;
-                case R.id.bstop_btn3:;
+                case R.id.bstop_btn3:
+                    ;
                     startActivity(bstop_btn_intent);
                     break;
             }
         }
     };
+    Handler handler =new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            Bundle data = msg.getData();
+            String val = data.getString("value");
+            Log.i("mylog", "请求结果为-->" + val);
+            // UI界面的更新等相关操作
+            bstop_adapter = new BstopAdapter(getBaseContext(),lb);
+            bstop_lv.setAdapter(bstop_adapter);
+        }
+    };
 
-
-    private class bstopGetDataTask extends AsyncTask<Void, Void, Void> {
+    /**
+     * 网络操作相关的子线程
+     */
+    Runnable networkTask = new Runnable() {
 
         @Override
-        protected Void doInBackground(Void... params) {
+        public void run() {
+            // TODO
+            //获取网络资源
+            final String path = "http://10.7.88.7:8990/bus/json";
             try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
+                list = BusRequestJson.getJSONObject(path);
+                if (lb.size() != 0) {
+                    lb.clear();
+                }
+                for(int i = 0;i < list.size();i++){
+                    lb.add(new bstop(Integer.valueOf(list.get(i).get("id")).intValue(),list.get(i).get("busimage"),list.get(i).get("busnumber"), list.get(i).get("firsttime"),list.get(i).get("enftime"),list.get(i).get("charge")));
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            return null;
+            // 在这里进行 http request.网络请求相关操
+            Message msg = new Message();
+            Bundle data = new Bundle();
+            data.putString("value", "请求结果");
+            msg.setData(data);
+            handler.sendMessage(msg);
         }
-        @Override
-        protected void onPostExecute(Void result) {
-            // TODO 自动生成的方法存根
-            super.onPostExecute(result);
-            getData();
-            // 通知数据改变了
-            bstop_adapter.notifyDataSetChanged();
-            // 加载完成后停止刷新
-            bsopPullToRefreshListView.onRefreshComplete();
-        }
-    }
+    };
 }
