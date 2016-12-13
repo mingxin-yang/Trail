@@ -71,7 +71,7 @@
                     android:textColor="#7597B3" />
             </LinearLayout>
         </RelativeLayout>
-        <RelativeLayout
+<!--        <RelativeLayout
             android:id="@+id/third_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -95,7 +95,7 @@
                     android:text="随手记"
                     android:textColor="#7597B3" />
             </LinearLayout>
-        </RelativeLayout>
+        </RelativeLayout>-->
         <RelativeLayout
             android:id="@+id/fourth_layout"
             android:layout_width="0dp"

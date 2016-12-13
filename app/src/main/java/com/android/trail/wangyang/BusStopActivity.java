@@ -2,7 +2,6 @@ package com.android.trail.wangyang;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,8 +20,6 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import qiu.niorgai.StatusBarCompat;
 
 
 public class BusStopActivity extends Activity {
@@ -96,7 +93,7 @@ public class BusStopActivity extends Activity {
             }
         };
         //获取网络资源
-        final String path = "http://10.7.88.7:8989/bus/json";//
+        final String path = "http://10.7.88.7:8990/bus/json";//
         new Thread() {                           //创建子线程进行网络访问的操作
             public void run() {
                 try {
