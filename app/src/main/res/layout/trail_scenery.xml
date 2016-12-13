@@ -4,6 +4,14 @@
     android:layout_height="match_parent"
     android:background="@drawable/scency_f_b1"
     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/title"/>
+    </LinearLayout>
+
+
     <com.baidu.mapapi.map.TextureMapView
         android:id="@+id/bmapView"
         android:layout_width="match_parent"
