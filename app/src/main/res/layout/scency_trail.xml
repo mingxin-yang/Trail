@@ -4,6 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFCC00">
+        <Button
+            android:id="@+id/fanhui"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/goback"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
     <com.baidu.mapapi.map.TextureMapView
         android:id="@+id/bmapView"
         android:layout_width="fill_parent"

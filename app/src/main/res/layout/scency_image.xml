@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/scency_f_b1">
 
+    <include layout="@layout/title"/>
+
     <ImageSwitcher
         android:id="@+id/imageswitcher"
         android:layout_width="match_parent"
