@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.format.DateUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -38,13 +39,12 @@ public class BusStopActivity extends Activity {
 
     private BusRequestJson brj;
     List<Map<String, String>> list;
-    private String url = "http://10.7.88.6:8989/bus/json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bus_stop);
-        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
+
         //监听
         bstop_back = (Button)findViewById(R.id.bstop_back);
         bstop_btn1 = (Button)findViewById(R.id.bstop_btn1);
@@ -55,6 +55,7 @@ public class BusStopActivity extends Activity {
         bstop_btn2.setOnClickListener(bstop_onclick);
         bstop_btn3.setOnClickListener(bstop_onclick);
 
+
         //下拉刷新
         bsopPullToRefreshListView = (PullToRefreshListView) findViewById(R.id.pull_to_refresh_listview_bstop);
         bsopPullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
@@ -62,26 +63,41 @@ public class BusStopActivity extends Activity {
             public void onRefresh(PullToRefreshBase<ListView> refreshView) {
                 String btsoplabel = DateUtils.formatDateTime(getApplicationContext(), System.currentTimeMillis(),
                         DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_ALL);
-                refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(btsoplabel);
                 new bstopGetDataTask().execute();
+                refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(btsoplabel);
             }
         });
+        getData();
+        bstop_adapter = new BstopAdapter(this,lb);
+        bstop_lv = bsopPullToRefreshListView.getRefreshableView();
+        bstop_lv.setAdapter(bstop_adapter);
+        bstop_lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent bstop_btn_intent= new Intent();
+                bstop_btn_intent.setClass(BusStopActivity.this, MoveList.class);
+                startActivity(bstop_btn_intent);
+            }
+        });
+    }
 
+    private void getData(){
         final Handler handler = new Handler() {
             public void handleMessage(android.os.Message msg) {
                 switch (msg.what) {
                     case 0:
-                        getData(list);
+                        for(int i = 0;i < list.size();i++){
+                            lb.add(new bstop(Integer.valueOf(list.get(i).get("id")).intValue(),list.get(i).get("busimage"),list.get(i).get("busnumber"), list.get(i).get("firsttime"),list.get(i).get("enftime"),list.get(i).get("charge")));
+                        }
                         break;
                     default:
                         break;
                 }
             }
         };
-
         //获取网络资源
-        final String path = "http://10.7.88.6:8989/bus/json";//
-        new Thread() {//创建子线程进行网络访问的操作
+        final String path = "http://10.7.88.7:8989/bus/json";//
+        new Thread() {                           //创建子线程进行网络访问的操作
             public void run() {
                 try {
                     list = brj.getJSONObject(path);
@@ -91,27 +107,8 @@ public class BusStopActivity extends Activity {
                 }
             }
         }.start();
-        bstop_adapter = new BstopAdapter(this,lb);
-        bstop_lv = bsopPullToRefreshListView.getRefreshableView();
-        bstop_lv.setAdapter(bstop_adapter);
     }
 
-    private void getData(List<Map<String, String>> list) {
-        for(int i = 0;i < list.size();i++){
-            lb.add(new bstop(Integer.valueOf(list.get(i).get("id")).intValue(),
-                    list.get(i)
-                            .get("busimage"),
-                    list.get(i)
-                            .get("busnumber"),
-                    list.get(i)
-                            .get("firsttime"),
-                    list.get(i)
-                            .get("enftime"),
-                    list.get(i)
-                            .get("charge")));
-        }
-//        lb.add(new bstop(0,"http://img.dongqiudi.com/uploads/avatar/2014/10/20/8MCTb0WBFG_thumb_1413805282863.jpg","ssss","1.00","12.00","1"));
-    }
 
     public View.OnClickListener bstop_onclick =new View.OnClickListener() {
         @Override
@@ -151,8 +148,13 @@ public class BusStopActivity extends Activity {
         }
         @Override
         protected void onPostExecute(Void result) {
-            bsopPullToRefreshListView.onRefreshComplete();
+            // TODO 自动生成的方法存根
             super.onPostExecute(result);
+            getData();
+            // 通知数据改变了
+            bstop_adapter.notifyDataSetChanged();
+            // 加载完成后停止刷新
+            bsopPullToRefreshListView.onRefreshComplete();
         }
     }
 }
