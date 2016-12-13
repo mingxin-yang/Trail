@@ -77,14 +77,14 @@
                         android:id="@+id/jie_shao_t2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="▪ 学术研究"
+                        android:text="▪ 学校简介"
                         android:textSize="18dp" />
                     <TextView
                         android:layout_marginTop="10dp"
                         android:id="@+id/jie_shao_t3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="▪ 办学规模"
+                        android:text="▪ 学术研究"
                         android:textSize="18dp" />
                     <TextView
                         android:layout_marginTop="10dp"
