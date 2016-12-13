@@ -20,5 +20,20 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="5dp"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  知名校友"
+            android:textSize="35sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      学校校友中有老一代革命家邓颖超、刘清扬、郭隆真、杨秀峰、康世恩、荣高棠等，有学界名人梁漱溟、张申府、汤用彤等，有中科院院士严陆光、郝柏林、李树深  等，也有许绍发、蔡振华等一批体育界精英。"
+            android:textSize="20sp"/>
 
+    </LinearLayout>
 </LinearLayout>

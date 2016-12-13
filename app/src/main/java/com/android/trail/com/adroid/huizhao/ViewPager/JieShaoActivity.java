@@ -61,12 +61,12 @@ public class JieShaoActivity extends Activity {
             switch (view.getId()){
                 case R.id.jie_shao_t1:
                     Intent intent1 = new Intent();
-                    intent1.setClass(JieShaoActivity.this,JieShao1.class);
+                    intent1.setClass(JieShaoActivity.this,JieShao2.class);
                     startActivity(intent1);
                     break;
                 case R.id.jie_shao_t2:
                     Intent intent2 = new Intent();
-                    intent2.setClass(JieShaoActivity.this,JieShao2.class);
+                    intent2.setClass(JieShaoActivity.this,JieShao1.class);
                     startActivity(intent2);
                     break;
                 case R.id.jie_shao_t3:
