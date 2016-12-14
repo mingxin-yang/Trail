@@ -2,6 +2,7 @@ package com.android.trail.map;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,15 +14,31 @@ import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
+import com.baidu.mapapi.map.MapPoi;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.OverlayOptions;
+import com.baidu.mapapi.map.PolygonOptions;
+import com.baidu.mapapi.map.PolylineOptions;
+import com.baidu.mapapi.map.Stroke;
 import com.baidu.mapapi.map.TextureMapView;
 import com.baidu.mapapi.map.UiSettings;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.model.LatLngBounds;
+import com.baidu.mapapi.search.core.SearchResult;
+import com.baidu.mapapi.search.geocode.GeoCodeResult;
+import com.baidu.mapapi.search.geocode.GeoCoder;
+import com.baidu.mapapi.search.geocode.OnGetGeoCoderResultListener;
+import com.baidu.mapapi.search.geocode.ReverseGeoCodeOption;
+import com.baidu.mapapi.search.geocode.ReverseGeoCodeResult;
+import com.baidu.mapapi.search.route.DrivingRoutePlanOption;
+import com.baidu.mapapi.search.route.PlanNode;
+import com.baidu.mapapi.search.route.RoutePlanSearch;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import qiu.niorgai.StatusBarCompat;
 
@@ -33,6 +50,9 @@ public class Map extends Activity{
     private TextureMapView mMapView=null;
     private BaiduMap mBaiduMap=null;
     private UiSettings mUiSettings = null;
+    private BitmapDescriptor bitmap;
+    private String address= "";
+    private RoutePlanSearch mSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +63,7 @@ public class Map extends Activity{
         // 获取地图控件引用
         initBaiduMap();
         addMarkerOverlay();
+        addPolylineOverlay();
 
         ImageView imageView=(ImageView)findViewById(R.id.rate_img);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +74,57 @@ public class Map extends Activity{
             }
         });
 
+//        bitmap = BitmapDescriptorFactory.fromResource(R.drawable.marker);
+//        mBaiduMap.setOnMapClickListener(new BaiduMap.OnMapClickListener() {
+//
+//            @Override
+//            public boolean onMapPoiClick(MapPoi arg0) {
+//                // TODO Auto-generated method stub
+//                return false;
+//            }
+//
+//            //此方法就是点击地图监听
+//            @Override
+//            public void onMapClick(LatLng latLng) {
+//                //获取经纬度
+//                double latitude = latLng.latitude;
+//                double longitude = latLng.longitude;
+//                System.out.println("latitude=" + latitude + ",longitude=" + longitude);
+//                //先清除图层
+//                mBaiduMap.clear();
+//                // 定义Maker坐标点
+//                LatLng point = new LatLng(latitude, longitude);
+//                // 构建MarkerOption，用于在地图上添加Marker
+//                MarkerOptions options = new MarkerOptions().position(point)
+//                        .icon(bitmap);
+//                // 在地图上添加Marker，并显示
+//                mBaiduMap.addOverlay(options);
+//                //实例化一个地理编码查询对象
+//                GeoCoder geoCoder = GeoCoder.newInstance();
+//                //设置反地理编码位置坐标
+//                ReverseGeoCodeOption op = new ReverseGeoCodeOption();
+//                op.location(latLng);
+//                //发起反地理编码请求(经纬度->地址信息)
+//                geoCoder.reverseGeoCode(op);
+//                geoCoder.setOnGetGeoCodeResultListener(new OnGetGeoCoderResultListener() {
+//
+//                    @Override
+//                    public void onGetReverseGeoCodeResult(ReverseGeoCodeResult arg0) {
+//                        //获取点击的坐标地址
+//                        address = arg0.getAddress();
+//                        System.out.println("address="+address);
+//                    }
+//
+//                    @Override
+//                    public void onGetGeoCodeResult(GeoCodeResult arg0) {
+//                    }
+//                });
+//            }
+//        });
+
+
     }
+
 
     private void initBaiduMap() {
         mMapView = (TextureMapView) findViewById(R.id.amapView);
@@ -156,6 +227,31 @@ public class Map extends Activity{
         Marker marker = (Marker) mBaiduMap.addOverlay(option);
     }
 
+
+    /**
+     * 添加折线覆盖物
+     */
+    private void addPolylineOverlay() {
+        // 构造折线点坐标
+        List<LatLng> points = new ArrayList<LatLng>();
+        points.add(new LatLng(38.006936,114.519556));
+        points.add(new LatLng(38.006989,114.53595));
+        points.add(new LatLng(37.998918,114.535932));
+        points.add(new LatLng(37.998818,114.519781));
+        points.add(new LatLng(38.006936,114.519556));
+        // 构建分段颜色索引数组
+        List<Integer> colors = new ArrayList<>();
+        colors.add(Integer.valueOf(Color.YELLOW));
+        colors.add(Integer.valueOf(Color.YELLOW));
+        colors.add(Integer.valueOf(Color.YELLOW));
+        colors.add(Integer.valueOf(Color.YELLOW));
+        OverlayOptions polyline = new PolylineOptions()
+                .width(7)              // 宽度
+                .colorsValues(colors)   // 颜色信息
+                .points(points);        // 点信息
+        // 添加在地图中
+        mBaiduMap.addOverlay(polyline);
+    }
 
     @Override
     protected void onDestroy() {
