@@ -46,7 +46,7 @@ public class secndFrag extends Fragment implements AdapterView.OnItemSelectedLis
             @Override
             public void onClick(View v) {
                 Intent i= new Intent();
-                i.setClass(getActivity(), scencyShare.class);
+                i.setClass(getContext(), scencyShare.class);
                 startActivity(i);
             }
         });
