@@ -2,13 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <!-- 黄色标题栏以及返回按钮-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFCC00">
+        <Button
+            android:id="@+id/jshao2_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/goback"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15sp"
         android:textSize="25sp"
-        android:text="历史沿革"/>
+        android:text="学术研究"/>
 
     <com.android.trail.com.adroid.huizhao.DragImageView
         android:id="@+id/div_main"
@@ -17,5 +31,4 @@
         android:layout_height="match_parent"
         android:scaleType="fitXY"
         />
-
 </LinearLayout>

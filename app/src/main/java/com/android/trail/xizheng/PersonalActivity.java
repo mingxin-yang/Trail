@@ -4,17 +4,20 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.trail.R;
+import com.android.trail.homepage.MainActivity;
 import com.android.trail.xizheng.listener.OnDoubleClickListener;
 
 import qiu.niorgai.StatusBarCompat;
@@ -25,6 +28,7 @@ import qiu.niorgai.StatusBarCompat;
 
 public class PersonalActivity extends Activity {
     private ImageView imge1;
+    private Button pback;
 
     private String[] mVals = new String[] { "苹果手机", "笔记本电脑", "电饭煲 ", "腊肉",
             "特产", "剃须刀", "宝宝", "康佳" , "腊肉",
@@ -39,6 +43,18 @@ public class PersonalActivity extends Activity {
         mInflater = LayoutInflater.from(this);
         mFlowLayout = (FlowLayout) findViewById(R.id.id_flowlayout);
         initData();
+
+        //返回
+        pback = (Button)findViewById(R.id.person_back);
+        pback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pback = new Intent();
+                pback.setClass(PersonalActivity.this, MainActivity.class);
+                startActivity(pback);
+                finish();
+            }
+        });
 
         //获取屏幕比例
         WindowManager wm = (WindowManager)PersonalActivity.this.getSystemService(Context.WINDOW_SERVICE);

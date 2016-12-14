@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //沉浸式状态栏实现
         StatusBarCompat.translucentStatusBar(this,false);
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()

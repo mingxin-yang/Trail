@@ -40,6 +40,7 @@ public class First extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+        //沉浸式状态栏实现
         StatusBarCompat.translucentStatusBar(this,false);
         assignViews();
         initData();

@@ -7,42 +7,66 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
+        <!-- 黄色标题栏以及返回按钮-->
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15sp"
-            android:textSize="45sp"
-            android:text="学校标志"/>
+            android:layout_height="45dp"
+            android:background="#FFCC00">
+            <Button
+                android:id="@+id/jshao3_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/goback"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"/>
 
+        </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:text="校名"/>
-        <ImageView
+            android:textSize="35sp"
+            android:text="学术研究"/>
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/xiao_ming"/>
+            android:text="  科研建设"
+            android:textSize="30sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="       2002年至2008年期间，学校共获得国家级资助项目143项（自然科学项目112项，社会科学项目31项），出版学术著作664部，公开发表学术论文7929篇，其中456篇被三大索引收录。2002年至2009年期间，学校获得省部级以上科研成果奖励126项（政府奖），其中一等奖12项、二等奖35项、三等奖79项。
+        截至2015年，科研经费快速增长，由2002年的610万元增长到2014年的10033万元。年承担国家基金项目数量位居省内高校前列，承担了一批国家“973”、“863”计划、国家自然科学基金重点项目、国家社科基金重大招标项目、国家社科基金重点项目、国家清史纂修工程主体类项目等一批具有较大影响的科研项目。2010年，孙大业院士课题组获国家自然科学二等奖，填补了河北省的空白；蒋春澜教授指导的博士论文进入“全国百篇优博”行列。一些自然科学研究成果发表在Science、Nature等国际权威学术期刊上，人文社会科学研究成果分获全国高校优秀人文社科成果奖、国家辞书奖、鲁迅文学奖等。"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  学术资源"
+            android:textSize="30sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="      馆藏资源"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      河北师范大学图书馆由原河北师范大学图书馆、河北师范学院图书馆、河北教育学院图书馆、河北职业技术学院图书馆合并而成。截至2015年，图书馆总建筑面积4.5万平方米，阅览座位近5000席，馆藏文献总量300余万册，是一所以师范教育为主的综合性现代化大学图书馆。"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="      大学学报"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="《河北师范大学学报》包括三个版：哲学社会科学版，自然科学版，教育科学版，均为双月刊，由河北师范大学主办，国内外公开发行。其前身为《教学与研究》，1981年经河北省新闻出版局、中共河北省委宣传部批准，正式改为河北师范大学学报，公开发行，刊号为（80）冀字005号。1998年全国期刊整顿中，学报获得国内统一刊号CN 13 - 1061 / N，国际标准连续出版物号ISSN 1000 – 5854，季刊。"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:text="校训"/>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/xiao_xun"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:text="校徽"/>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/xiao_hui"/>
 
     </LinearLayout>
 
