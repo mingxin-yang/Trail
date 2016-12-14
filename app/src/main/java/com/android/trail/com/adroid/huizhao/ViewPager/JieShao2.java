@@ -2,13 +2,16 @@ package com.android.trail.com.adroid.huizhao.ViewPager;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import com.android.trail.R;
 import com.android.trail.com.adroid.huizhao.BitmapUtil;
@@ -30,11 +33,25 @@ public class JieShao2 extends Activity {
 
     private ViewTreeObserver viewTreeObserver;
 
+    private Button back;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.jie_shao_2);
         StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
+
+        back = (Button)findViewById(R.id.jshao2_back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent back = new Intent();
+                back.setClass(JieShao2.this,JieShaoActivity.class);
+                startActivity(back);
+                finish();
+            }
+        });
+
 /** 获取可見区域高度 **/
         WindowManager manager = getWindowManager();
         window_width = manager.getDefaultDisplay().getWidth();

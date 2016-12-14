@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- 黄色标题栏以及返回按钮-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFCC00">
+        <Button
+            android:id="@+id/person_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/goback"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/m_framelayout"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -380,6 +399,7 @@
 
         </RelativeLayout>
 
-    </FrameLayout>
-
+    </LinearLayout>
 </ScrollView>
+
+</LinearLayout>

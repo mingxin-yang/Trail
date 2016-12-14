@@ -43,6 +43,7 @@ public class Map extends Activity{
         // 获取地图控件引用
         initBaiduMap();
         addMarkerOverlay();
+        addElseMarker();
 
         ImageView imageView=(ImageView)findViewById(R.id.rate_img);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +69,7 @@ public class Map extends Activity{
         if (child != null && (child instanceof ImageView || child instanceof ZoomControls)) {
             child.setVisibility(View.INVISIBLE);
         }
-        MapStatusUpdate msu = MapStatusUpdateFactory.zoomTo(17.0f);
+        MapStatusUpdate msu = MapStatusUpdateFactory.zoomTo(19.0f);
         mBaiduMap.setMapStatus(msu);
         mUiSettings = mBaiduMap.getUiSettings();
 
@@ -151,6 +152,25 @@ public class Map extends Activity{
                 .position(point)    // 设置marker的位置
                 .draggable(true)    // 设置是否允许拖拽
                 .title("商业区")       // 设置marker的title
+                .icon(bitmap);      // 必须设置marker图标
+        //在地图上添加Marker，并显示
+        Marker marker = (Marker) mBaiduMap.addOverlay(option);
+    }
+    private void addElseMarker() {
+        // 定义Maker坐标点
+        LatLng point = new LatLng(38.002053,114.526945);
+        // 构建Marker图标
+        BitmapDescriptor bitmap = BitmapDescriptorFactory
+                .fromResource(R.drawable.marker);
+        //使用bundle来标识不同marker
+        Bundle bunshop = new Bundle();
+        bunshop.putInt("short",1);
+        // 构建MarkerOption，用于在地图上添加Marker
+        OverlayOptions option = new MarkerOptions()
+                .extraInfo(bunshop)   //设置marker标识
+                .position(point)    // 设置marker的位置
+                .draggable(true)    // 设置是否允许拖拽
+                .title("公教楼")       // 设置marker的title
                 .icon(bitmap);      // 必须设置marker图标
         //在地图上添加Marker，并显示
         Marker marker = (Marker) mBaiduMap.addOverlay(option);
