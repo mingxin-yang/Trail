@@ -42,8 +42,9 @@ public class Map extends Activity{
         StatusBarCompat.translucentStatusBar(this,false);
         // 获取地图控件引用
         initBaiduMap();
-        addMarkerOverlay();
-        addElseMarker();
+        addWastMarkerOverlay();
+        addEastMarkerOverlay();
+        addSHMarkerOverlay();
 
         ImageView imageView=(ImageView)findViewById(R.id.rate_img);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -89,13 +90,29 @@ public class Map extends Activity{
                 // 点击处理
                 int value = marker.getExtraInfo().getInt("short");
                 switch (value){
+                    case 0:
+                        Toast.makeText(Map.this,
+                                marker.getTitle(),
+                                Toast.LENGTH_SHORT)
+                                .show();
+                        Intent intent0=new Intent(Map.this,Map_list.class);
+                        startActivity(intent0);
+                        break;
                     case 1:
                         Toast.makeText(Map.this,
                                 marker.getTitle(),
                                 Toast.LENGTH_SHORT)
                                 .show();
-                        Intent intent=new Intent(Map.this,Map_list.class);
-                        startActivity(intent);
+                        Intent intent1=new Intent(Map.this,Map_list.class);
+                        startActivity(intent1);
+                        break;
+                    case 2:
+                        Toast.makeText(Map.this,
+                                marker.getTitle(),
+                                Toast.LENGTH_SHORT)
+                                .show();
+                        Intent intent2=new Intent(Map.this,Map_list.class);
+                        startActivity(intent2);
                         break;
                 }
                 return false;
@@ -137,7 +154,10 @@ public class Map extends Activity{
     /**
      * 添加标注覆盖物
      */
-    private void addMarkerOverlay() {
+    /**
+     * 添加师生活动中心标注覆盖物
+     */
+    private void addSHMarkerOverlay() {
         // 定义Maker坐标点
         LatLng point = new LatLng(38.001797,114.524474);
         // 构建Marker图标
@@ -145,20 +165,23 @@ public class Map extends Activity{
                 .fromResource(R.drawable.marker);
         //使用bundle来标识不同marker
         Bundle bunshop = new Bundle();
-        bunshop.putInt("short",1);
+        bunshop.putInt("short",0);
         // 构建MarkerOption，用于在地图上添加Marker
         OverlayOptions option = new MarkerOptions()
                 .extraInfo(bunshop)   //设置marker标识
                 .position(point)    // 设置marker的位置
                 .draggable(true)    // 设置是否允许拖拽
-                .title("商业区")       // 设置marker的title
+                .title("师生活动中心")       // 设置marker的title
                 .icon(bitmap);      // 必须设置marker图标
         //在地图上添加Marker，并显示
         Marker marker = (Marker) mBaiduMap.addOverlay(option);
     }
-    private void addElseMarker() {
+    /**
+     * 添加d东门标注覆盖物
+     */
+    private void addEastMarkerOverlay() {
         // 定义Maker坐标点
-        LatLng point = new LatLng(38.002053,114.526945);
+        LatLng point = new LatLng(38.002408,114.520352);
         // 构建Marker图标
         BitmapDescriptor bitmap = BitmapDescriptorFactory
                 .fromResource(R.drawable.marker);
@@ -170,7 +193,29 @@ public class Map extends Activity{
                 .extraInfo(bunshop)   //设置marker标识
                 .position(point)    // 设置marker的位置
                 .draggable(true)    // 设置是否允许拖拽
-                .title("公教楼")       // 设置marker的title
+                .title("东门商业区")       // 设置marker的title
+                .icon(bitmap);      // 必须设置marker图标
+        //在地图上添加Marker，并显示
+        Marker marker = (Marker) mBaiduMap.addOverlay(option);
+    }
+    /**
+     * 添加西门标注覆盖物
+     */
+    private void addWastMarkerOverlay() {
+        // 定义Maker坐标点
+        LatLng point = new LatLng(38.002451,114.533898);
+        // 构建Marker图标
+        BitmapDescriptor bitmap = BitmapDescriptorFactory
+                .fromResource(R.drawable.marker);
+        //使用bundle来标识不同marker
+        Bundle bunshop = new Bundle();
+        bunshop.putInt("short",2);
+        // 构建MarkerOption，用于在地图上添加Marker
+        OverlayOptions option = new MarkerOptions()
+                .extraInfo(bunshop)   //设置marker标识
+                .position(point)    // 设置marker的位置
+                .draggable(true)    // 设置是否允许拖拽
+                .title("西门商业区")       // 设置marker的title
                 .icon(bitmap);      // 必须设置marker图标
         //在地图上添加Marker，并显示
         Marker marker = (Marker) mBaiduMap.addOverlay(option);
