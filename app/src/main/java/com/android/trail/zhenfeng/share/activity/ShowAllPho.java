@@ -1,6 +1,4 @@
-package com.android.trail.map.activity;
-
-import java.util.ArrayList;
+package com.android.trail.zhenfeng.share.activity;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -26,6 +24,8 @@ import com.android.trail.map.util.ImageItem;
 import com.android.trail.map.util.PublicWay;
 import com.android.trail.map.util.Res;
 
+import java.util.ArrayList;
+
 import qiu.niorgai.StatusBarCompat;
 
 /**
@@ -35,7 +35,7 @@ import qiu.niorgai.StatusBarCompat;
  * @QQ:595163260
  * @version 2014年10月18日  下午11:49:10
  */
-public class ShowAllPhoto extends Activity {
+public class ShowAllPho extends Activity {
 	private GridView gridView;
 	private ProgressBar progressBar;
 	private AlbumGridViewAdapter gridImageAdapter;
@@ -91,7 +91,7 @@ public class ShowAllPhoto extends Activity {
 		public void onClick(View v) {
 			if (Bimp.tempSelectBitmap.size() > 0) {
 				intent.putExtra("position", "2");
-				intent.setClass(ShowAllPhoto.this, GalleryActivity.class);
+				intent.setClass(ShowAllPho.this, GalleryActivi.class);
 				startActivity(intent);
 			}
 		}
@@ -106,7 +106,7 @@ public class ShowAllPhoto extends Activity {
 		}
 
 		public void onClick(View v) {
-			intent.setClass(ShowAllPhoto.this, ImageFile.class);
+			intent.setClass(ShowAllPho.this, ImageFi.class);
 			startActivity(intent);
 		}
 
@@ -143,7 +143,7 @@ public class ShowAllPhoto extends Activity {
 						if (Bimp.tempSelectBitmap.size() >= PublicWay.num&&isChecked) {
 							button.setVisibility(View.GONE);
 							toggleButton.setChecked(false);
-							Toast.makeText(ShowAllPhoto.this, Res.getString("only_choose_num"), 200)
+							Toast.makeText(ShowAllPho.this, Res.getString("only_choose_num"), 200)
 									.show();
 							return;
 						}
@@ -212,7 +212,7 @@ public class ShowAllPhoto extends Activity {
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
 			this.finish();
-			intent.setClass(ShowAllPhoto.this, ImageFile.class);
+			intent.setClass(ShowAllPho.this, ImageFi.class);
 			startActivity(intent);
 		}
 

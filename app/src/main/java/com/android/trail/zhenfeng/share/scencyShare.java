@@ -1,12 +1,6 @@
 package com.android.trail.zhenfeng.share;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-
-import com.android.trail.R;
-import com.android.trail.zhenfeng.hzfLei.AndroidShare;
 
 /**
  * Created by 20160316 on 2016/12/13.
@@ -14,7 +8,7 @@ import com.android.trail.zhenfeng.hzfLei.AndroidShare;
 
 public class scencyShare extends AppCompatActivity {
 
-    private Button buShare;
+  /*  private Button buShare;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +26,7 @@ public class scencyShare extends AppCompatActivity {
                 as.show();
             }
         });
-
+*/
       /*  fanhui = (Button)findViewById(R.id.fanhui);
 
         fanhui.setOnClickListener(new View.OnClickListener() {
@@ -43,5 +37,5 @@ public class scencyShare extends AppCompatActivity {
             }
         });*/
 
-    }
+  //  }
 }
