@@ -9,9 +9,9 @@ android {
     signingConfigs {
         config {
             keyAlias 'key'
-            keyPassword '123456'
-            storeFile file('E:/android/key/sdkey/key.jks')
-            storePassword '123456'
+            keyPassword 'daohaode'
+            storeFile file('D:/Users/key.jks')
+            storePassword 'daohaode'
         }
     }
     compileSdkVersion 24
