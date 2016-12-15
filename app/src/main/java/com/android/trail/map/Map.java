@@ -10,6 +10,8 @@ import android.widget.Toast;
 import android.widget.ZoomControls;
 
 import com.android.trail.R;
+import com.android.trail.map.zoom.Map_list_east;
+import com.android.trail.map.zoom.Map_list_west;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
@@ -108,7 +110,7 @@ public class Map extends Activity{
                                 marker.getTitle(),
                                 Toast.LENGTH_SHORT)
                                 .show();
-                        Intent intent1=new Intent(Map.this,Map_list.class);
+                        Intent intent1=new Intent(Map.this,Map_list_east.class);
                         startActivity(intent1);
                         break;
                     case 2:
@@ -116,7 +118,7 @@ public class Map extends Activity{
                                 marker.getTitle(),
                                 Toast.LENGTH_SHORT)
                                 .show();
-                        Intent intent2=new Intent(Map.this,Map_list.class);
+                        Intent intent2=new Intent(Map.this,Map_list_west.class);
                         startActivity(intent2);
                         break;
                 }
