@@ -110,7 +110,7 @@ public class Map extends Activity{
                                 marker.getTitle(),
                                 Toast.LENGTH_SHORT)
                                 .show();
-                        Intent intent1=new Intent(Map.this,Map_list_east.class);
+                        Intent intent1=new Intent(Map.this,Map_list.class);
                         startActivity(intent1);
                         break;
                     case 2:
@@ -118,7 +118,7 @@ public class Map extends Activity{
                                 marker.getTitle(),
                                 Toast.LENGTH_SHORT)
                                 .show();
-                        Intent intent2=new Intent(Map.this,Map_list_west.class);
+                        Intent intent2=new Intent(Map.this,Map_list.class);
                         startActivity(intent2);
                         break;
                 }

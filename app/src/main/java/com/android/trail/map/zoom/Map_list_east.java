@@ -1,6 +1,5 @@
 package com.android.trail.map.zoom;
 
-import android.support.v7.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
