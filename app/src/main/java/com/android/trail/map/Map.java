@@ -2,6 +2,7 @@ package com.android.trail.map;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,6 +19,7 @@ import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.OverlayOptions;
+import com.baidu.mapapi.map.PolylineOptions;
 import com.baidu.mapapi.map.TextureMapView;
 import com.baidu.mapapi.map.UiSettings;
 import com.baidu.mapapi.model.LatLng;
@@ -43,6 +45,10 @@ public class Map extends Activity{
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.map);
         StatusBarCompat.translucentStatusBar(this,false);
+
+
+
+
         // 获取地图控件引用
         initBaiduMap();
         addWastMarkerOverlay();
@@ -59,6 +65,7 @@ public class Map extends Activity{
         });
 
     }
+
 
     private void initBaiduMap() {
         mMapView = (TextureMapView) findViewById(R.id.amapView);

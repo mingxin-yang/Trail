@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\shixun\Trail\PullToRefresh\assets"/><source path="D:\shixun\Trail\PullToRefresh\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\shixun\Trail\PullToRefresh\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="F:\Java\Android\Trail\PullToRefresh\assets"/><source path="F:\Java\Android\Trail\PullToRefresh\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="F:\Java\Android\Trail\PullToRefresh\src\debug\assets"/></dataSet></merger>
