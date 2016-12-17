@@ -10,6 +10,8 @@ import android.widget.Toast;
 import android.widget.ZoomControls;
 
 import com.android.trail.R;
+import com.android.trail.map.zoom.Map_list_east;
+import com.android.trail.map.zoom.Map_list_west;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;

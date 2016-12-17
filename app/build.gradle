@@ -9,8 +9,8 @@ android {
     signingConfigs {
         config {
             keyAlias 'key'
-            keyPassword '654321'
-            storeFile file('E:/AndroidSDK/keystore.jks')
+            keyPassword '123456'
+            storeFile file('E:/android/key/sdkey/key.jks')
             storePassword '123456'
         }
     }
