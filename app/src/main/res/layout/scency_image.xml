@@ -4,6 +4,26 @@
     android:layout_height="match_parent"
     android:background="@drawable/scency_f_b1">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFCC00">
+        <Button
+            android:id="@+id/fanhui"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/goback"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+        <ImageButton
+            android:id="@+id/scency_fenxiang"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fenxiang"
+            android:layout_marginLeft="300dp"/>
+    </LinearLayout>
+
     <ImageSwitcher
         android:id="@+id/imageswitcher"
         android:layout_width="match_parent"

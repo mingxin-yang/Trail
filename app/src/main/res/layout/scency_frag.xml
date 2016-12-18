@@ -11,7 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/result_image_border"></FrameLayout>
+        android:background="@color/result_image_border">
+
+    </FrameLayout>
 
     <!--3. 底部的四个选项菜单-->
     <LinearLayout
@@ -69,7 +71,7 @@
                     android:textColor="#7597B3" />
             </LinearLayout>
         </RelativeLayout>
-        <RelativeLayout
+<!--        <RelativeLayout
             android:id="@+id/third_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -93,7 +95,7 @@
                     android:text="随手记"
                     android:textColor="#7597B3" />
             </LinearLayout>
-        </RelativeLayout>
+        </RelativeLayout>-->
         <RelativeLayout
             android:id="@+id/fourth_layout"
             android:layout_width="0dp"

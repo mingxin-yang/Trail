@@ -60,8 +60,6 @@
             android:layout_height="wrap_content"
             android:hint="请输入您的留言....."
             android:background="@drawable/bg_edittext_normal"/>
-
-
     </RelativeLayout>
 
 </RelativeLayout>

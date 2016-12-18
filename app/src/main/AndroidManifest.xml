@@ -73,7 +73,7 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="4lrDd2HeLqg8aeso9YoYAj9IjjX88h8C" />
+            android:value="FWLDbKCVglWGkQlX1jecy36brPgHUv84" />
 
             <!--android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />-->
 
@@ -81,8 +81,12 @@
             android:enabled="true"
             android:process=":remote"
             />
-        <!--<activity android:name=".zhenfeng.Scenery">-->
-        <activity android:name=".hongxue.Discuss"/>
+
+
+
+        <activity android:name=".zhenfeng.share.scencyShare"/>
+        <activity android:name=".hongxue.Discuss"
+            android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".wangyang.BusStopActivity"/>
         <activity android:name=".xizheng.PersonalActivity"/>
         <activity android:name=".zhenfeng.FJTabview"/>
@@ -94,6 +98,8 @@
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao3"/>
 
         <activity android:name=".wangyang.MoveList"/>
+
+        <activity android:name=".xizheng.Userlogin"/>
 
         <activity android:name=".welcomepage.First"/>
         <activity android:name=".homepage.MainActivity"/>

@@ -7,32 +7,33 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
 import com.android.trail.R;
 import com.android.trail.homepage.MainActivity;
 import com.android.trail.json.BusRequestJson;
+import com.android.trail.pulltorefresh.RefreshableView;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 
-
 public class BusStopActivity extends Activity {
 
     //返回
-    private Button bstop_back,bstop_btn1,bstop_btn2,bstop_btn3;
+    private Button bstop_back, bstop_btn1, bstop_btn2, bstop_btn3;
 
     //自定义 adapter 从数据库获取数据
-    private List<bstop> lb =new ArrayList<>();
+    private List<bstop> lb = new ArrayList<>();
     private BstopAdapter bstop_adapter;
     private ListView bstop_lv;
 
-    private List<Map<String, String>> list;
+    List<Map<String, String>> list;
 
-    private  RefreshableView refreshableView;
+    private RefreshableView refreshableView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,16 +41,16 @@ public class BusStopActivity extends Activity {
         setContentView(R.layout.activity_bus_stop);
 
         //监听
-        bstop_back = (Button)findViewById(R.id.bstop_back);
-        bstop_btn1 = (Button)findViewById(R.id.bstop_btn1);
-        bstop_btn2 = (Button)findViewById(R.id.bstop_btn2);
-        bstop_btn3 = (Button)findViewById(R.id.bstop_btn3);
+        bstop_back = (Button) findViewById(R.id.bstop_back);
+        bstop_btn1 = (Button) findViewById(R.id.bstop_btn1);
+        bstop_btn2 = (Button) findViewById(R.id.bstop_btn2);
+        bstop_btn3 = (Button) findViewById(R.id.bstop_btn3);
         bstop_back.setOnClickListener(bstop_onclick);
         bstop_btn1.setOnClickListener(bstop_onclick);
         bstop_btn2.setOnClickListener(bstop_onclick);
         bstop_btn3.setOnClickListener(bstop_onclick);
 
-        bstop_lv = (ListView)findViewById(R.id.listview_bstop);
+        bstop_lv = (ListView) findViewById(R.id.listview_bstop);
         refreshableView = (RefreshableView) findViewById(R.id.refreshable_view);
         refreshableView.setOnRefreshListener(new RefreshableView.PullToRefreshListener() {
             @Override
@@ -66,20 +67,53 @@ public class BusStopActivity extends Activity {
 
         new Thread(networkTask).start();
 
-
+        //item的点击事件
+        bstop_lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent bstop_btn_intent = new Intent();
+                bstop_btn_intent.setClass(BusStopActivity.this, MoveList.class);
+                startActivity(bstop_btn_intent);
+            }
+        });
     }
 
-    Handler handler = new Handler() {
+
+    public View.OnClickListener bstop_onclick = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent bstop_btn_intent = new Intent();
+            bstop_btn_intent.setClass(BusStopActivity.this, MoveList.class);
+            switch (v.getId()) {
+                case R.id.bstop_back:
+                    Intent bstop_back_intent = new Intent();
+                    bstop_back_intent.setClass(BusStopActivity.this, MainActivity.class);
+                    startActivity(bstop_back_intent);
+                    finish();
+                    break;
+                case R.id.bstop_btn1:
+                    startActivity(bstop_btn_intent);
+                    break;
+                case R.id.bstop_btn2:
+                    startActivity(bstop_btn_intent);
+                    break;
+                case R.id.bstop_btn3:
+                    ;
+                    startActivity(bstop_btn_intent);
+                    break;
+            }
+        }
+    };
+    Handler handler =new Handler(){
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             Bundle data = msg.getData();
             String val = data.getString("value");
             Log.i("mylog", "请求结果为-->" + val);
-            // TODO
+            // UI界面的更新等相关操作
             bstop_adapter = new BstopAdapter(getBaseContext(),lb);
             bstop_lv.setAdapter(bstop_adapter);
-            // UI界面的更新等相关操作
         }
     };
 
@@ -112,31 +146,4 @@ public class BusStopActivity extends Activity {
             handler.sendMessage(msg);
         }
     };
-
-
-    public View.OnClickListener bstop_onclick =new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent bstop_btn_intent= new Intent();
-            bstop_btn_intent.setClass(BusStopActivity.this, MoveList.class);
-            switch (v.getId()){
-                case R.id.bstop_back:
-                    Intent bstop_back_intent= new Intent();
-                    bstop_back_intent.setClass(BusStopActivity.this, MainActivity.class);
-                    startActivity(bstop_back_intent);
-                    finish();
-                    break;
-                case R.id.bstop_btn1:
-                    startActivity(bstop_btn_intent);
-                    break;
-                case R.id.bstop_btn2:
-                    startActivity(bstop_btn_intent);
-                    break;
-                case R.id.bstop_btn3:;
-                    startActivity(bstop_btn_intent);
-                    break;
-            }
-        }
-    };
-
 }
