@@ -153,6 +153,9 @@
         <activity
             android:name="com.android.trail.map.activity.GalleryActivity">
         </activity>
+        <activity android:name=".map.BNDemoGuideActivity"/>
+        <activity android:name=".map.CustomRouteActivity"/>
+        <activity android:name=".map.Navi"/>
 
 
     </application>
