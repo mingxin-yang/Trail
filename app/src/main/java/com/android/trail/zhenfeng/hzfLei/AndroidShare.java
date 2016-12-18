@@ -41,6 +41,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.widget.ListPopupWindow.MATCH_PARENT;
+
 public class AndroidShare extends Dialog implements AdapterView.OnItemClickListener {
     private LinearLayout mLayout;
     private GridView mGridView;
@@ -112,37 +114,39 @@ public class AndroidShare extends Dialog implements AdapterView.OnItemClickListe
         dm = context.getResources().getDisplayMetrics();
         this.mDensity = dm.density;
         this.mListData = new ArrayList<ShareItem>();
-        this.mListData.add(new ShareItem("微信", R.drawable.qq_logo,
+        this.mListData.add(new ShareItem("    微信", R.drawable.vchart,
                 "com.tencent.mm.ui.tools.ShareImgUI", "com.tencent.mm"));
-        this.mListData.add(new ShareItem("朋友圈", R.drawable.qq_logo,
+        this.mListData.add(new ShareItem(" 朋友圈", R.drawable.pengyouquan,
                 "com.tencent.mm.ui.tools.ShareToTimeLineUI", "com.tencent.mm"));
-        this.mListData.add(new ShareItem("qq", R.drawable.qq_logo,
+        this.mListData.add(new ShareItem(" 腾讯QQ", R.drawable.qq1,
                 "com.tencent.mobileqq.activity.JumpActivity","com.tencent.mobileqq"));
-        this.mListData.add(new ShareItem("qq空间", R.drawable.qq_logo,
+        this.mListData.add(new ShareItem(" QQ空间", R.drawable.qzone,
                 "com.qzone.ui.operation.QZonePublishMoodActivity","com.qzone"));
-        this.mListData.add(new ShareItem("新浪微博", R.drawable.qq_logo,
+        this.mListData.add(new ShareItem("新浪微博", R.drawable.weibo,
                 "com.sina.weibo.EditActivity", "com.sina.weibo"));
-        this.mListData.add(new ShareItem("腾讯微博", R.drawable.qq_logo,
+        this.mListData.add(new ShareItem("腾讯微博", R.drawable.qzone,
                 "com.tencent.WBlog.intentproxy.TencentWeiboIntent","com.tencent.WBlog"));
-        this.mListData.add(new ShareItem("其他", R.drawable.qq_logo,
+        this.mListData.add(new ShareItem("   其他", R.drawable.walk,
                 "",""));
 
         this.mLayout = new LinearLayout(context);
-        this.mLayout.setOrientation(1);//LinearLayout.VERTICAL
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);// -1 和  -2
-        params.leftMargin = ((int) (10.0F * this.mDensity));
-        params.rightMargin = ((int) (10.0F * this.mDensity));
+        this.mLayout.setOrientation(LinearLayout.VERTICAL);//LinearLayout.VERTICAL
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(700, LinearLayout.LayoutParams.WRAP_CONTENT);// -1 和  -2
+        params.leftMargin = ((int) (1.0F * this.mDensity));
+        params.rightMargin = ((int) (1.0F * this.mDensity));
         this.mLayout.setLayoutParams(params);
         this.mLayout.setBackgroundColor(Color.parseColor("#D9DEDF"));
 
 
         this.mGridView = new GridView(context);
-        this.mGridView.setLayoutParams(new ViewGroup.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));// -1 和  -2
+        this.mGridView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));// -1 和  -2
         this.mGridView.setGravity(17);//设置居中 等
-        this.mGridView.setHorizontalSpacing((int) (10.0F * this.mDensity));
-        this.mGridView.setVerticalSpacing((int) (10.0F * this.mDensity));
-        this.mGridView.setStretchMode(1);
-        this.mGridView.setColumnWidth((int) (90.0F * this.mDensity));
+        this.mGridView.setHorizontalSpacing((int) (1.0F * this.mDensity));
+        this.mGridView.setVerticalSpacing((int) (1.0F * this.mDensity));
+        this.mGridView.setStretchMode(GridView.NO_STRETCH);
+
+
+        this.mGridView.setColumnWidth((int) (85.0F * this.mDensity));//修改宽度的
         this.mGridView.setHorizontalScrollBarEnabled(false);
         this.mGridView.setVerticalScrollBarEnabled(false);
         this.mLayout.addView(this.mGridView);
@@ -294,8 +298,8 @@ public class AndroidShare extends Dialog implements AdapterView.OnItemClickListe
     }
 
     private final class MyAdapter extends BaseAdapter {
-        private static final int image_id = 256;
-        private static final int tv_id = 512;
+        private static final int image_id = 180;
+        private static final int tv_id = 400;
 
         public MyAdapter() {
         }
@@ -314,19 +318,19 @@ public class AndroidShare extends Dialog implements AdapterView.OnItemClickListe
 
         private View getItemView() {
             LinearLayout item = new LinearLayout(getContext());
-            item.setOrientation(1);
+            item.setOrientation(LinearLayout.VERTICAL);
             int padding = (int) (10.0F * mDensity);
             item.setPadding(padding, padding, padding, padding);
             item.setGravity(1);
 
             ImageView iv = new ImageView(getContext());
             item.addView(iv);
-            iv.setLayoutParams(new LinearLayout.LayoutParams(200,200));
+            iv.setLayoutParams(new LinearLayout.LayoutParams(120,120));
             iv.setId(image_id);
 
             TextView tv = new TextView(getContext());
             item.addView(tv);
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);//-2
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);//-2
             layoutParams.topMargin = ((int) (5.0F * mDensity));
             tv.setLayoutParams(layoutParams);
             tv.setTextColor(Color.parseColor("#212121"));

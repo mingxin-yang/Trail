@@ -10,14 +10,15 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.Gallery;
-import android.widget.ImageButton;
+
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.ViewSwitcher;
 
 import com.android.trail.R;
-import com.android.trail.zhenfeng.share.scencyShare;
+import com.android.trail.zhenfeng.share.scencyRate;
 
 import java.util.HashMap;
 
@@ -27,7 +28,7 @@ import java.util.HashMap;
 
 public class secndFrag extends Fragment implements AdapterView.OnItemSelectedListener, ViewSwitcher.ViewFactory, AdapterView.OnItemClickListener {
 
-    private ImageButton scency_fenxiang;
+    private Button scency_fenxiang;
     private Gallery gallery;
     private ImageSwitcher imageSwitcher;
     private ImageAdapter imageAdapter;
@@ -40,13 +41,13 @@ public class secndFrag extends Fragment implements AdapterView.OnItemSelectedLis
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.scency_image, container, false);
 
-        scency_fenxiang=(ImageButton)view.findViewById(R.id.scency_fenxiang) ;
+        scency_fenxiang=(Button)view.findViewById(R.id.scency_fenxiang) ;
         scency_fenxiang.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 Intent i= new Intent();
-                i.setClass(getActivity(), scencyShare.class);
+                i.setClass(getContext(),scencyRate.class);
                 startActivity(i);
             }
         });

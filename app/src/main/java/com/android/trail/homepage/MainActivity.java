@@ -17,7 +17,9 @@ import com.android.trail.hongxue.Discuss;
 import com.android.trail.map.Map;
 import com.android.trail.wangyang.BusStopActivity;
 import com.android.trail.xizheng.PersonalActivity;
+import com.android.trail.xizheng.Userlogin;
 import com.android.trail.zhenfeng.FJTabview;
+import com.android.trail.zhenfeng.Scenery;
 
 import qiu.niorgai.StatusBarCompat;
 
@@ -105,13 +107,13 @@ public class MainActivity extends Activity {
                     //个人中心首页
                     case R.id.imageView2:
                         Intent intent = new Intent();
-                        intent.setClass(MainActivity.this, PersonalActivity.class);
+                        intent.setClass(MainActivity.this, Userlogin.class);
                         startActivity(intent);
                         break;
                     //风景页
                     case R.id.telId4:
                         Intent intent4 = new Intent();
-                        intent4.setClass(MainActivity.this, FJTabview.class);
+                        intent4.setClass(MainActivity.this, Scenery.class);
                         startActivity(intent4);
                         break;
                     //留言
@@ -129,7 +131,7 @@ public class MainActivity extends Activity {
                     //商家
                     case R.id.telId2:
                         Intent intent2=new Intent(MainActivity.this,Map.class);
-                        startActivity(intent2);
+                         startActivity(intent2);
                     default:
                         break;
                 }
