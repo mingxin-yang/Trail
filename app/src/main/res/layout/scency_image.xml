@@ -16,7 +16,7 @@
             android:background="@drawable/goback"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="5dp"/>
-        <ImageButton
+        <Button
             android:id="@+id/scency_fenxiang"
             android:layout_width="40dp"
             android:layout_height="wrap_content"

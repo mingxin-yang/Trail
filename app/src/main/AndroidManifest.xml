@@ -62,7 +62,15 @@
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <!--允许应用读取低级别的系统日志文件 -->
     <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 申明网络权限  -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 申明权限 操作SD卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -73,7 +81,7 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="FWLDbKCVglWGkQlX1jecy36brPgHUv84" />
+            android:value="09zAMprT8D4b2MB0R1wD5n09xZEC4WS2" />
 
             <!--android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />-->
 
@@ -83,13 +91,30 @@
             />
 
 
-
+        <activity android:name=".zhenfeng.Scenery"/>
+        <activity android:name=".zhenfeng.share.scencyRate"/>
         <activity android:name=".zhenfeng.share.scencyShare"/>
+        <activity android:name=".zhenfeng.fourTabViews.scenery_imagey"/>
+        <activity
+            android:name="com.android.trail.zhenfeng.share.activity.AlbumActivi"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.android.trail.zhenfeng.share.activity.ImageFi" >
+        </activity>
+        <activity
+            android:name="com.android.trail.zhenfeng.share.activity.ShowAllPho" >
+        </activity>
+        <activity
+            android:name="com.android.trail.zhenfeng.share.activity.GalleryActivi">
+        </activity>
+
+        <activity android:name=".map.Rounting"/>
         <activity android:name=".hongxue.Discuss"
             android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".wangyang.BusStopActivity"/>
         <activity android:name=".xizheng.PersonalActivity"/>
-        <activity android:name=".zhenfeng.FJTabview"/>
+
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
         <activity android:name=".com.adroid.huizhao.Test"/>
 
@@ -130,7 +155,7 @@
         <activity
             android:name="com.android.trail.map.activity.GalleryActivity">
         </activity>
-        <activity android:name=".map.Rounting"/>
+
 
     </application>
 

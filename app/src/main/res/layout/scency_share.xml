@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/scency_f_b2">
+   >
 
     <include layout="@layout/scency_head"/>
 
@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:background="@color/beige"
             android:alpha="0.7"
-            android:layout_height="200dp"
+            android:layout_height="119dp"
             android:hint="写下你的浏览体验....."
             />
     </LinearLayout>
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         <GridView
-            android:id="@+id/noScrollgridview"
+            android:id="@+id/noScrollgridview1"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginLeft="13dp"
@@ -53,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:id="@+id/buttonShare"
+            android:id="@+id/buShare"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="分享"

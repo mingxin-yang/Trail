@@ -47,6 +47,10 @@ public class Map extends Activity{
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.map);
         StatusBarCompat.translucentStatusBar(this,false);
+
+
+
+
         // 获取地图控件引用
         initBaiduMap();
         addWastMarkerOverlay();
@@ -63,6 +67,7 @@ public class Map extends Activity{
         });
 
     }
+
 
     private void initBaiduMap() {
         mMapView = (TextureMapView) findViewById(R.id.amapView);

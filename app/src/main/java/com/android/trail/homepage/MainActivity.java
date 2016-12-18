@@ -19,6 +19,7 @@ import com.android.trail.wangyang.BusStopActivity;
 import com.android.trail.xizheng.PersonalActivity;
 import com.android.trail.xizheng.Userlogin;
 import com.android.trail.zhenfeng.FJTabview;
+import com.android.trail.zhenfeng.Scenery;
 
 import qiu.niorgai.StatusBarCompat;
 
@@ -112,7 +113,7 @@ public class MainActivity extends Activity {
                     //风景页
                     case R.id.telId4:
                         Intent intent4 = new Intent();
-                        intent4.setClass(MainActivity.this, FJTabview.class);
+                        intent4.setClass(MainActivity.this, Scenery.class);
                         startActivity(intent4);
                         break;
                     //留言
