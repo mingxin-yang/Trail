@@ -173,6 +173,9 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
             case R.id.registfer:
                 if(SERVER_FLAG>10){
                     Toast.makeText(this, "[内部测试--谨慎操作]", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent();
+                    i.setClass(Userlogin.this,PersonalActivity.class);
+                    startActivity(i);
                 }
                 SERVER_FLAG++;
                 break;
@@ -271,7 +274,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                 EditText realname =(EditText)change1.findViewById(R.id.txt_username);
                 EditText username =(EditText)change1.findViewById(R.id.txt_nicename);
                 try {
-                    urlPath = "http://192.168.1.103:8992/user/?obj=0&passward="+passward.getText().toString()
+                    urlPath = "http://10.7.88.94:8991/user/?obj=0&passward="+passward.getText().toString()
                                         +"&realname="+URLEncoder.encode(realname.getText().toString(),"UTF-8")
                                         +"&username="+URLEncoder.encode(username.getText().toString(),"UTF-8");
                 } catch (UnsupportedEncodingException e) {
