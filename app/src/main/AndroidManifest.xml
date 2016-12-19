@@ -93,8 +93,8 @@
 
         <activity android:name=".zhenfeng.Scenery"/>
         <activity android:name=".zhenfeng.share.scencyRate"/>
-        <activity android:name=".zhenfeng.share.scencyShare"/>
         <activity android:name=".zhenfeng.fourTabViews.scenery_imagey"/>
+        <activity android:name=".zhenfeng.fourTabViews.oneShare"/>
         <activity
             android:name="com.android.trail.zhenfeng.share.activity.AlbumActivi"
             android:screenOrientation="portrait">

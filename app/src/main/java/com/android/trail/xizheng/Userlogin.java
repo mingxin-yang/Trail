@@ -240,7 +240,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
     //登陆
     private void Login(){
         try {
-            urlPath2 = "http://192.168.1.103:8992/user/?obj=1&passward="+et_pass.getText().toString()
+            urlPath2 = "http://10.7.88.94:8991/user/?obj=1&passward="+et_pass.getText().toString()
                     +"&username="+URLEncoder.encode(et_name.getText().toString(),"UTF-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
