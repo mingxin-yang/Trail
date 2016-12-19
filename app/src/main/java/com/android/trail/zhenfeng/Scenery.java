@@ -19,6 +19,7 @@ import android.widget.Toast;
 import android.widget.ZoomControls;
 
 import com.android.trail.R;
+import com.android.trail.zhenfeng.share.activity.oneShare;
 import com.android.trail.zhenfeng.share.scencyRate;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -273,6 +274,15 @@ public class Scenery extends AppCompatActivity {
         });
 
 //设置三个按钮
+
+        img01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent();
+                i.setClass(Scenery.this,oneShare.class);
+                startActivity(i);
+            }
+        });
 
         img02.setOnClickListener(new View.OnClickListener() {
             @Override
