@@ -67,6 +67,7 @@ public class scencyRate extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.scency_share);
+
         Res.init(this);
         bimap = BitmapFactory.decodeResource(
                 getResources(),
@@ -75,8 +76,8 @@ public class scencyRate extends AppCompatActivity {
         parentView = getLayoutInflater().inflate(R.layout.scency_share, null);
         setContentView(parentView);
         Init();
+        //沉浸式状态栏
         StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
-
         buShare=(Button) findViewById(R.id.buShare);
         buShare.setOnClickListener(new View.OnClickListener() {
 
