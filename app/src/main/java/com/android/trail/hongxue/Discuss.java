@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.text.format.DateUtils;
 import android.view.ContextMenu;
@@ -24,6 +25,9 @@ import android.widget.Toast;
 
 import com.android.trail.R;
 import com.android.trail.homepage.MainActivity;
+import com.android.trail.json.BBSRequestJson;
+import com.android.trail.json.BusRequestJson;
+import com.android.trail.wangyang.bstop;
 import com.android.trail.xizheng.PersonalActivity;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -84,34 +88,7 @@ public class Discuss extends AppCompatActivity {
         item.setImage(res.getDrawable(R.drawable.logo));
         item.setTitle("我觉得写留言板这个人很帅");
         mList.add(item);
-        item = new ListItem();
-        item.setImage(res.getDrawable(R.drawable.logo));
-        item.setTitle("楼上说的对");
-        mList.add(item);
-        item = new ListItem();
-        item.setImage(res.getDrawable(R.drawable.logo));
-        item.setTitle("楼上说得对");
-        mList.add(item);
-        item = new ListItem();
-        item.setImage(res.getDrawable(R.drawable.logo));
-        item.setTitle("楼上说得对");
-        mList.add(item);
-        item = new ListItem();
-        item.setImage(res.getDrawable(R.drawable.logo));
-        item.setTitle("楼上说得对");
-        mList.add(item);
-        item = new ListItem();
-        item.setImage(res.getDrawable(R.drawable.logo));
-        item.setTitle("楼上说得对");
-        mList.add(item);
-        item = new ListItem();
-        item.setImage(res.getDrawable(R.drawable.logo));
-        item.setTitle("楼上说得对");
-        mList.add(item);
-        item = new ListItem();
-        item.setImage(res.getDrawable(R.drawable.logo));
-        item.setTitle("楼上说得对");
-        mList.add(item);
+
 
         // 获取MainListAdapter对象
         MainListViewAdapter adapter = new MainListViewAdapter();
@@ -120,6 +97,22 @@ public class Discuss extends AppCompatActivity {
         mListView.setAdapter(adapter);
         //给listview注册上下文菜单
         registerForContextMenu(mListView);
+    }
+    private void getData(){
+        final String path = "http://10.7.88.7:8990/bbs/json";
+        try {
+            //mList = BBSRequestJson.getJSONObject(path);
+            if (mList.size() != 0) {
+                mList.clear();
+            }
+            ListItem item = new ListItem();
+            //for(int i = 0;i < mListView.size();i++){
+                //mList.add(item.getImage("headsculpture"),item.getTitle("bulletin"));
+           // }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
     private class disGetDataTask extends AsyncTask<Void, Void, Void> {
 

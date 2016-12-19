@@ -17,7 +17,6 @@ import java.util.Map;
 
 import qiu.niorgai.StatusBarCompat;
 
-import static com.baidu.location.d.j.S;
 
 /**
  * Created by mingx_000 on 2016/12/5 0005.

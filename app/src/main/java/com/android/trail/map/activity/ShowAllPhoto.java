@@ -180,7 +180,7 @@ public class ShowAllPhoto extends Activity {
 				// bundle.putStringArrayList("selectedDataList",
 				// selectedDataList);
 				// intent.putExtras(bundle);
-				// intent.setClass(ShowAllPhoto.this, UploadPhoto.class);
+				// intent.setClass(ShowAllPho.this, UploadPhoto.class);
 				// startActivity(intent);
 				finish();
 

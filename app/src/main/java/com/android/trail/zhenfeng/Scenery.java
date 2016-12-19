@@ -1,14 +1,26 @@
 package com.android.trail.zhenfeng;
 
+import android.animation.Animator;
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import android.widget.ZoomControls;
 
 import com.android.trail.R;
+import com.android.trail.zhenfeng.share.activity.oneShare;
+import com.android.trail.zhenfeng.share.scencyRate;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -18,13 +30,15 @@ import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
-import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.map.TextureMapView;
 import com.baidu.mapapi.map.UiSettings;
 import com.baidu.mapapi.model.LatLng;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Scenery extends AppCompatActivity {
 
@@ -57,6 +71,13 @@ public class Scenery extends AppCompatActivity {
             "地图模式【罗盘】"};
 
     private int mCurrentStyle = 0;
+
+
+    //弹出按钮实现
+    private Context context = Scenery.this;
+    private Handler mHandler = new Handler();
+    private List<ImageView> list = new ArrayList<>();
+    private Dialog dialog;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +87,12 @@ public class Scenery extends AppCompatActivity {
 
         initBaiduMap();
         initLocation();
-        
+        findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog();
+            }
+        });
     }
 
 
@@ -220,6 +246,127 @@ public class Scenery extends AppCompatActivity {
             }
         });
     }
+
+    //弹出按钮
+    private void showDialog() {
+        dialog = new Dialog(context, R.style.my_dialog_style);
+        dialog.setCancelable(true);
+        View view = LayoutInflater.from(context).inflate(R.layout.dialog, null);
+        dialog.setContentView(view, new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT));
+        dialog.show();
+        final ImageView img01 = (ImageView) view.findViewById(R.id.scency_tpy);
+        final ImageView img02 = (ImageView) view.findViewById(R.id.scency_fxy);
+        final ImageView img03 = (ImageView) view.findViewById(R.id.scency_gjy);
+        // 这几个show和close的操作千万不要用集合循环去操作，否则在显示dialog时会出现dialog闪一下就消失的情况
+        showAnim(img01, 150);
+        showAnim(img02, 200);
+        showAnim(img03, 250);
+        Button button = (Button) view.findViewById(R.id.btn_dialog);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeAnim(img03, 100, 380);
+                closeAnim(img02, 150, 430);
+                closeAnim(img01, 200, 480);
+            }
+        });
+
+//设置三个按钮
+
+        img01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent();
+                i.setClass(Scenery.this,oneShare.class);
+                startActivity(i);
+            }
+        });
+
+        img02.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent();
+                i.setClass(Scenery.this,scencyRate.class);
+                startActivity(i);
+            }
+        });
+
+    }
+
+    private void showAnim(final ImageView i, int d) {
+        i.setVisibility(View.INVISIBLE);
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                i.setVisibility(View.VISIBLE);
+                ValueAnimator fadeAnim = ObjectAnimator.ofFloat(i, "translationY", 1000, 0);
+                fadeAnim.setDuration(600);
+                KickBackAnimator kickAnimator = new KickBackAnimator();
+                kickAnimator.setDuration(600);
+                fadeAnim.setEvaluator(kickAnimator);
+                fadeAnim.start();
+                fadeAnim.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {}
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        i.clearAnimation();
+                    }
+                    @Override
+                    public void onAnimationCancel(Animator animation) {}
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {}
+                });
+            }
+        },  d);
+    }
+
+    private void closeAnim(final ImageView img, int i, int j) {
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                ValueAnimator fadeAnim = ObjectAnimator.ofFloat(img, "translationY", 0, 1000);
+                fadeAnim.setDuration(600);
+                KickBackAnimator kickAnimator = new KickBackAnimator();
+                kickAnimator.setDuration(600);
+                fadeAnim.setEvaluator(kickAnimator);
+                fadeAnim.start();
+                fadeAnim.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        // TODO Auto-generated method stub
+                    }
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+                        // TODO Auto-generated method stub
+                    }
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        img.setVisibility(View.INVISIBLE);
+                        img.clearAnimation();
+                    }
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+                        // TODO Auto-generated method stub
+                    }
+                });
+            }
+        }, i);
+        if(img.getId() == R.id.scency_tpy){
+            mHandler.postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    dialog.dismiss();
+                }
+            }, j);
+        }
+    }
+
+
+
 
     @Override
     protected void onStart()

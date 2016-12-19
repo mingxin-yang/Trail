@@ -15,7 +15,6 @@ import com.android.trail.R;
 import com.android.trail.zhenfeng.fourTabViews.fouthFrag;
 import com.android.trail.zhenfeng.fourTabViews.fristFrag;
 import com.android.trail.zhenfeng.fourTabViews.secndFrag;
-import com.android.trail.zhenfeng.fourTabViews.thirdFrag;
 
 import qiu.niorgai.StatusBarCompat;
 
@@ -29,19 +28,19 @@ public class FJTabview extends AppCompatActivity {
     //四个Fragment  ID
     private RelativeLayout r1;
     private RelativeLayout r2;
-    private RelativeLayout r3;
+
     private RelativeLayout r4;
 
     //四个Img图片 底部Tab
     private ImageView img1;
     private ImageView img2;
-    private ImageView img3;
+
     private ImageView img4;
 
     //初始化fragment
     private fristFrag fragment1 = new fristFrag();
     private secndFrag fragment2 = new secndFrag();
-    private thirdFrag fragment3 = new thirdFrag();
+
     private fouthFrag fragment4 = new fouthFrag();
     //判断Fragment是否加载过
     private Fragment mTempFragment;
@@ -112,17 +111,17 @@ public class FJTabview extends AppCompatActivity {
     public void getRelativeID(){
         r1 = (RelativeLayout)findViewById(R.id.first_layout);
         r2 = (RelativeLayout)findViewById(R.id.second_layout);
-        r3 = (RelativeLayout)findViewById(R.id.third_layout);
+
         r4 = (RelativeLayout)findViewById(R.id.fourth_layout);
 
         img1 = (ImageView)findViewById(R.id.first_image);
         img2 = (ImageView)findViewById(R.id.second_image);
-        img3 = (ImageView)findViewById(R.id.third_image);
+
         img4 = (ImageView)findViewById(R.id.fourth_image);
     }
     public void setListenerID(){
         r2.setOnClickListener(mylistener);
-        r3.setOnClickListener(mylistener);
+
         r4.setOnClickListener(mylistener);
         r1.setOnClickListener(mylistener);
     }
@@ -144,28 +143,28 @@ public class FJTabview extends AppCompatActivity {
                 case R.id.first_layout:
                     img1.setImageResource(R.drawable.guide_tfaccount_k);
                     img2.setImageResource(R.drawable.guide_discover_g);
-                    img3.setImageResource(R.drawable.guide_cart_g);
+
                     img4.setImageResource(R.drawable.guide_account_g);
                     switchFragment(fragment1);
                     break;
                 case R.id.second_layout:
                     img1.setImageResource(R.drawable.guide_tfaccount_g);
                     img2.setImageResource(R.drawable.guide_discover_k);
-                    img3.setImageResource(R.drawable.guide_cart_g);
+
                     img4.setImageResource(R.drawable.guide_account_g);
                     switchFragment(fragment2);
                     break;
-                case R.id.third_layout:
+               /* case R.id.third_layout:
                     img1.setImageResource(R.drawable.guide_tfaccount_g);
                     img2.setImageResource(R.drawable.guide_discover_g);
                     img3.setImageResource(R.drawable.guide_cart_k);
                     img4.setImageResource(R.drawable.guide_account_g);
                     switchFragment(fragment3);
-                    break;
+                    break;*/
                 case R.id.fourth_layout:
                     img1.setImageResource(R.drawable.guide_tfaccount_g);
                     img2.setImageResource(R.drawable.guide_discover_g);
-                    img3.setImageResource(R.drawable.guide_cart_g);
+
                     img4.setImageResource(R.drawable.guide_account_k);
                     switchFragment(fragment4);
                     break;

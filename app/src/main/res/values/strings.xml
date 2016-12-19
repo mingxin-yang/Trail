@@ -26,4 +26,17 @@
     <string name="updated_at">上次更新于%1$s前</string>
     <string name="updated_just_now">刚刚更新</string>
     <string name="time_error">时间有问题</string>
+    <string name="longitude1">38.007028</string>
+    <string name="latitude1">114.526918</string>//北门
+    <string name="longitude2">38.003265</string>
+    <string name="latitude2">114.527255</string>//四方广场
+    <string name="longitude3">38.000144</string>
+    <string name="latitude3">114.524578</string>//诚朴园
+    <string name="longitude4">38.000926</string>
+    <string name="latitude4">114.527237</string>//第一食堂
+    <string name="longitude5">38.00298</string>
+    <string name="latitude5">114.520055</string>/天客隆
+    <string name="longitude6">38.003265</string>
+    <string name="latitude6">114.527255</string>//西门超市
+
 </resources>

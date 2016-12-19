@@ -59,8 +59,7 @@ public class UserRequestJson {
                 String school = item.getString("school");
                 String getdate = item.getString("getdate");
                 String headsculpture = item.getString("headsculpture");
-                String username = item.getString("usern" +
-                        "ame");
+                String username = item.getString("username");
                 String realname = item.getString("realname");
                 String gone = item.getString("gone");
                 map = new HashMap<String, String>();
