@@ -99,6 +99,7 @@
             android:name="com.android.trail.zhenfeng.share.activity.AlbumActivi"
             android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".zhenfeng.share.activity.oneShare"/>
         <activity
             android:name="com.android.trail.zhenfeng.share.activity.ImageFi" >
         </activity>

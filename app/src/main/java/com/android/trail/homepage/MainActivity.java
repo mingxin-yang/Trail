@@ -3,6 +3,7 @@ package com.android.trail.homepage;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -18,7 +19,6 @@ import com.android.trail.map.Map;
 import com.android.trail.wangyang.BusStopActivity;
 import com.android.trail.xizheng.PersonalActivity;
 import com.android.trail.xizheng.Userlogin;
-import com.android.trail.zhenfeng.FJTabview;
 import com.android.trail.zhenfeng.Scenery;
 
 import qiu.niorgai.StatusBarCompat;
@@ -27,6 +27,11 @@ import static com.android.trail.R.menu.main;
 
 
 public class MainActivity extends Activity {
+
+    //个人主页
+    private SharedPreferences sharepreferences;     //实例化 SharedPreferences
+    private SharedPreferences.Editor editor;
+    private boolean fristload;
 
     //添加个人中心页
     private ImageView img;
@@ -41,6 +46,12 @@ public class MainActivity extends Activity {
             getFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment()).commit();
         }
+
+        /*登陆成功后不在跳转登陆界面
+        * */
+        sharepreferences=this.getSharedPreferences("check", MODE_PRIVATE);// 初始化 SharedPreferences 储存
+        editor=sharepreferences.edit();//将SharedPreferences 储存 可编辑化
+        fristload=sharepreferences.getBoolean("fristload", true);//从SharedPreferences中获取是否第一次启动   默认为true
     }
 
     @Override
@@ -106,9 +117,16 @@ public class MainActivity extends Activity {
                         break;
                     //个人中心首页
                     case R.id.imageView2:
-                        Intent intent = new Intent();
-                        intent.setClass(MainActivity.this, Userlogin.class);
-                        startActivity(intent);
+                        if(fristload){
+                            Intent intent = new Intent();
+                            intent.setClass(MainActivity.this, PersonalActivity.class);
+                            startActivity(intent);
+                        }
+                        else {
+                            Intent intent = new Intent();
+                            intent.setClass(MainActivity.this, Userlogin.class);
+                            startActivity(intent);
+                        }
                         break;
                     //风景页
                     case R.id.telId4:

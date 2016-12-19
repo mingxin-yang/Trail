@@ -20,6 +20,8 @@ import com.android.trail.R;
 import com.android.trail.homepage.MainActivity;
 import com.android.trail.xizheng.listener.OnDoubleClickListener;
 
+import java.net.URL;
+
 import qiu.niorgai.StatusBarCompat;
 
 /**
@@ -30,6 +32,11 @@ public class PersonalActivity extends Activity {
     private ImageView imge1;
     private Button pback;
 
+    private TextView tt;
+
+    private String urlPath;
+    private URL url = null;
+
     private String[] mVals = new String[] { "苹果手机", "笔记本电脑", "电饭煲 ", "腊肉",
             "特产", "剃须刀", "宝宝", "康佳" , "腊肉",
             "特产", "剃须刀", "宝宝", "康佳"};
@@ -39,6 +46,13 @@ public class PersonalActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.personalipd);
+
+        Intent intent = getIntent();
+        String id = intent.getStringExtra("id");
+        String username = intent.getStringExtra("username");
+        tt = (TextView)findViewById(R.id.t3);
+        tt.setText(username);
+
         StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
         mInflater = LayoutInflater.from(this);
         mFlowLayout = (FlowLayout) findViewById(R.id.id_flowlayout);
