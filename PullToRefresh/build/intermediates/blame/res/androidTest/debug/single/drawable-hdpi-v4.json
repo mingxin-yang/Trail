@@ -1,7 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Ccx\\Desktop\\Formal\\Trail\\PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\default_ptr_rotate.png",
-        "source": "C:\\Users\\Ccx\\Desktop\\Formal\\Trail\\PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\default_ptr_rotate.png"
+        "merged": "D:\\android_project\\Trail\\PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\default_ptr_rotate.png",
+        "source": "D:\\android_project\\Trail\\PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "D:\\android_project\\Trail\\PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\default_ptr_flip.png",
+        "source": "D:\\android_project\\Trail\\PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\default_ptr_flip.png"
     },
     {
         "merged": "E:\\workbase\\xiangmu\\Trail\\PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\indicator_arrow.png",
@@ -12,12 +16,8 @@
         "source": "E:\\workbase\\xiangmu\\Trail\\PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\default_ptr_flip.png"
     },
     {
-        "merged": "C:\\Users\\Ccx\\Desktop\\Formal\\Trail\\PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\indicator_arrow.png",
-        "source": "C:\\Users\\Ccx\\Desktop\\Formal\\Trail\\PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\indicator_arrow.png"
-    },
-    {
-        "merged": "C:\\Users\\Ccx\\Desktop\\Formal\\Trail\\PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\default_ptr_flip.png",
-        "source": "C:\\Users\\Ccx\\Desktop\\Formal\\Trail\\PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\default_ptr_flip.png"
+        "merged": "D:\\android_project\\Trail\\PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\indicator_arrow.png",
+        "source": "D:\\android_project\\Trail\\PullToRefresh\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\indicator_arrow.png"
     },
     {
         "merged": "E:\\workbase\\xiangmu\\Trail\\PullToRefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\default_ptr_rotate.png",
