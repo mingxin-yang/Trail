@@ -46,6 +46,41 @@ public class PersonalActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.personalipd);
 
+        //获取个性签名控件
+        TextView qianming_tv = (TextView)findViewById(R.id.tv_qianming);
+        qianming_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //处理单击事件
+                final TextView tv_qianming = (TextView) findViewById(R.id.tv_qianming);
+
+                LinearLayout change3 = (LinearLayout) getLayoutInflater().inflate(R.layout.datachange3,null);
+                final EditText et_cgqianming = (EditText) change3.findViewById(R.id.et_cgqianming);
+                new AlertDialog.Builder(PersonalActivity.this)
+                        //设置对话框的标题
+                        .setTitle("个性签名修改")
+                        //设置对话框显示的view对象
+                        .setView(change3)
+                        //为对话框设置保存按钮
+                        .setPositiveButton("保存", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //此处可执行保存操作
+                                tv_qianming.setText(et_cgqianming.getText().toString());
+                            }
+                        })
+                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //此处可执行取消操作，不做任何事情
+                            }
+                        })
+                        //创建并显示对话框
+                        .create()
+                        .show();
+            }
+        });
+        //昵称带数据跳转
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
         String username = intent.getStringExtra("username");
@@ -117,6 +152,7 @@ public class PersonalActivity extends Activity {
             }
         }));
     }
+
 
     public void initData() {
         /**
