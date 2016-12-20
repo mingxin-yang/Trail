@@ -48,6 +48,7 @@ public class PersonalActivity extends Activity {
 
         //获取个性签名控件
         TextView qianming_tv = (TextView)findViewById(R.id.tv_qianming);
+        //注册个性签名点击事件
         qianming_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
