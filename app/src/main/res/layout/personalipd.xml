@@ -248,7 +248,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_marginTop="8sp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <TextView
@@ -350,6 +350,7 @@
                         android:text="微信"/>
 
                     <TextView
+                        android:id="@+id/tv_vchat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="52sp"
@@ -369,6 +370,7 @@
                         android:text="QQ"/>
 
                     <TextView
+                        android:id="@+id/tv_qq"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="52sp"
@@ -388,6 +390,7 @@
                         android:text="新浪微博"/>
 
                     <TextView
+                        android:id="@+id/tv_sina"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="52sp"

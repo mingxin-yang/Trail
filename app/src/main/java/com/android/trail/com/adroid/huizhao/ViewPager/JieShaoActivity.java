@@ -42,9 +42,9 @@ public class JieShaoActivity extends Activity {
     private int oldPosition = 0;
     //存放图片的id
     private  int[] imageIds = new int[]{
-            R.drawable.jshao_top1,
-            R.drawable.jshao_top2,
-            R.drawable.jshao_top3
+            R.drawable.jieshao_img2,
+            R.drawable.jieshao_img1,
+            R.drawable.jieshao_img3
     };
   //  private int[] imageIds = new int[]{
    //         R.drawable.p1,

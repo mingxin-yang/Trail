@@ -32,10 +32,10 @@
             android:layout_height="match_parent"
             android:background="@color/bg_Gray" />
 
-        <ImageView
+        <!--<ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:src="@drawable/tb_icon_more_msg_56" />
+            android:src="@drawable/tb_icon_more_msg_56" />-->
     </LinearLayout>
 </LinearLayout>

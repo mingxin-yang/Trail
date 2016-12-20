@@ -37,7 +37,7 @@ public class oneShare extends Activity implements AdapterView.OnItemSelectedList
     private HashMap<Integer, ImageView> mViewMap;
 
     private int[] resIds = new int[]
-            {R.drawable.p1, R.drawable.jieshao2, R.drawable.jieshao3};
+            {R.drawable.s1, R.drawable.s2, R.drawable.s3, R.drawable.s4, R.drawable.s5, R.drawable.s6, R.drawable.s7};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

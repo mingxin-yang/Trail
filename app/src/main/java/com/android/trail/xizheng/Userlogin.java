@@ -341,6 +341,9 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                             String username =item.getString("username");
                             String realname = item.getString("realname");
                             String gone = item.getString("gone");
+                            //新增
+                            String qianming = item.getString("qianming");
+                            String sina = item.getString("sina");
                             map = new HashMap<String, String>();
                             map.put("id", id + "");
                             map.put("qq", qq);
@@ -353,6 +356,9 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                             map.put("username",username);
                             map.put("realname",realname);
                             map.put("gone",gone);
+                            //新增
+                            map.put("qianming", qianming);
+                            map.put("sina", sina);
                             list.add(map);
                         }
                     } catch (JSONException e) {
@@ -370,6 +376,9 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                     intent.putExtra("username", list.get(0).get("username"));
                     intent.putExtra("realname", list.get(0).get("realname"));
                     intent.putExtra("gone", list.get(0).get("gone"));
+                    //新增
+                    intent.putExtra("qianming", list.get(0).get("qianming"));
+                    intent.putExtra("sina", list.get(0).get("sina"));
                     intent.setClass(Userlogin.this,PersonalActivity.class);
                     startActivity(intent);
                     finish();

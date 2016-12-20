@@ -26,6 +26,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -63,11 +64,6 @@ public class scencyRate extends AppCompatActivity {
     private LinearLayout ll_popup;
     public static Bitmap bimap ;
     private Button buShare;
-
-    private LayoutInflater inflater;
-    //获取图片地址
-    private ImageView share;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,18 +79,18 @@ public class scencyRate extends AppCompatActivity {
         Init();
         //沉浸式状态栏
         StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
-
-        //
-        share = (ImageView)findViewById(R.id.item_grida_image);
-
-
+         EditText sharewenzi=(EditText) findViewById(R.id.sharewenzi);
+         final String msgText1=sharewenzi.getText().toString();
+       /* ImageView item_grida_image=(ImageView) findViewById(R.id.item_grida_image);
+        path=item_grida_image.getDrawingCache();
+        Bitmap imageBitmap = BitmapFactory.decodeFile(path)*/
         buShare=(Button) findViewById(R.id.buShare);
         buShare.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 AndroidShare as = new AndroidShare(
                         scencyRate.this,
-                        "哈哈---超方便的分享！！！来自allen",
+                        "你好啊",
                         "http://img6.cache.netease.com/cnews/news2012/img/logo_news.png");
                 as.show();
             }
@@ -145,7 +141,8 @@ public class scencyRate extends AppCompatActivity {
         //完成跳转
         bt2.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(scencyRate.this, AlbumActivi.class);
+                Intent intent = new Intent(scencyRate.this,
+                        AlbumActivi.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.activity_translate_in, R.anim.activity_translate_out);
                 pop.dismiss();
@@ -186,7 +183,7 @@ public class scencyRate extends AppCompatActivity {
 
     @SuppressLint("HandlerLeak")
     public class GridAdapter extends BaseAdapter {
-
+        private LayoutInflater inflater;
         private int selectedPosition = -1;
         private boolean shape;
 
