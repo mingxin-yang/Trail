@@ -31,7 +31,13 @@ public class PersonalActivity extends Activity {
     private ImageView imge1;
     private Button pback;
 
-    private TextView tt;
+    private TextView tv_username;
+    private TextView tv_realname;
+    private TextView tv_birthday;
+    private TextView tv_school;
+    private TextView tv_love;
+    private TextView tv_Enrollment;
+    private TextView tv_qianming;
 
     private String urlPath;
     private URL url = null;
@@ -48,6 +54,7 @@ public class PersonalActivity extends Activity {
 
         //获取个性签名控件
         TextView qianming_tv = (TextView)findViewById(R.id.tv_qianming);
+        //注册个性签名点击事件
         qianming_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,12 +87,33 @@ public class PersonalActivity extends Activity {
                         .show();
             }
         });
-        //昵称带数据跳转
+
+
+        //带数据跳转
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
         String username = intent.getStringExtra("username");
-        tt = (TextView)findViewById(R.id.t3);
-        tt.setText(username);
+        String realname = intent.getStringExtra("realname");
+        String birthday = intent.getStringExtra("birthday");
+        String school = intent.getStringExtra("school");
+        String enrollment = intent.getStringExtra("getdate");
+
+
+        tv_username = (TextView)findViewById(R.id.t3);
+        tv_realname = (TextView)findViewById(R.id.tv_realname);
+        tv_birthday = (TextView)findViewById(R.id.tv_birthday);
+        tv_school = (TextView)findViewById(R.id.tv_school);
+        tv_Enrollment = (TextView)findViewById(R.id.tv_Enrollment);
+        tv_love = (TextView)findViewById(R.id.tv_love);
+        tv_qianming = (TextView)findViewById(R.id.tv_qianming);
+
+        tv_username.setText(username);
+        tv_realname.setText(realname);
+        tv_birthday.setText(birthday);
+        tv_school.setText(school);
+        tv_Enrollment.setText(enrollment);
+        tv_username.setText(username);
+
 
         StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
         mInflater = LayoutInflater.from(this);
@@ -115,6 +143,10 @@ public class PersonalActivity extends Activity {
 //
 //        timer.schedule(task, 1000, 1000);       // timeTask
 
+
+        /*
+        * 昵称修改
+        * */
         //获取昵称控件
         TextView nick_tv = (TextView)findViewById(R.id.t3);
         //注册昵称点击事件监听器
@@ -172,40 +204,5 @@ public class PersonalActivity extends Activity {
             mFlowLayout.addView(tv);//添加到父View
         }
     }
-
-
-
-
-//    TimerTask task = new TimerTask() {
-//        @Override
-//        public void run() {
-//
-//            runOnUiThread(new Runnable() {      // UI thread
-//                @Override
-//                public void run() {
-//                    recLen--;
-//                    txtView.setText(""+recLen);
-//                    if(recLen < 0){
-//                        timer.cancel();
-//                        txtView.setVisibility(View.GONE);
-//                    }
-//                }
-//            });
-//        }
-//    };
-
-//    //获取屏幕的宽度
-//    public static int getScreenWidth(Context context) {
-//        WindowManager manager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-//        Display display = manager.getDefaultDisplay();
-//        return display.getWidth();
-//    }
-//
-//    //获取屏幕的宽度
-//    public static int getScreenHeight(Context context) {
-//        WindowManager manager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-//        Display display = manager.getDefaultDisplay();
-//        return display.getHeight();
-//    }
 
 }
