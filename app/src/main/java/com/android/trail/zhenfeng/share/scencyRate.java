@@ -26,6 +26,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -67,6 +68,7 @@ public class scencyRate extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.scency_share);
+
         Res.init(this);
         bimap = BitmapFactory.decodeResource(
                 getResources(),
@@ -75,15 +77,20 @@ public class scencyRate extends AppCompatActivity {
         parentView = getLayoutInflater().inflate(R.layout.scency_share, null);
         setContentView(parentView);
         Init();
+        //沉浸式状态栏
         StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
-
+         EditText sharewenzi=(EditText) findViewById(R.id.sharewenzi);
+         final String msgText1=sharewenzi.getText().toString();
+       /* ImageView item_grida_image=(ImageView) findViewById(R.id.item_grida_image);
+        path=item_grida_image.getDrawingCache();
+        Bitmap imageBitmap = BitmapFactory.decodeFile(path)*/
         buShare=(Button) findViewById(R.id.buShare);
         buShare.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 AndroidShare as = new AndroidShare(
                         scencyRate.this,
-                        "哈哈---超方便的分享！！！来自allen",
+                        "你好啊",
                         "http://img6.cache.netease.com/cnews/news2012/img/logo_news.png");
                 as.show();
             }

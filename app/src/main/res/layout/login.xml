@@ -24,7 +24,9 @@
                 android:layout_marginTop="5dp"
                 android:paddingRight="60dp"
                 android:maxLength="20"
-                android:paddingLeft="55dp" >
+                android:paddingLeft="55dp"
+                android:hint="请输入用户名"
+                >
             </EditText>
             <ImageView
                 android:layout_width="22dp"
@@ -66,11 +68,13 @@
                 android:id="@+id/password"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:paddingRight="60dp"
-            android:maxLength="20"
-            android:paddingLeft="55dp" >
-        </EditText>
+                android:inputType="textPassword"
+                android:paddingRight="60dp"
+                android:maxLength="20"
+                android:paddingLeft="55dp"
+                android:hint="请输入密码"
+                >
+            </EditText>
         <ImageView
             android:layout_width="24dp"
             android:layout_height="22dp"
@@ -81,7 +85,7 @@
             android:id="@+id/bt_pwd_eye"
             android:layout_width="23dp"
             android:layout_height="23dp"
-            android:background="@drawable/login_code_in_img"
+            android:background="@drawable/cleareye"
             android:layout_gravity="right|center_vertical"
             android:layout_marginRight="10dp"
             />
@@ -102,7 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/usercode_layout"
         android:layout_marginTop="30dp"
-        android:background="#ff336699"
+        android:background="@color/darkturquoise"
         android:textColor="@android:color/white"
         android:gravity="center"
         android:text="登录" />
@@ -145,5 +149,9 @@ android:layout_marginRight="20dp" >
     android:text="AnyLife,Make the world a better place."
     android:textSize="16sp"
     android:visibility="visible" />
+
+
+
 </RelativeLayout>
-    </RelativeLayout>
+
+</RelativeLayout>

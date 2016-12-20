@@ -47,7 +47,7 @@ public class AndroidShare extends Dialog implements AdapterView.OnItemClickListe
     private LinearLayout mLayout;
     private GridView mGridView;
     private float mDensity;
-    private String msgText = "分享了...哈哈";
+    private String msgText;
     private String mImgPath;
     private int mScreenOrientation;
     private List<ShareItem> mListData;
@@ -73,7 +73,7 @@ public class AndroidShare extends Dialog implements AdapterView.OnItemClickListe
         super(context, R.style.shareDialogTheme);
     }
 
-    public AndroidShare(Context context, int theme, String msgText, final String imgUri) {
+   /* public AndroidShare(Context context, int theme, String msgText, final String imgUri) {
         super(context, theme);
         this.msgText = msgText;
 
@@ -89,10 +89,12 @@ public class AndroidShare extends Dialog implements AdapterView.OnItemClickListe
             }).start();
         else
             this.mImgPath = imgUri;
-    }
+    }*/
 
     public AndroidShare(Context context, String msgText, final String imgUri) {
         super(context, R.style.shareDialogTheme);
+
+
         this.msgText = msgText;
 
         if (Patterns.WEB_URL.matcher(imgUri).matches())

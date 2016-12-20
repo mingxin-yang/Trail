@@ -1,8 +1,9 @@
-package com.android.trail.zhenfeng.share.activity;
+package com.android.trail.zhenfeng.fourTabViews;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,8 @@ import com.android.trail.zhenfeng.share.scencyRate;
 
 import java.util.HashMap;
 
+import qiu.niorgai.StatusBarCompat;
+
 /**
  * Created by Lenovo on 2016/12/18.
  */
@@ -34,13 +37,15 @@ public class oneShare extends Activity implements AdapterView.OnItemSelectedList
     private HashMap<Integer, ImageView> mViewMap;
 
     private int[] resIds = new int[]
-            {R.drawable.p1, R.drawable.jieshao2, R.drawable.jieshao3};
+            {R.drawable.s1, R.drawable.s2, R.drawable.s3, R.drawable.s4, R.drawable.s5, R.drawable.s6, R.drawable.s7};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.scency_image);
 
+        //沉浸式状态栏
+        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
         scency_fenxiang = (Button) findViewById(R.id.scency_fenxiang);
         scency_fenxiang.setOnClickListener(new View.OnClickListener() {
 
