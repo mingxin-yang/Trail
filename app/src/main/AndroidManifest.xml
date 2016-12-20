@@ -81,7 +81,7 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="09zAMprT8D4b2MB0R1wD5n09xZEC4WS2" />
+            android:value="4lrDd2HeLqg8aeso9YoYAj9IjjX88h8C" />
 
             <!--android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />-->
 
@@ -89,8 +89,6 @@
             android:enabled="true"
             android:process=":remote"
             />
-
-
         <activity android:name=".zhenfeng.Scenery"/>
         <activity android:name=".zhenfeng.share.scencyRate"/>
         <activity android:name=".zhenfeng.fourTabViews.scenery_imagey"/>
@@ -99,7 +97,6 @@
             android:name="com.android.trail.zhenfeng.share.activity.AlbumActivi"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".zhenfeng.share.activity.oneShare"/>
         <activity
             android:name="com.android.trail.zhenfeng.share.activity.ImageFi" >
         </activity>
@@ -122,6 +119,10 @@
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao1"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao2"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao3"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao4"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.Jieshao5"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao6"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoMore"/>
 
         <activity android:name=".wangyang.MoveList"/>
 
