@@ -253,7 +253,7 @@
 
                     <TextView
                         android:id="@+id/tv_qianming"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="52sp"
                         android:text="不潮不用花钱"/>
