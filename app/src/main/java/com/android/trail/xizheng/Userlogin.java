@@ -3,6 +3,7 @@ package com.android.trail.xizheng;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -20,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.trail.R;
+import com.android.trail.homepage.MainActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -121,13 +123,9 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
         mLoginError.setOnClickListener(this);
         mRegister.setOnClickListener(this);
 
-        //  countryselect=(RelativeLayout) findViewById(R.id.countryselect_layout);
-        //  countryselect.setOnClickListener(this);
-        //  coutry_phone_sn=(TextView) findViewById(R.id.contry_sn);
-        //  coutryName=(TextView) findViewById(R.id.country_name);
+        /*登陆成功后不在跳转登陆界面
+        * */
 
-        //  coutryName.setText(coutry_name_array[selectIndex]);    //默认为1
-        //  coutry_phone_sn.setText("+"+coutry_phone_sn_array[selectIndex]);
     }
     /**
      * 手机号，密码输入控件公用这一个watcher
@@ -252,7 +250,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
     //登陆
     private void Login(){
         try {
-            urlPath2 = "http://192.168.1.103:8992/user/?obj=1&passward="+et_pass.getText().toString()
+            urlPath2 = "http://10.7.88.94:8992/user/?obj=1&passward="+et_pass.getText().toString()
                     +"&username="+URLEncoder.encode(et_name.getText().toString(),"UTF-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -283,7 +281,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                 EditText realname =(EditText)change1.findViewById(R.id.txt_username);
                 EditText username =(EditText)change1.findViewById(R.id.txt_nicename);
                 try {
-                    urlPath = "http://192.168.1.103:8992/user/?obj=0&passward="+passward.getText().toString()
+                    urlPath = "http://10.7.88.94:8992/user/?obj=0&passward="+passward.getText().toString()
                                         +"&realname="+URLEncoder.encode(realname.getText().toString(),"UTF-8")
                                         +"&username="+URLEncoder.encode(username.getText().toString(),"UTF-8");
                 } catch (UnsupportedEncodingException e) {
@@ -315,7 +313,11 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
         public void handleMessage(Message msg)
         {
             if (msg.what == 0x123) {
-                    Toast.makeText(Userlogin.this, "登陆成功", Toast.LENGTH_LONG).show();
+                    SharedPreferences share=getSharedPreferences("user", MainActivity.MODE_WORLD_WRITEABLE);
+                    SharedPreferences.Editor editor = share.edit();
+                    editor.putBoolean("USER", true);
+                    editor.commit();
+                Toast.makeText(Userlogin.this, "登陆成功", Toast.LENGTH_LONG).show();
                     List<Map<String, String>> list = new ArrayList<Map<String, String>>();
                     Map<String, String> map = null;
                     String json = responseData;

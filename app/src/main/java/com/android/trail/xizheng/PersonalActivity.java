@@ -128,7 +128,6 @@ public class PersonalActivity extends Activity {
                 Intent pback = new Intent();
                 pback.setClass(PersonalActivity.this, MainActivity.class);
                 startActivity(pback);
-                finish();
             }
         });
 
