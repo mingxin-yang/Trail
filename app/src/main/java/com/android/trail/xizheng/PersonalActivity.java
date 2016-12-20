@@ -15,14 +15,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.android.trail.R;
 import com.android.trail.homepage.MainActivity;
 import com.android.trail.xizheng.listener.OnDoubleClickListener;
-
+import com.android.trail.R;
 import java.net.URL;
 
 import qiu.niorgai.StatusBarCompat;
+
 
 /**
  * Created by Lenovo on 2016/11/25.
