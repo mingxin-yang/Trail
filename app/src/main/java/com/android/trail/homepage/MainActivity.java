@@ -2,6 +2,7 @@ package com.android.trail.homepage;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -21,6 +22,8 @@ import com.android.trail.xizheng.PersonalActivity;
 import com.android.trail.xizheng.Userlogin;
 import com.android.trail.zhenfeng.Scenery;
 
+import java.io.File;
+
 import qiu.niorgai.StatusBarCompat;
 
 import static com.android.trail.R.menu.main;
@@ -29,9 +32,12 @@ import static com.android.trail.R.menu.main;
 public class MainActivity extends Activity {
 
     //个人主页
-    private SharedPreferences sharepreferences;     //实例化 SharedPreferences
-    private SharedPreferences.Editor editor;
-    private boolean fristload;
+    //定义对象
+    private static SharedPreferences sp;
+    private int index= 0;
+    private static SharedPreferences.Editor mEditor;
+    private File filepath;
+
 
     //添加个人中心页
     private ImageView img;
@@ -49,9 +55,11 @@ public class MainActivity extends Activity {
 
         /*登陆成功后不在跳转登陆界面
         * */
-        sharepreferences=this.getSharedPreferences("check", MODE_PRIVATE);// 初始化 SharedPreferences 储存
-        editor=sharepreferences.edit();//将SharedPreferences 储存 可编辑化
-        fristload=sharepreferences.getBoolean("fristload", true);//从SharedPreferences中获取是否第一次启动   默认为true
+        sp = this.getSharedPreferences("user", Context.MODE_WORLD_WRITEABLE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putBoolean("USER", false);
+        editor.commit();
+
     }
 
     @Override
@@ -117,7 +125,7 @@ public class MainActivity extends Activity {
                         break;
                     //个人中心首页
                     case R.id.imageView2:
-                        if(fristload){
+                        if(sp.getBoolean("USER",false)){
                             Intent intent = new Intent();
                             intent.setClass(MainActivity.this, PersonalActivity.class);
                             startActivity(intent);
