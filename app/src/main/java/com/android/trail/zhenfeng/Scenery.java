@@ -6,7 +6,6 @@ import android.animation.ValueAnimator;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -40,8 +39,6 @@ import com.baidu.mapapi.model.LatLng;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import qiu.niorgai.StatusBarCompat;
 
 public class Scenery extends AppCompatActivity {
 
@@ -87,8 +84,9 @@ public class Scenery extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.trail_scenery);
-        //沉浸式状态栏
-        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
+    /*    //沉浸式状态栏
+        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);*/
+       // backg();
         initBaiduMap();
         initLocation();
         findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
@@ -98,6 +96,8 @@ public class Scenery extends AppCompatActivity {
             }
         });
     }
+
+
 
 
     //1.显示基本地图
@@ -284,7 +284,9 @@ public class Scenery extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i= new Intent();
                 i.setClass(Scenery.this,oneShare.class);
+
                 startActivity(i);
+
             }
         });
 
@@ -294,6 +296,7 @@ public class Scenery extends AppCompatActivity {
                 Intent i= new Intent();
                 i.setClass(Scenery.this,scencyRate.class);
                 startActivity(i);
+
             }
         });
 

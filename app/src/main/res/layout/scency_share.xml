@@ -3,6 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sceneryimg1"
    >
 
     <include layout="@layout/scency_head"/>
@@ -25,10 +26,11 @@
         android:layout_height="wrap_content"
         >
         <EditText
+            android:id="@+id/sharewenzi"
             android:layout_width="match_parent"
             android:background="@color/beige"
             android:alpha="0.7"
-            android:layout_height="119dp"
+            android:layout_height="200dp"
             android:hint="写下你的浏览体验....."
             />
     </LinearLayout>
