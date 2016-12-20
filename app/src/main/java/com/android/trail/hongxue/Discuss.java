@@ -33,6 +33,7 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import qiu.niorgai.StatusBarCompat;
 
@@ -101,14 +102,15 @@ public class Discuss extends AppCompatActivity {
     private void getData(){
         final String path = "http://10.7.88.7:8990/bbs/json";
         try {
-            //mList = BBSRequestJson.getJSONObject(path);
+            List ist = BBSRequestJson.getJSONObject(path);
             if (mList.size() != 0) {
                 mList.clear();
             }
-            ListItem item = new ListItem();
-            //for(int i = 0;i < mListView.size();i++){
-                //mList.add(item.getImage("headsculpture"),item.getTitle("bulletin"));
-           // }
+            for(int i = 0;i < mList.size();i++){
+                ListItem item = new ListItem();
+                //item.setImage(ist.get(i).get());
+                mList.add(item);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
