@@ -63,6 +63,11 @@ public class scencyRate extends AppCompatActivity {
     private LinearLayout ll_popup;
     public static Bitmap bimap ;
     private Button buShare;
+
+    private LayoutInflater inflater;
+    //获取图片地址
+    private ImageView share;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +83,11 @@ public class scencyRate extends AppCompatActivity {
         Init();
         //沉浸式状态栏
         StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
+
+        //
+        share = (ImageView)findViewById(R.id.item_grida_image);
+
+
         buShare=(Button) findViewById(R.id.buShare);
         buShare.setOnClickListener(new View.OnClickListener() {
 
@@ -135,8 +145,7 @@ public class scencyRate extends AppCompatActivity {
         //完成跳转
         bt2.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(scencyRate.this,
-                        AlbumActivi.class);
+                Intent intent = new Intent(scencyRate.this, AlbumActivi.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.activity_translate_in, R.anim.activity_translate_out);
                 pop.dismiss();
@@ -177,7 +186,7 @@ public class scencyRate extends AppCompatActivity {
 
     @SuppressLint("HandlerLeak")
     public class GridAdapter extends BaseAdapter {
-        private LayoutInflater inflater;
+
         private int selectedPosition = -1;
         private boolean shape;
 

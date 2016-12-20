@@ -198,7 +198,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                     bt_pwd_eye.setBackgroundResource(R.drawable.button_clear);
                     et_pass.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_NORMAL);
                 }else{
-                    bt_pwd_eye.setBackgroundResource(R.drawable.button_clear);
+                    bt_pwd_eye.setBackgroundResource(R.drawable.cleareye);
                     et_pass.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
                 }
                 et_pass.setSelection(et_pass.getText().toString().length());
