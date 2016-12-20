@@ -30,6 +30,7 @@ import qiu.niorgai.StatusBarCompat;
 public class PersonalActivity extends Activity {
     private ImageView imge1;
     private Button pback;
+    private LinearLayout ll_basicdata;
 
     private TextView tv_username;
     private TextView tv_realname;
@@ -54,6 +55,7 @@ public class PersonalActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.personalipd);
+
 
         //获取个性签名控件
         TextView qianming_tv = (TextView)findViewById(R.id.tv_qianming);
@@ -129,7 +131,29 @@ public class PersonalActivity extends Activity {
         tv_username.setText(username);
         tv_vchat.setText(vchat);
         tv_qq.setText(qq);
-        tv_qq.setText(sina);
+        tv_sina.setText(sina);
+
+        ll_basicdata = (LinearLayout) findViewById(R.id.ll_basicdata);
+        ll_basicdata.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                String realname = tv_realname.getText().toString();
+                String birthday = tv_birthday.getText().toString();
+                String school = tv_school.getText().toString();
+                String love = tv_love.getText().toString();
+                String enrollment = tv_Enrollment.getText().toString();
+
+                Intent intent = new Intent();
+                intent.putExtra("realname", realname);
+                intent.putExtra("realname", birthday);
+                intent.putExtra("school", school);
+                intent.putExtra("love", love);
+                intent.putExtra("enrollment", enrollment);
+                intent.setClass(PersonalActivity.this, PersonalData2Activity.class);
+                startActivity(intent);
+            }
+        });
 
 
         StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
@@ -200,6 +224,7 @@ public class PersonalActivity extends Activity {
             }
         }));
     }
+
 
 
     public void initData() {
