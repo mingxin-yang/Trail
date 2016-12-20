@@ -355,4 +355,6 @@
     <color name="albumback">#E1E0DE</color>
     <color name="plugin_camera_black">#000000</color>
     <color name="none_color">#00000000</color>
+    <color name="bg_btn">#4682B4</color>
+    <!-- 钢兰色 -->
 </resources>

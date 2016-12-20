@@ -3,6 +3,7 @@ package com.android.trail.xizheng;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -20,6 +21,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.trail.R;
+import com.android.trail.homepage.MainActivity;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -27,6 +33,10 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Lenovo on 2016/12/17.
@@ -36,6 +46,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
 
     private String urlPath,urlPath2;
     private URL url = null;
+    private String responseData;
 
     // 声明控件对象
     private EditText et_name, et_pass;
@@ -112,13 +123,9 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
         mLoginError.setOnClickListener(this);
         mRegister.setOnClickListener(this);
 
-        //  countryselect=(RelativeLayout) findViewById(R.id.countryselect_layout);
-        //  countryselect.setOnClickListener(this);
-        //  coutry_phone_sn=(TextView) findViewById(R.id.contry_sn);
-        //  coutryName=(TextView) findViewById(R.id.country_name);
+        /*登陆成功后不在跳转登陆界面
+        * */
 
-        //  coutryName.setText(coutry_name_array[selectIndex]);    //默认为1
-        //  coutry_phone_sn.setText("+"+coutry_phone_sn_array[selectIndex]);
     }
     /**
      * 手机号，密码输入控件公用这一个watcher
@@ -243,7 +250,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
     //登陆
     private void Login(){
         try {
-            urlPath2 = "http://10.7.88.94:8991/user/?obj=1&passward="+et_pass.getText().toString()
+            urlPath2 = "http://10.7.88.94:8992/user/?obj=1&passward="+et_pass.getText().toString()
                     +"&username="+URLEncoder.encode(et_name.getText().toString(),"UTF-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -274,7 +281,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                 EditText realname =(EditText)change1.findViewById(R.id.txt_username);
                 EditText username =(EditText)change1.findViewById(R.id.txt_nicename);
                 try {
-                    urlPath = "http://10.7.88.94:8991/user/?obj=0&passward="+passward.getText().toString()
+                    urlPath = "http://10.7.88.94:8992/user/?obj=0&passward="+passward.getText().toString()
                                         +"&realname="+URLEncoder.encode(realname.getText().toString(),"UTF-8")
                                         +"&username="+URLEncoder.encode(username.getText().toString(),"UTF-8");
                 } catch (UnsupportedEncodingException e) {
@@ -294,12 +301,9 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
         public void handleMessage(Message msg)
         {
             if (msg.what == 0x123) {
-                Toast.makeText(Userlogin.this, "发送成功", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent();
-                intent.setClass(Userlogin.this,PersonalActivity.class);
-                startActivity(intent);
+                Toast.makeText(Userlogin.this, "注册成功,请登录!", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(Userlogin.this, "发送失败", Toast.LENGTH_LONG).show();
+                Toast.makeText(Userlogin.this, "注册失败", Toast.LENGTH_LONG).show();
             }
         }
     };
@@ -309,11 +313,67 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
         public void handleMessage(Message msg)
         {
             if (msg.what == 0x123) {
+                    SharedPreferences share=getSharedPreferences("user", MainActivity.MODE_WORLD_WRITEABLE);
+                    SharedPreferences.Editor editor = share.edit();
+                    editor.putBoolean("USER", true);
+                    editor.commit();
                 Toast.makeText(Userlogin.this, "登陆成功", Toast.LENGTH_LONG).show();
+                    List<Map<String, String>> list = new ArrayList<Map<String, String>>();
+                    Map<String, String> map = null;
+                    String json = responseData;
+
+                // 把字符串组转换成字符串
+                    JSONObject jsonObject = null;
+                    try {
+                        JSONArray jsonArray = new JSONArray(json);
+                        for (int i = 0; i< jsonArray.length(); i++) {
+                            //循环遍历，依次取出JSONObject对象
+                            //用getInt和getString方法取出对应键值
+                            JSONObject item = jsonArray.getJSONObject(i);
+                            int id = item.getInt("id");
+                            String qq = item.getString("qq");
+                            String vchat = item.getString("vchat");
+                            String passward = item.getString("passward");
+                            String hobbies = item.getString("hobbies");
+                            String school = item.getString("school");
+                            String getdate = item.getString("getdate");
+                            String headsculpture = item.getString("headsculpture");
+                            String username =item.getString("username");
+                            String realname = item.getString("realname");
+                            String gone = item.getString("gone");
+                            map = new HashMap<String, String>();
+                            map.put("id", id + "");
+                            map.put("qq", qq);
+                            map.put("vchat",vchat);
+                            map.put("passward",passward);
+                            map.put("hobbies",hobbies);
+                            map.put("school",school);
+                            map.put("getdate",getdate);
+                            map.put("headsculpture",headsculpture);
+                            map.put("username",username);
+                            map.put("realname",realname);
+                            map.put("gone",gone);
+                            list.add(map);
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                 Intent intent = new Intent();
-                intent.setClass(Userlogin.this,PersonalActivity.class);
-                startActivity(intent);
-            } else {
+                    intent.putExtra("id", list.get(0).get("id"));
+                    intent.putExtra("qq", list.get(0).get("qq"));
+                    intent.putExtra("vchat", list.get(0).get("vchat"));
+                    intent.putExtra("passward", list.get(0).get("passward"));
+                    intent.putExtra("hobbies", list.get(0).get("hobbies"));
+                    intent.putExtra("school", list.get(0).get("school"));
+                    intent.putExtra("getdate", list.get(0).get("getdate"));
+                    intent.putExtra("headsculpture", list.get(0).get("headsculpture"));
+                    intent.putExtra("username", list.get(0).get("username"));
+                    intent.putExtra("realname", list.get(0).get("realname"));
+                    intent.putExtra("gone", list.get(0).get("gone"));
+                    intent.setClass(Userlogin.this,PersonalActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
                 Toast.makeText(Userlogin.this, "登陆失败", Toast.LENGTH_LONG).show();
             }
         }
@@ -340,12 +400,14 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                             BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
                             // 数据
                             String retData = null;
-                            String responseData = "";
+                            responseData = "";
                             while ((retData = in.readLine()) != null) {
                                 responseData += retData;
                             }
                             in.close();
-                            if (responseData.equals("ture")) {
+                            if (responseData.equals("false")) {
+                                handler2.sendEmptyMessage(0x122);
+                            }else {
                                 handler2.sendEmptyMessage(0x123);
                             }
                         } else {

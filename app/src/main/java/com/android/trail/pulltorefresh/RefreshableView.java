@@ -29,7 +29,7 @@ public class RefreshableView extends LinearLayout implements View.OnTouchListene
      */
     public static final int STATUS_PULL_TO_REFRESH = 0;
 
-    /**
+    /**shaod
      * 释放立即刷新状态
      */
     public static final int STATUS_RELEASE_TO_REFRESH = 1;
