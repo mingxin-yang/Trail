@@ -9,9 +9,9 @@ android {
     signingConfigs {
         config {
             keyAlias 'key'
-            keyPassword '123456'
-            storeFile file('D:/askey/keystore.jks')
-            storePassword '123456'
+            keyPassword 'daohaode'
+            storeFile file('D:/Users/key.jks')
+            storePassword 'daohaode'
         }
     }
     compileSdkVersion 24
@@ -47,6 +47,5 @@ dependencies {
     compile project(':PullToRefresh')
     compile project(':StatusBar')
     compile files('libs/BaiduLBS_Android.jar')
-    compile files('libs/httpmime-4.1.2.jar')
 }
 
