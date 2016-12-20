@@ -85,7 +85,7 @@
             android:id="@+id/bt_pwd_eye"
             android:layout_width="23dp"
             android:layout_height="23dp"
-            android:background="@drawable/login_code_in_img"
+            android:background="@drawable/cleareye"
             android:layout_gravity="right|center_vertical"
             android:layout_marginRight="10dp"
             />
