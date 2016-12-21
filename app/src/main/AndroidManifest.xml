@@ -99,7 +99,7 @@
             android:value="48ae76de3f" />
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="09zAMprT8D4b2MB0R1wD5n09xZEC4WS2" />
+            android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />
 
         <!-- android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" /> -->
         <!-- android:value="09zAMprT8D4b2MB0R1wD5n09xZEC4WS2" -->
@@ -129,19 +129,27 @@
         <activity android:name=".welcomepage.First"/>
         <activity android:name=".homepage.MainActivity"/>
         <activity android:name=".welcomepage.NotFirst">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <!--<activity android:name=".zhenfeng.Scenery">-->
         <!--<activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">-->
         <activity android:name=".map.Map"/>
         <activity android:name=".map.Map_list"/>
         <activity android:name=".map.MapShow_list"/>
-        <activity android:name=".map.Detail"/>
-        <activity android:name=".map.Rate"/>
+        <activity android:name=".map.MapGoodsShow">
+
+        </activity>
+        <activity android:name=".map.Rate">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".map.activity.AlbumActivity"
             android:screenOrientation="portrait"></activity>

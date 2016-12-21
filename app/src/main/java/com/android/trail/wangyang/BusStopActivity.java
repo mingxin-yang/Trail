@@ -126,7 +126,7 @@ public class BusStopActivity extends Activity {
         public void run() {
             // TODO
             //获取网络资源
-            final String path = "http://10.7.88.7:8990/bus/json";
+            final String path = "http://10.7.88.94:8991/bus/json";
             try {
                 list = BusRequestJson.getJSONObject(path);
                 if (lb.size() != 0) {
