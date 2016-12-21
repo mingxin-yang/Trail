@@ -125,6 +125,7 @@
 
         <activity android:name=".wangyang.MoveList"/>
 
+        
         <activity android:name=".xizheng.Userlogin"/>
         <activity android:name=".xizheng.PersonalData2Activity"/>
 
