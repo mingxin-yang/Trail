@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -52,7 +53,9 @@ import qiu.niorgai.StatusBarCompat;
  */
 public class Discuss extends AppCompatActivity {
     List<Map<String, String>> ist = new ArrayList<Map<String, String>>();
+    private EditText DiscussEdt = (EditText)findViewById(R.id.discuss_edt);
     private Button btn;
+    private Button btn_put = (Button)findViewById(R.id.btn_put);
     //声明ListView控件
     private ListView mListView;
     // 声明数组链表，其装载的类型是ListItem(封装了一个Drawable和一个String的类)
@@ -109,6 +112,22 @@ public class Discuss extends AppCompatActivity {
         //给listview注册上下文菜单
         registerForContextMenu(mListView);
         getData();
+        btn_put.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                putData();
+            }
+        });
+    }
+    private void putData(){
+        String str = DiscussEdt.getText().toString();
+        for (int i = 0;;i++){
+            Resources res = this.getResources();
+            ListItem item = new ListItem();
+            item.setImage(res.getDrawable(R.drawable.logo));
+            item.setTitle(str);
+            mList.add(item);
+        }
     }
     private void getData(){
         final String path = "http://10.7.88.94:8992/bbs/json";

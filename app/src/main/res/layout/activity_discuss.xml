@@ -51,9 +51,10 @@
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
             android:background="@drawable/send"
-            android:id="@+id/btn"/>
+            android:id="@+id/btn_put"/>
         <EditText
             android:layout_toLeftOf="@+id/btn"
+            android:id="@+id/discuss_edt"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="5dp"
             android:layout_width="fill_parent"
