@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/scency_f_b1">
+    android:background="@drawable/sceneryimg2"
+    >
 
     <LinearLayout
         android:orientation="horizontal"
@@ -20,8 +21,8 @@
             android:id="@+id/scency_fenxiang"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/fenxiang"
-            android:layout_marginLeft="300dp"/>
+            android:background="@drawable/sceneryfx"
+            android:layout_marginLeft="280dp"/>
     </LinearLayout>
 
     <ImageSwitcher

@@ -15,15 +15,15 @@
             android:layout_marginRight="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_here"
+            android:src="@drawable/sceneryimg"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"/>
 
         <ImageView
             android:id="@+id/scency_fxy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_here"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/scenerysha"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"/>
 
@@ -33,7 +33,7 @@
             android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_here"
+            android:src="@drawable/scenerygui"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"/>
 
@@ -41,10 +41,11 @@
             android:id="@+id/btn_dialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="弹"
+            android:text="取消"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="100dp"/>
+            android:layout_marginBottom="100dp"
+            />
 
     </RelativeLayout>
 

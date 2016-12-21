@@ -81,7 +81,7 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="4lrDd2HeLqg8aeso9YoYAj9IjjX88h8C" />
+            android:value="09zAMprT8D4b2MB0R1wD5n09xZEC4WS2" />
 
             <!--android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" />-->
 
@@ -91,7 +91,6 @@
             />
         <activity android:name=".zhenfeng.Scenery"/>
         <activity android:name=".zhenfeng.share.scencyRate"/>
-        <activity android:name=".zhenfeng.fourTabViews.scenery_imagey"/>
         <activity android:name=".zhenfeng.fourTabViews.oneShare"/>
         <activity
             android:name="com.android.trail.zhenfeng.share.activity.AlbumActivi"
@@ -126,10 +125,13 @@
 
         <activity android:name=".wangyang.MoveList"/>
 
+        
         <activity android:name=".xizheng.Userlogin"/>
+        <activity android:name=".xizheng.PersonalData2Activity"/>
 
         <activity android:name=".welcomepage.First"/>
         <activity android:name=".homepage.MainActivity"/>
+        <activity android:name=".xizheng.PersonalData2Activity"/>
         <activity android:name=".welcomepage.NotFirst">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

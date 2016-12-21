@@ -41,13 +41,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.widget.ListPopupWindow.MATCH_PARENT;
-
 public class AndroidShare extends Dialog implements AdapterView.OnItemClickListener {
     private LinearLayout mLayout;
     private GridView mGridView;
     private float mDensity;
-    private String msgText = "分享了...哈哈";
+    private String msgText;
     private String mImgPath;
     private int mScreenOrientation;
     private List<ShareItem> mListData;
@@ -73,7 +71,7 @@ public class AndroidShare extends Dialog implements AdapterView.OnItemClickListe
         super(context, R.style.shareDialogTheme);
     }
 
-    public AndroidShare(Context context, int theme, String msgText, final String imgUri) {
+   /* public AndroidShare(Context context, int theme, String msgText, final String imgUri) {
         super(context, theme);
         this.msgText = msgText;
 
@@ -89,10 +87,12 @@ public class AndroidShare extends Dialog implements AdapterView.OnItemClickListe
             }).start();
         else
             this.mImgPath = imgUri;
-    }
+    }*/
 
     public AndroidShare(Context context, String msgText, final String imgUri) {
         super(context, R.style.shareDialogTheme);
+
+
         this.msgText = msgText;
 
         if (Patterns.WEB_URL.matcher(imgUri).matches())
@@ -223,24 +223,23 @@ public class AndroidShare extends Dialog implements AdapterView.OnItemClickListe
         shareMsg(getContext(), "分享到...", this.msgText, this.mImgPath, share);
     }
 
-    private void shareMsg(Context context, String msgTitle, String msgText,
-                          String imgPath, ShareItem share) {
+    private void shareMsg(Context context, String msgTitle, String msgText, String imgPath, ShareItem share) {
         if (!share.packageName.isEmpty() && !isAvilible(getContext(), share.packageName)) {
             Toast.makeText(getContext(), "请先安装" + share.title, Toast.LENGTH_SHORT).show();
             return;
         }
 
-        Intent intent = new Intent("android.intent.action.SEND");
-        if ((imgPath == null) || (imgPath.equals(""))) {
-            intent.setType("text/plain");
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        if (imgPath == null || imgPath.equals("")) {
+            intent.setType("text/plain"); // 纯文本
         } else {
             File f = new File(imgPath);
-            if ((f != null) && (f.exists()) && (f.isFile())) {
-                intent.setType("image/png");
-                intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(f));
+            if (f != null && f.exists() && f.isFile()) {
+                intent.setType("image/jpg");
+                Uri u = Uri.fromFile(f);
+                intent.putExtra(Intent.EXTRA_STREAM, u);
             }
         }
-
         intent.putExtra(Intent.EXTRA_SUBJECT, msgTitle);
         intent.putExtra(Intent.EXTRA_TEXT, msgText);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

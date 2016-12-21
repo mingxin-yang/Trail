@@ -178,7 +178,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                 break;
 
             case R.id.registfer:
-                if(SERVER_FLAG>10){
+                if(SERVER_FLAG>3){
                     Toast.makeText(this, "[内部测试--谨慎操作]", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent();
                     i.setClass(Userlogin.this,PersonalActivity.class);
@@ -198,7 +198,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                     bt_pwd_eye.setBackgroundResource(R.drawable.button_clear);
                     et_pass.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_NORMAL);
                 }else{
-                    bt_pwd_eye.setBackgroundResource(R.drawable.button_clear);
+                    bt_pwd_eye.setBackgroundResource(R.drawable.cleareye);
                     et_pass.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
                 }
                 et_pass.setSelection(et_pass.getText().toString().length());
@@ -255,7 +255,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        login.sleep(1000);
+        login.sleep(1);
     }
 
     /*创建注册对话框*/
@@ -316,7 +316,6 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                     SharedPreferences share=getSharedPreferences("user", MainActivity.MODE_WORLD_WRITEABLE);
                     SharedPreferences.Editor editor = share.edit();
                     editor.putBoolean("USER", true);
-                    editor.commit();
                 Toast.makeText(Userlogin.this, "登陆成功", Toast.LENGTH_LONG).show();
                     List<Map<String, String>> list = new ArrayList<Map<String, String>>();
                     Map<String, String> map = null;
@@ -341,6 +340,9 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                             String username =item.getString("username");
                             String realname = item.getString("realname");
                             String gone = item.getString("gone");
+                            //新增
+                            String qianming = item.getString("qianming");
+                            String sina = item.getString("sina");
                             map = new HashMap<String, String>();
                             map.put("id", id + "");
                             map.put("qq", qq);
@@ -353,8 +355,14 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                             map.put("username",username);
                             map.put("realname",realname);
                             map.put("gone",gone);
+                            //新增
+                            map.put("qianming", qianming);
+                            map.put("sina", sina);
                             list.add(map);
                         }
+                        editor.putString("username", list.get(0).get("username"));
+                        editor.putString("headsculpture",list.get(0).get("headsculpture"));
+                        editor.commit();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -370,6 +378,9 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                     intent.putExtra("username", list.get(0).get("username"));
                     intent.putExtra("realname", list.get(0).get("realname"));
                     intent.putExtra("gone", list.get(0).get("gone"));
+                    //新增
+                    intent.putExtra("qianming", list.get(0).get("qianming"));
+                    intent.putExtra("sina", list.get(0).get("sina"));
                     intent.setClass(Userlogin.this,PersonalActivity.class);
                     startActivity(intent);
                     finish();

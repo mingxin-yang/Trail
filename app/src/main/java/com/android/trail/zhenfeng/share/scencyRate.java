@@ -15,7 +15,6 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -26,6 +25,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -78,13 +78,18 @@ public class scencyRate extends AppCompatActivity {
         Init();
         //沉浸式状态栏
         StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
+         EditText sharewenzi=(EditText) findViewById(R.id.sharewenzi);
+         final String msgText1=sharewenzi.getText().toString();
+       /* ImageView item_grida_image=(ImageView) findViewById(R.id.item_grida_image);
+        path=item_grida_image.getDrawingCache();
+        Bitmap imageBitmap = BitmapFactory.decodeFile(path)*/
         buShare=(Button) findViewById(R.id.buShare);
         buShare.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 AndroidShare as = new AndroidShare(
                         scencyRate.this,
-                        "哈哈---超方便的分享！！！来自allen",
+                        "你好啊",
                         "http://img6.cache.netease.com/cnews/news2012/img/logo_news.png");
                 as.show();
             }
@@ -321,17 +326,7 @@ public class scencyRate extends AppCompatActivity {
         }
     }
 
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            for(int i=0;i<PublicWay.activityList.size();i++){
-                if (null != PublicWay.activityList.get(i)) {
-                    PublicWay.activityList.get(i).finish();
-                }
-            }
-            System.exit(0);
-        }
-        return true;
-    }
+
 
 }
 
