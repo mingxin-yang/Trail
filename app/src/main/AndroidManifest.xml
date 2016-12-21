@@ -91,7 +91,6 @@
             />
         <activity android:name=".zhenfeng.Scenery"/>
         <activity android:name=".zhenfeng.share.scencyRate"/>
-        <activity android:name=".zhenfeng.fourTabViews.scenery_imagey"/>
         <activity android:name=".zhenfeng.fourTabViews.oneShare"/>
         <activity
             android:name="com.android.trail.zhenfeng.share.activity.AlbumActivi"
@@ -126,7 +125,9 @@
 
         <activity android:name=".wangyang.MoveList"/>
 
+        
         <activity android:name=".xizheng.Userlogin"/>
+        <activity android:name=".xizheng.PersonalData2Activity"/>
 
         <activity android:name=".welcomepage.First"/>
         <activity android:name=".homepage.MainActivity"/>
