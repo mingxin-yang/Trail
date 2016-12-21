@@ -101,7 +101,7 @@ public class PersonalActivity extends Activity {
         String realname = intent.getStringExtra("realname");
         String birthday = intent.getStringExtra("birthday");
         String school = intent.getStringExtra("school");
-        String love = intent.getStringExtra("love");
+        String love = intent.getStringExtra("gone");
         String vchat = intent.getStringExtra("vchat");
         String qianming = intent.getStringExtra("qianming");
         String enrollment = intent.getStringExtra("getdate");

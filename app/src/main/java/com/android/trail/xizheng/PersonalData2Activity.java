@@ -2,18 +2,13 @@ package com.android.trail.xizheng;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.android.trail.R;
-import com.android.trail.homepage.MainActivity;
-
-import qiu.niorgai.StatusBarCompat;
 
 /**
  * Created by dell on 2016/12/20.
@@ -39,6 +34,8 @@ public class PersonalData2Activity extends Activity{
         et_realname = (EditText)findViewById(R.id.et_realname);
         et_birthday = (EditText)findViewById(R.id.et_birthday);
         et_school = (EditText)findViewById(R.id.et_school);
+        et_love = (EditText) findViewById(R.id.et_love);
+        et_Enrollment = (EditText)findViewById(R.id.et_Enrollment);
 
         Intent intent = getIntent();
         String realname = intent.getStringExtra("realname");

@@ -178,7 +178,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                 break;
 
             case R.id.registfer:
-                if(SERVER_FLAG>10){
+                if(SERVER_FLAG>3){
                     Toast.makeText(this, "[内部测试--谨慎操作]", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent();
                     i.setClass(Userlogin.this,PersonalActivity.class);
@@ -255,7 +255,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        login.sleep(1000);
+        login.sleep(1);
     }
 
     /*创建注册对话框*/
@@ -316,7 +316,6 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                     SharedPreferences share=getSharedPreferences("user", MainActivity.MODE_WORLD_WRITEABLE);
                     SharedPreferences.Editor editor = share.edit();
                     editor.putBoolean("USER", true);
-                    editor.commit();
                 Toast.makeText(Userlogin.this, "登陆成功", Toast.LENGTH_LONG).show();
                     List<Map<String, String>> list = new ArrayList<Map<String, String>>();
                     Map<String, String> map = null;
@@ -361,6 +360,9 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                             map.put("sina", sina);
                             list.add(map);
                         }
+                        editor.putString("username", list.get(0).get("username"));
+                        editor.putString("headsculpture",list.get(0).get("headsculpture"));
+                        editor.commit();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

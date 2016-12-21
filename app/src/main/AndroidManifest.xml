@@ -130,6 +130,7 @@
 
         <activity android:name=".welcomepage.First"/>
         <activity android:name=".homepage.MainActivity"/>
+        <activity android:name=".xizheng.PersonalData2Activity"/>
         <activity android:name=".welcomepage.NotFirst">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
