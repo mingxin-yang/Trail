@@ -111,7 +111,7 @@ public class Discuss extends AppCompatActivity {
         getData();
     }
     private void getData(){
-        final String path = "http://10.7.88.7:8990/bbs/json";
+        final String path = "http://10.7.88.94:8992/bbs/json";
         try {
             ist = BBSRequestJson.getJSONObject(path);
             if (mList.size() != 0) {
