@@ -362,25 +362,25 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                         }
                         editor.putString("username", list.get(0).get("username"));
                         editor.putString("headsculpture",list.get(0).get("headsculpture"));
-                        editor.commit();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 Intent intent = new Intent();
-                    intent.putExtra("id", list.get(0).get("id"));
-                    intent.putExtra("qq", list.get(0).get("qq"));
-                    intent.putExtra("vchat", list.get(0).get("vchat"));
-                    intent.putExtra("passward", list.get(0).get("passward"));
-                    intent.putExtra("hobbies", list.get(0).get("hobbies"));
-                    intent.putExtra("school", list.get(0).get("school"));
-                    intent.putExtra("getdate", list.get(0).get("getdate"));
-                    intent.putExtra("headsculpture", list.get(0).get("headsculpture"));
-                    intent.putExtra("username", list.get(0).get("username"));
-                    intent.putExtra("realname", list.get(0).get("realname"));
-                    intent.putExtra("gone", list.get(0).get("gone"));
+                    editor.putInt("id", Integer.parseInt(list.get(0).get("id")));
+                    editor.putString("qq",list.get(0).get("qq"));
+                    editor.putString("vchat",list.get(0).get("vchat"));
+                    editor.putString("passward",list.get(0).get("passward"));
+                    editor.putString("hobbies",list.get(0).get("hobbies"));
+                    editor.putString("school", list.get(0).get("school"));
+                    editor.putString("getdate", list.get(0).get("getdate"));
+                    editor.putString("headsculpture",list.get(0).get("headsculpture"));
+                    editor.putString("username",list.get(0).get("username"));
+                    editor.putString("realname",list.get(0).get("realname"));
+                    editor.putString("gone",list.get(0).get("gone"));
                     //新增
-                    intent.putExtra("qianming", list.get(0).get("qianming"));
-                    intent.putExtra("sina", list.get(0).get("sina"));
+                    editor.putString("qianming",list.get(0).get("qianming"));
+                    editor.putString("sina",list.get(0).get("sina"));
+                    editor.commit();
                     intent.setClass(Userlogin.this,PersonalActivity.class);
                     startActivity(intent);
                     finish();

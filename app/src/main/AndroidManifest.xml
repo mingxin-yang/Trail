@@ -69,6 +69,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 申明网络权限  -->
     <uses-permission android:name="android.permission.INTERNET" />
+
     <!-- 申明权限 操作SD卡 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -122,6 +123,7 @@
         <activity android:name=".com.adroid.huizhao.ViewPager.Jieshao5"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao6"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoMore"/>
+        <activity android:name=".xizheng.PhotoCamera"/>
 
         <activity android:name=".wangyang.MoveList"/>
 

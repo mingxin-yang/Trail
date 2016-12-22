@@ -11,10 +11,9 @@
         android:background="#FFCC00">
         <Button
             android:id="@+id/person_back"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/goback"
-            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退出登陆"
             android:layout_marginLeft="5dp"/>
     </LinearLayout>
 
