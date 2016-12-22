@@ -5,23 +5,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.trail.R;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
-import com.baidu.mapapi.map.BitmapDescriptorFactory;
 import com.baidu.mapapi.map.InfoWindow;
 import com.baidu.mapapi.map.MapPoi;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
-import com.baidu.mapapi.map.MapView;
 
 import com.baidu.mapapi.map.TextureMapView;
-import com.baidu.mapapi.map.Overlay;
 import com.baidu.mapapi.model.LatLng;
-import com.baidu.mapapi.model.inner.GeoPoint;
 import com.baidu.mapapi.overlayutil.WalkingRouteOverlay;
 import com.baidu.mapapi.search.core.RouteLine;
 import com.baidu.mapapi.overlayutil.OverlayManager;
@@ -194,7 +189,6 @@ public class CustomRouteActivity extends Activity implements BaiduMap.OnMapClick
 
     }
 
-    @Override
     public void onGetMassTransitRouteResult(MassTransitRouteResult massTransitRouteResult) {
 
     }
@@ -204,7 +198,6 @@ public class CustomRouteActivity extends Activity implements BaiduMap.OnMapClick
 
     }
 
-    @Override
     public void onGetIndoorRouteResult(IndoorRouteResult indoorRouteResult) {
 
     }

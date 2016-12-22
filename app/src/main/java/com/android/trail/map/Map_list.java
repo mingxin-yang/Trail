@@ -5,15 +5,12 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.android.trail.R;
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,7 +24,6 @@ import qiu.niorgai.StatusBarCompat;
  */
 
 public class Map_list extends Activity{
-    private PullToRefreshListView mPullToRefreshListView;
     private ListView lv;
     private MyAdapter myadapter;
     private LinkedList<String> mListItems;
@@ -41,25 +37,12 @@ public class Map_list extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map_list);
         StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
-        mPullToRefreshListView = (PullToRefreshListView) findViewById(R.id.pull_to_refresh_listview);
-        mPullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
-            @Override
-            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
-                String label = DateUtils.formatDateTime(getApplicationContext(), System.currentTimeMillis(),
-                        DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_ALL);
-
-                refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(label);
-
-                new GetDataTask().execute();
-            }
-        });
         adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data);
         //5.得到listview对象，并设置adapter
         getData();
         mListItems = new LinkedList<String>();
         mListItems.addAll(Arrays.asList(data));
         myadapter=new MyAdapter(this,ls);
-        lv=mPullToRefreshListView.getRefreshableView();
         lv.setAdapter(myadapter);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -87,7 +70,6 @@ public class Map_list extends Activity{
             mListItems.addFirst("Added after refresh...");
             myadapter.notifyDataSetChanged();
 
-            mPullToRefreshListView.onRefreshComplete();
             super.onPostExecute(result);
         }
     }
