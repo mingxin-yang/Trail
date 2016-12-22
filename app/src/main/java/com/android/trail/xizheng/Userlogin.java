@@ -278,8 +278,8 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
             public void onClick(DialogInterface dialog, int which) {
                 //此处可执行注册操作
                 EditText passward=    (EditText)change1.findViewById(R.id.txt_password);
-                EditText realname =(EditText)change1.findViewById(R.id.txt_username);
-                EditText username =(EditText)change1.findViewById(R.id.txt_nicename);
+                EditText realname =(EditText)change1.findViewById(R.id.txt_nicename);
+                EditText username =(EditText)change1.findViewById(R.id.txt_username);
                 try {
                     urlPath = "http://10.7.88.94:8992/user/?obj=0&passward="+passward.getText().toString()
                                         +"&realname="+URLEncoder.encode(realname.getText().toString(),"UTF-8")

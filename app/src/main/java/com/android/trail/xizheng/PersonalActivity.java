@@ -243,7 +243,7 @@ public class PersonalActivity extends AppCompatActivity implements View.OnClickL
                             public void onClick(DialogInterface dialog, int which) {
                                 //此处可执行保存操作
                                 imge1.setImageBitmap(ytouxiang);
-                                imge2.setImageBitmap(ytouxiang);
+                                //imge2.setImageBitmap(ytouxiang);
                             }
                         })
                         .setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -418,10 +418,10 @@ public class PersonalActivity extends AppCompatActivity implements View.OnClickL
         intent.putExtra("crop", "true");
         // aspectX aspectY 是宽高的比例
         intent.putExtra("aspectX", 1);
-        intent.putExtra("aspectY", 1);
+        intent.putExtra("aspectY", 2);
         // outputX outputY 是裁剪图片宽高
-        intent.putExtra("outputX", 300);
-        intent.putExtra("outputY", 300);
+        intent.putExtra("outputX",  2*h/5);
+        intent.putExtra("outputY", 2*h/5);
         intent.putExtra("return-data", true);
         startActivityForResult(intent, PHOTO_CLIP);
     }
