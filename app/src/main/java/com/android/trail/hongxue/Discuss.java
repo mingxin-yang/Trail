@@ -61,7 +61,7 @@ public class Discuss extends AppCompatActivity {
     // 声明数组链表，其装载的类型是ListItem(封装了一个Drawable和一个String的类)
     private ArrayList<ListItem> mList;
 
-    private PullToRefreshListView disPullToRefreshListView;
+
     /**
      * Activity的入口方法
      */
@@ -73,16 +73,7 @@ public class Discuss extends AppCompatActivity {
         DiscussEdt = (EditText)findViewById(R.id.discuss_edt);
         btn_put = (Button)findViewById(R.id.btn_put);
         //下拉刷新
-        disPullToRefreshListView = (PullToRefreshListView) findViewById(R.id.pull_to_refresh_listview_dis);
-        disPullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
-            @Override
-            public void onRefresh(PullToRefreshBase<ListView> refreshView) {
-                String btsoplabel = DateUtils.formatDateTime(getApplicationContext(), System.currentTimeMillis(),
-                        DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_ALL);
-                new disGetDataTask().execute();
-                refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(btsoplabel);
-            }
-        });
+
 
         btn = (Button)findViewById(R.id.btn_discuss);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +86,7 @@ public class Discuss extends AppCompatActivity {
         });
 
         //获取listview对象
-        mListView = disPullToRefreshListView.getRefreshableView();
+        mListView = (ListView) findViewById(R.id.discuss_list);
         //获取Resources对象
         Resources res = this.getResources();
         mList = new ArrayList<Discuss.ListItem>();
@@ -151,24 +142,7 @@ public class Discuss extends AppCompatActivity {
         }
 
     }
-    private class disGetDataTask extends AsyncTask<Void, Void, Void> {
 
-        @Override
-        protected Void doInBackground(Void... params) {
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-            }
-            return null;
-        }
-        @Override
-        protected void onPostExecute(Void result) {
-            // TODO 自动生成的方法存根
-            super.onPostExecute(result);
-            // 加载完成后停止刷新
-            disPullToRefreshListView.onRefreshComplete();
-        }
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.discuss, menu);
