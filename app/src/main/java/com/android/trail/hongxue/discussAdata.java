@@ -8,11 +8,9 @@ public class discussAdata {
     private int id;
     private String bulletin;
     private String username;
-
     private String headsculpture;
 
-    public discussAdata(int id,
-            String username, String headsculpture, String bulletin) {
+    public discussAdata(int id,String username, String headsculpture, String bulletin) {
         this.username = username;
         this.headsculpture = headsculpture;
         this.bulletin = bulletin;
