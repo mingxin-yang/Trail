@@ -10,79 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@android:color/white"
    >
-    <ScrollView
-        android:id="@+id/scroll"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"
-                android:orientation="vertical"
-                android:weightSum="1">
-
-                <ImageView
-                    android:layout_width="378dp"
-                    android:layout_height="378dp"
-                    android:src="@drawable/good"
-                    android:id="@+id/imageView" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="【包邮 皮面烫金 打字无删减】四大名著全套原著正版
-  四大名著全套学生版红楼梦原著三国演义"
-                    android:textSize="15dp"
-                    android:textColor="#000000"
-                    android:id="@+id/textView2" />
-
-                <TextView
-                    android:id="@+id/charge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="￥115"
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-
-                    android:layout_margin="20dp"
-                    android:textColor="#FF2400"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="月销1037"
-                    android:textColor="#000000"
-                    android:textAlignment="center"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="12dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="宝贝评价"
-                    android:textSize="20sp"
-                    android:textColor="@android:color/black"/>
-
-            </LinearLayout>
-            <com.android.trail.map.MyListView
-                android:id="@+id/list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:descendantFocusability="blocksDescendants">
-            </com.android.trail.map.MyListView>
-
-        </LinearLayout>
-
-    </ScrollView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -91,6 +19,82 @@
         android:layout_alignParentBottom="true"
         android:background="@android:color/white"
     >
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="378dp"
+                        android:layout_height="378dp"
+                        android:src="@drawable/good"
+                        android:id="@+id/imageView" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="【包邮 皮面烫金 打字无删减】四大名著全套原著正版
+      四大名著全套学生版红楼梦原著三国演义"
+                        android:textSize="15dp"
+                        android:textColor="#000000"
+                         />
+
+                    <TextView
+                        android:id="@+id/charge1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥115222222"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+
+                        android:layout_margin="20dp"
+                        android:textColor="#FF2400"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="月销1037"
+                        android:textColor="#000000"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="宝贝评价"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/black"/>
+
+                </LinearLayout>
+                <com.android.trail.map.MyListView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+                </com.android.trail.map.MyListView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
         <Button
             android:id="@+id/showBtn"
             android:layout_width="wrap_content"

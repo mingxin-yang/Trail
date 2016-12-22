@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -36,6 +37,7 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 
 import com.android.trail.R;
+import com.android.trail.homepage.MainActivity;
 import com.android.trail.map.activity.AlbumActivity;
 import com.android.trail.map.activity.GalleryActivity;
 import com.android.trail.map.util.Bimp;
@@ -45,14 +47,19 @@ import com.android.trail.map.util.PublicWay;
 import com.android.trail.map.util.Res;
 
 import java.io.DataOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import qiu.niorgai.StatusBarCompat;
 
 import static android.R.attr.path;
+import static com.android.trail.R.id.et;
+import static com.android.trail.R.id.username;
 
 //import static com.baidu.location.d.j.R;
 
@@ -85,26 +92,40 @@ public class Rate extends Activity {
         setContentView(parentView);
         Init();
         StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
-
+        //获取用户名和用户头像
+        SharedPreferences share=getSharedPreferences("user", MainActivity.MODE_WORLD_WRITEABLE);
+        String username=share.getString("username","");
+        String headsculpture=share.getString("headsculpture","");
+        //评论内容
         EditText et=(EditText)findViewById(R.id.et);
         String content=et.getText().toString();
+        final Map<String,Object> paramMap = new HashMap<String, Object>(); //文本数据全部添加到Map里
+        paramMap.put("username",username);
+        paramMap.put("headsculpture", headsculpture);
+        paramMap.put("content", content);
+        final File pictureFile = new File(Bimp.tempSelectBitmap.get(0).getImagePath()); //通过路径获取文件
         Button submit=(Button)findViewById(R.id.submit);
         submit.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                uploadFile();
+
+                new Thread(){
+                    public void run(){
+                        uploadFile("http://10.7.88.94:8992/shopvaluate",paramMap,pictureFile);
+                    }
+                }.start();
             }
         });
 
     }
 
-    private void uploadFile() {
+    private void uploadFile(String urlStr, Map<String,Object> paramMap, File pictureFile ) {
         String end ="\r\n";
         String twoHyphens ="--";
         String boundary =java.util.UUID.randomUUID().toString();
         try
         {
-            URL url =new URL("http://10.7.88.94:8992/shopvaluate");
+            URL url =new URL(urlStr);
             HttpURLConnection con=(HttpURLConnection)url.openConnection();
           /* 允许Input、Output，不使用Cache */
             con.setDoInput(true);
@@ -128,7 +149,7 @@ public class Rate extends Activity {
                     newName +"\""+ end);
             ds.writeBytes(end);
           /* 取得文件的FileInputStream */
-            FileInputStream fStream =new FileInputStream(Bimp.tempSelectBitmap.get(0).getImagePath());
+            FileInputStream fStream =new FileInputStream(pictureFile);
           /* 设置每次写入1024bytes */
             int bufferSize =1024;
             byte[] buffer =new byte[bufferSize];
@@ -140,6 +161,17 @@ public class Rate extends Activity {
                 ds.write(buffer, 0, length);
             }
             ds.writeBytes(end);
+
+            StringBuilder text = new StringBuilder();
+            for(Map.Entry<String,Object> entry : paramMap.entrySet()) { //在for循环中拼接报文，上传文本数据
+                text.append("--");
+                text.append(boundary);
+                text.append("\r\n");
+                text.append("Content-Disposition: form-data; name=\""+ entry.getKey() + "\"\r\n\r\n");
+                text.append(entry.getValue());
+                text.append("\r\n");
+            }
+            ds.write(text.toString().getBytes("utf-8"));
             ds.writeBytes(twoHyphens + boundary + twoHyphens + end);
           /* close streams */
             fStream.close();

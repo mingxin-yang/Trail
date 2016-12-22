@@ -108,32 +108,54 @@
             android:enabled="true"
             android:process=":remote"
             />
+        <activity android:name=".zhenfeng.Scenery"/>
+        <activity android:name=".zhenfeng.share.scencyRate"/>
+        <activity android:name=".zhenfeng.fourTabViews.oneShare"/>
+        <activity
+            android:name="com.android.trail.zhenfeng.share.activity.AlbumActivi"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.android.trail.zhenfeng.share.activity.ImageFi" >
+        </activity>
+        <activity
+            android:name="com.android.trail.zhenfeng.share.activity.ShowAllPho" >
+        </activity>
+        <activity
+            android:name="com.android.trail.zhenfeng.share.activity.GalleryActivi">
+        </activity>
 
 
 
-        <activity android:name=".zhenfeng.share.scencyShare"/>
         <activity android:name=".hongxue.Discuss"
             android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".wangyang.BusStopActivity"/>
         <activity android:name=".xizheng.PersonalActivity"/>
-        <activity android:name=".zhenfeng.FJTabview"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
         <activity android:name=".com.adroid.huizhao.Test"/>
 
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao1"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao2"/>
         <activity android:name=".com.adroid.huizhao.ViewPager.JieShao3"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao4"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.Jieshao5"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao6"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoMore"/>
 
         <activity android:name=".wangyang.MoveList"/>
+
+        
+        <activity android:name=".xizheng.Userlogin"/>
+        <activity android:name=".xizheng.PersonalData2Activity"/>
 
         <activity android:name=".welcomepage.First"/>
         <activity android:name=".homepage.MainActivity"/>
         <activity android:name=".welcomepage.NotFirst">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <!--<activity android:name=".zhenfeng.Scenery">-->
         <!--<activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity">-->
@@ -144,25 +166,26 @@
 
         </activity>
         <activity android:name=".map.Rate">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name=".map.activity.AlbumActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".map.activity.ImageFile"></activity>
-        <activity android:name=".map.activity.ShowAllPhoto"></activity>
-        <activity android:name=".map.activity.GalleryActivity"></activity>
-        <activity android:name=".map.Rounting" />
+            android:name="com.android.trail.map.activity.AlbumActivity"
+            android:screenOrientation="portrait">
+        </activity>
         <activity
-            android:name=".map.CustomRouteActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".map.Navi" />
-        <activity android:name=".map.BNDemoGuideActivity" />
+            android:name="com.android.trail.map.activity.ImageFile" >
+        </activity>
+        <activity
+            android:name="com.android.trail.map.activity.ShowAllPhoto" >
+        </activity>
+        <activity
+            android:name="com.android.trail.map.activity.GalleryActivity">
+        </activity>
+        <activity android:name=".map.BNDemoGuideActivity"/>
+        <activity android:name=".map.CustomRouteActivity"/>
+        <activity android:name=".map.Navi"/>
+
+
     </application>
 
 </manifest>

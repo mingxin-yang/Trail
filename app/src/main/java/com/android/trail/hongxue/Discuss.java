@@ -2,7 +2,10 @@ package com.android.trail.hongxue;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -18,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -32,7 +36,14 @@ import com.android.trail.xizheng.PersonalActivity;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
+import java.io.BufferedInputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import qiu.niorgai.StatusBarCompat;
 
@@ -41,7 +52,10 @@ import qiu.niorgai.StatusBarCompat;
  * Created by Loktar on 2016/11/22.
  */
 public class Discuss extends AppCompatActivity {
+    List<Map<String, String>> ist = new ArrayList<Map<String, String>>();
+    private EditText DiscussEdt;
     private Button btn;
+    private Button btn_put;
     //声明ListView控件
     private ListView mListView;
     // 声明数组链表，其装载的类型是ListItem(封装了一个Drawable和一个String的类)
@@ -55,7 +69,8 @@ public class Discuss extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discuss);
         StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
-
+        DiscussEdt = (EditText)findViewById(R.id.discuss_edt);
+        btn_put = (Button)findViewById(R.id.btn_put);
         //下拉刷新
         disPullToRefreshListView = (PullToRefreshListView) findViewById(R.id.pull_to_refresh_listview_dis);
         disPullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
@@ -84,10 +99,10 @@ public class Discuss extends AppCompatActivity {
         Resources res = this.getResources();
         mList = new ArrayList<Discuss.ListItem>();
         //初始化data，装载数据到数组链表mList中
-        ListItem item = new ListItem();
+        /*ListItem item = new ListItem();
         item.setImage(res.getDrawable(R.drawable.logo));
         item.setTitle("我觉得写留言板这个人很帅");
-        mList.add(item);
+        mList.add(item);*/
 
 
         // 获取MainListAdapter对象
@@ -97,18 +112,40 @@ public class Discuss extends AppCompatActivity {
         mListView.setAdapter(adapter);
         //给listview注册上下文菜单
         registerForContextMenu(mListView);
+        getData();
+        btn_put.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                putData();
+            }
+        });
+    }
+    private void putData(){
+        String str = DiscussEdt.getText().toString();
+
+            Resources res = this.getResources();
+            ListItem item = new ListItem();
+            item.setImage(res.getDrawable(R.drawable.logo));
+            item.setTitle(str);
+            mList.add(item);
+
     }
     private void getData(){
-        final String path = "http://10.7.88.7:8990/bbs/json";
+        final String path = "http://10.7.88.94:8992/bbs/json";
         try {
-            //mList = BBSRequestJson.getJSONObject(path);
+            ist = BBSRequestJson.getJSONObject(path);
             if (mList.size() != 0) {
                 mList.clear();
             }
-            ListItem item = new ListItem();
-            //for(int i = 0;i < mListView.size();i++){
-                //mList.add(item.getImage("headsculpture"),item.getTitle("bulletin"));
-           // }
+            for(int i = 0;i < mList.size();i++){
+                String BitmapUrl = ist.get(i).get("headsculpture");
+                Bitmap bp = getBitmap(BitmapUrl);
+                Drawable da = new BitmapDrawable(bp);
+                ListItem item = new ListItem();
+                item.setTitle(ist.get(i).get("bulletin"));
+                item.setImage(da);
+                mList.add(item);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -152,9 +189,6 @@ public class Discuss extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setClass(Discuss.this,PersonalActivity.class);
                 startActivity(intent);
-                break;
-            case R.id.share:
-                Toast.makeText(Discuss.this, "点赞成功", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.delete:
                 Toast.makeText(Discuss.this, "举报成功", Toast.LENGTH_SHORT).show();
@@ -261,5 +295,27 @@ public class Discuss extends AppCompatActivity {
             this.title = title;
         }
 
+    }
+    public Bitmap getBitmap(String url) {
+        Bitmap bm = null;
+        try {
+            URL iconUrl = new URL(url);
+            URLConnection conn = iconUrl.openConnection();
+            HttpURLConnection http = (HttpURLConnection) conn;
+
+            int length = http.getContentLength();
+
+            conn.connect();
+            // 获得图像的字符流
+            InputStream is = conn.getInputStream();
+            BufferedInputStream bis = new BufferedInputStream(is, length);
+            bm = BitmapFactory.decodeStream(bis);
+            bis.close();
+            is.close();// 关闭流
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return bm;
     }
 }

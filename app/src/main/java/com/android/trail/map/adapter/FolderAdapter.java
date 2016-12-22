@@ -1,7 +1,5 @@
 package com.android.trail.map.adapter;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -22,6 +20,8 @@ import com.android.trail.map.util.BitmapCache;
 import com.android.trail.map.util.BitmapCache.ImageCallback;
 import com.android.trail.map.util.ImageItem;
 import com.android.trail.map.util.Res;
+
+import java.util.ArrayList;
 
 /**
  * 这个是显示所有包含图片的文件夹的适配器
@@ -138,7 +138,7 @@ public class FolderAdapter extends BaseAdapter {
 		if (path.contains("android_hybrid_camera_default"))
 			holder.imageView.setImageResource(Res.getDrawableID("plugin_camera_no_pictures"));
 		else {
-//			holder.imageView.setImageBitmap( AlbumActivity.contentList.get(position).imageList.get(0).getBitmap());
+//			holder.imageView.setImageBitmap( AlbumActivi.contentList.get(position).imageList.get(0).getBitmap());
 			final ImageItem item = AlbumActivity.contentList.get(position).imageList.get(0);
 			holder.imageView.setTag(item.imagePath);
 			cache.displayBmp(holder.imageView, item.thumbnailPath, item.imagePath,

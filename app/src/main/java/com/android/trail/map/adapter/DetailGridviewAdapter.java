@@ -1,6 +1,7 @@
 package com.android.trail.map.adapter;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,14 +22,13 @@ import java.util.ArrayList;
  */
 
 public class DetailGridviewAdapter extends BaseAdapter {
-    Activity context;
+    Context context;
     ArrayList<String> list;
     public Bitmap bitmaps[];
     private FinalBitmap finalImageLoader;
     private int wh;
-    public DetailGridviewAdapter(Activity context,ArrayList<String> data) {
+    public DetailGridviewAdapter(Context context, ArrayList<String> data) {
         this.context=context;
-        this.wh=(SysUtils.getScreenWidth(context)-SysUtils.Dp2Px(context, 99))/3;
         this.list=data;
         this.finalImageLoader=FinalBitmap.create(context);
         this.finalImageLoader.configLoadingImage(R.drawable.ic_launcher);//图片加载完成前显示的图片

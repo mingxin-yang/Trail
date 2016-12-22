@@ -33,17 +33,16 @@ import static android.R.attr.data;
 
 public class DetailListViewAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
-    private Activity context;
+    private Context context;
     private List<Detail> list;
     private FinalBitmap finalImageLoader ;
     private DetailGridviewAdapter nearByInfoImgsAdapter;
     private int wh;
 
-    public DetailListViewAdapter(Activity context, List<Detail> list) {
+    public DetailListViewAdapter(Context context, List<Detail> list) {
         super();
         this.mInflater = LayoutInflater.from(context);
         this.context = context;
-        this.wh=(SysUtils.getScreenWidth(context)-SysUtils.Dp2Px(context, 99))/3;
         this.list = list;
         this.finalImageLoader=FinalBitmap.create(context);
         this.finalImageLoader.configLoadingImage(R.drawable.ic_launcher);
@@ -58,17 +57,17 @@ public class DetailListViewAdapter extends BaseAdapter {
     }
     @Override
     public int getCount() {
-        return list.size();
+        return list == null ? 0 : list.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return list.get(i);
+        return list == null ? null : list.get(i);
     }
 
     @Override
     public long getItemId(int i) {
-        return i;
+        return list == null ? null : i;
     }
 
     @Override
@@ -161,7 +160,7 @@ public class DetailListViewAdapter extends BaseAdapter {
                     gv_images.setNumColumns(3);
                     break;
             }
-            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(w, RelativeLayout.LayoutParams.WRAP_CONTENT);
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(w, LinearLayout.LayoutParams.WRAP_CONTENT);
             gv_images.setLayoutParams(lp);
             nearByInfoImgsAdapter=new DetailGridviewAdapter(context, list);
             gv_images.setAdapter(nearByInfoImgsAdapter);

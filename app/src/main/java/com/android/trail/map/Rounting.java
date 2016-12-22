@@ -6,31 +6,13 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import com.android.trail.R;
-import com.android.trail.homepage.MainActivity;
-import com.baidu.mapapi.map.BitmapDescriptorFactory;
-import com.baidu.mapapi.map.MapStatusUpdateFactory;
-import com.baidu.mapapi.map.MarkerOptions;
-import com.baidu.mapapi.model.LatLng;
-import com.baidu.mapapi.search.core.SearchResult;
-import com.baidu.mapapi.search.geocode.GeoCodeOption;
-import com.baidu.mapapi.search.geocode.GeoCodeResult;
-import com.baidu.mapapi.search.geocode.GeoCoder;
-import com.baidu.mapapi.search.geocode.OnGetGeoCoderResultListener;
-import com.baidu.mapapi.search.geocode.ReverseGeoCodeOption;
-import com.baidu.mapapi.search.geocode.ReverseGeoCodeResult;
-import com.baidu.platform.comapi.map.B;
-import com.baidu.platform.comapi.map.E;
 
 import qiu.niorgai.StatusBarCompat;
 
 import static com.android.trail.R.string.latitude3;
 import static com.android.trail.R.string.longitude3;
-import static com.baidu.location.d.h.S;
-import static com.baidu.location.d.h.r;
 
 /**
  * Created by mingx_000 on 2016/12/5 0005.
@@ -43,7 +25,7 @@ public class Rounting extends Activity implements View.OnClickListener{
     Button walk2;
     Button walk3;
     Button rount;
-
+    Button luxian_back;
     String longitude1;
     String latitude1;
     String longitude2;
@@ -64,12 +46,14 @@ public class Rounting extends Activity implements View.OnClickListener{
         walk1=(Button)findViewById(R.id.walk1);
         walk2=(Button)findViewById(R.id.walk2);
         walk3=(Button)findViewById(R.id.walk3);
+        luxian_back=(Button)findViewById(R.id.luxian_back);
 
 //        searchButtonProcess(rount);
 
         walk1.setOnClickListener(this);
         walk2.setOnClickListener(this);
         walk3.setOnClickListener(this);
+        luxian_back.setOnClickListener(this);
 
 
 
