@@ -14,6 +14,7 @@ import android.widget.ListView;
 import com.android.trail.R;
 import com.android.trail.homepage.MainActivity;
 import com.android.trail.json.BBSRequestJson;
+import com.android.trail.pulltorefresh.RefreshableView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,7 @@ public class Discuss extends Activity {
     private Button btn;
     private Button btn_put;
     private discussAdapter discussAdapter;
+    private RefreshableView refreshableView;
     //声明ListView控件
     private ListView mListView;
     // 声明数组链表，其装载的类型是ListItem(封装了一个Drawable和一个String的类)
@@ -46,6 +48,19 @@ public class Discuss extends Activity {
         DiscussEdt = (EditText)findViewById(R.id.discuss_edt);
         btn_put = (Button)findViewById(R.id.btn_put);
         //下拉刷新
+        refreshableView = (RefreshableView) findViewById(R.id.fresh_view);
+        refreshableView.setOnRefreshListener(new RefreshableView.PullToRefreshListener() {
+            @Override
+            public void onRefresh() {
+                try {
+                    Thread.sleep(3000);
+                    new Thread(networkTask).start();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                refreshableView.finishRefreshing();
+            }
+        }, 0);
 
         new Thread(networkTask).start();
 
