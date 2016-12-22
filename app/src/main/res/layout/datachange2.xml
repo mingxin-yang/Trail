@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <!-- 黄色标题栏以及返回按钮-->
-    <FrameLayout
+    <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -14,7 +14,6 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:background="@drawable/goback"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="5dp"/>
         <TextView
             android:layout_width="match_parent"
@@ -23,10 +22,9 @@
             android:text="个人信息修改"
             android:textSize="25dp"
             android:textAlignment="center"/>
-    </FrameLayout>
+    </LinearLayout>
     <!--个人信息修改-->
     <LinearLayout
-        android:layout_marginTop="50dip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -48,7 +46,7 @@
                     android:text="真实姓名"/>
 
                 <EditText
-                    android:id="@+id/et_change1"
+                    android:id="@+id/et_realname"
                     android:layout_width="200dip"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="52sp"
@@ -68,7 +66,7 @@
                     android:text="出生日期"/>
 
                 <EditText
-                    android:id="@+id/et_change2"
+                    android:id="@+id/et_birthday"
                     android:layout_width="200dip"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="52sp"
@@ -88,7 +86,7 @@
                     android:text="@string/xuexiao"/>
 
                 <EditText
-                    android:id="@+id/et_change3"
+                    android:id="@+id/et_school"
                     android:layout_width="200dip"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="52sp"
@@ -108,7 +106,7 @@
                     android:text="入学年份"/>
 
                 <EditText
-                    android:id="@+id/et_change4"
+                    android:id="@+id/et_Enrollment"
                     android:layout_width="200dip"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="52sp"
@@ -128,7 +126,7 @@
                     android:text="恋爱状态"/>
 
                 <EditText
-                    android:id="@+id/et_change5"
+                    android:id="@+id/et_love"
                     android:layout_width="200dip"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="52sp"
@@ -144,4 +142,4 @@
                 android:text="保存"/>
         </LinearLayout>
     </LinearLayout>
-</FrameLayout>
+</LinearLayout>
