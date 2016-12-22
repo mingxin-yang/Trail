@@ -10,7 +10,7 @@ android {
         config {
             keyAlias 'key'
             keyPassword '123456'
-            storeFile file('D:/askey/keystore.jks')
+            storeFile file('C:/Android/android-studio/keystore.jks')
             storePassword '123456'
         }
     }
@@ -44,8 +44,8 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
-    compile project(':PullToRefresh')
     compile project(':StatusBar')
     compile files('libs/BaiduLBS_Android.jar')
+    compile project(':carrousellayout')
 }
 
