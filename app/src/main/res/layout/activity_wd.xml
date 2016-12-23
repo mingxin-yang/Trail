@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_wd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="horizontal"
+    tools:context="com.android.trail.wangyang.WDActivity">
+    <ImageView
+        android:src="@drawable/bus_65"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+<TextView
+    android:text="南焦客运站-->白佛客运站\t\t\t\t南焦客运站\n南二环体育街口\n赵卜口\n建华塔南路口\n南王\n大石门\n世纪公园\n万达广场"
+    android:textSize="25sp"
+    android:lineSpacingMultiplier="1.5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+</LinearLayout>

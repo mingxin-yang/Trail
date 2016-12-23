@@ -1,76 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.trail">
+          package="com.android.trail">
 
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
 
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <!-- 这个权限用于进行网络定位 -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <!-- 这个权限用于访问GPS定位 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <!-- 用于读取手机当前的状态 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <!-- 访问网络，网络定位需要上网 -->
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!-- SD卡读取权限，用户写入离线定位数据 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <!-- 允许应用读取低级别的系统日志文件 -->
-    <uses-permission android:name="android.permission.READ_LOGS" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <!-- 这个权限用于进行网络定位 -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <!-- 这个权限用于访问GPS定位 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <!-- 用于读取手机当前的状态 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <!-- 访问网络，网络定位需要上网 -->
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!-- SD卡读取权限，用户写入离线定位数据 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <!-- 允许应用读取低级别的系统日志文件 -->
-    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_LOGS"/>
 
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
 
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <!-- 申明网络权限 -->
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!-- 申明权限 操作SD卡 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -80,60 +80,81 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="4lrDd2HeLqg8aeso9YoYAj9IjjX88h8C" />
+            android:value="49X90Be3McyA5jPO20uuqfGEsKR05Uui"/>
 
         <!-- android:value="5mtxMu6EeQ3V8x25nKZqoyBICSFF35Ag" /> -->
 
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote" />
+            android:process=":remote"/>
 
-        <activity android:name=".map.Rounting" />
+        <activity android:name=".zhenfeng.Scenery"/>
+        <activity android:name=".zhenfeng.share.scencyRate"/>
+        <activity android:name=".zhenfeng.fourTabViews.oneShare"/>
+        <activity
+            android:name=".zhenfeng.share.activity.AlbumActivi"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".zhenfeng.share.activity.ImageFi">
+        </activity>
+        <activity android:name=".zhenfeng.share.activity.ShowAllPho">
+        </activity>
+        <activity android:name=".zhenfeng.share.activity.GalleryActivi">
+        </activity>
+        <activity android:name=".map.Rounting"/>
         <activity
             android:name=".hongxue.Discuss"
-            android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".wangyang.BusStopActivity" />
-        <activity android:name=".xizheng.PersonalActivity" />
-        <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity" />
-        <activity android:name=".com.adroid.huizhao.Test" />
-        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao1" />
-        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao2" />
-        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao3" />
-        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao4" />
-        <activity android:name=".com.adroid.huizhao.ViewPager.Jieshao5" />
-        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao6" />
-        <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoMore" />
-        <activity android:name=".wangyang.MoveList" />
-        <activity android:name=".xizheng.Userlogin" />
-        <activity android:name=".xizheng.PersonalData2Activity" />
-        <activity android:name=".welcomepage.First" />
-        <activity android:name=".homepage.MainActivity" />
-        <activity android:name=".xizheng.PersonalData2Activity" />
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".wangyang.BusStopActivity"/>
+        <activity android:name=".xizheng.PersonalActivity"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"/>
+        <activity android:name=".com.adroid.huizhao.Test"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao1"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao2"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao3"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao4"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.Jieshao5"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShao6"/>
+        <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoMore"/>
+        <activity android:name=".wangyang.MoveList"/>
+        <activity android:name=".xizheng.Userlogin"/>
+        <activity android:name=".xizheng.PersonalData2Activity"/>
+        <activity android:name=".welcomepage.First"/>
+        <activity android:name=".homepage.MainActivity"/>
         <activity android:name=".welcomepage.NotFirst">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <!-- <activity android:name=".zhenfeng.Scenery"> -->
         <!-- <activity android:name=".com.adroid.huizhao.ViewPager.JieShaoActivity"> -->
-        <activity android:name=".map.Map" />
-        <activity android:name=".map.Map_list" />
-        <activity android:name=".map.MapShow_list" />
-        <activity android:name=".map.Detail" />
-        <activity android:name=".map.Rate" />
+        <activity android:name=".map.Map"/>
+        <activity android:name=".map.Map_list"/>
+        <activity android:name=".map.MapShow_list"/>
+        <activity android:name=".map.Detail"/>
+        <activity android:name=".map.Rate"/>
         <activity
             android:name=".map.activity.AlbumActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".map.activity.ImageFile" />
-        <activity android:name=".map.activity.ShowAllPhoto" />
-        <activity android:name=".map.activity.GalleryActivity" />
-        <activity android:name=".map.BNDemoGuideActivity" />
-        <activity android:name=".map.CustomRouteActivity" />
-        <activity android:name=".map.Navi" />
-        <activity android:name=".scenery.Scan" />
-        <activity android:name=".scenery.Share"></activity>
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".map.activity.ImageFile">
+        </activity>
+        <activity android:name=".map.activity.ShowAllPhoto">
+        </activity>
+        <activity android:name=".map.activity.GalleryActivity">
+        </activity>
+        <activity android:name=".map.BNDemoGuideActivity"/>
+        <activity android:name=".map.CustomRouteActivity"/>
+        <activity android:name=".map.Navi"/>
+        <activity android:name=".wangyang.WDActivity">
+        </activity>
+        <activity android:name=".wangyang.HCZActivity">
+        </activity>
+        <activity android:name=".wangyang.XBActivity">
+        </activity>
     </application>
 
 </manifest>
