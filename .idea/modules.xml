@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/StatusBar/StatusBar.iml" filepath="$PROJECT_DIR$/StatusBar/StatusBar.iml" />
       <module fileurl="file://$PROJECT_DIR$/Trail.iml" filepath="$PROJECT_DIR$/Trail.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/carrousellayout/carrousellayout.iml" filepath="$PROJECT_DIR$/carrousellayout/carrousellayout.iml" />
     </modules>
   </component>
 </project>
