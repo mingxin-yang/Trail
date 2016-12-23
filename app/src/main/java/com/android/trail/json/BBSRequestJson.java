@@ -53,12 +53,12 @@ public class BBSRequestJson {
                 int id = item.getInt("id");
                 String headsculpture = item.getString("headsculpture");
                 String bulletin = item.getString("bulletin");
-
+                String username = item.getString("username");
                 map = new HashMap<String, String>();
                 map.put("id", id + "");
                 map.put("headsculpture", headsculpture);
                 map.put("bulletin",bulletin);
-
+                map.put("username",username);
                 list.add(map);
             }
         }

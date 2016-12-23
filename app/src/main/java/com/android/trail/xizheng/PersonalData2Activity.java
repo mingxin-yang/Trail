@@ -2,13 +2,14 @@ package com.android.trail.xizheng;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.android.trail.R;
+import com.android.trail.homepage.MainActivity;
 
 /**
  * Created by dell on 2016/12/20.
@@ -17,8 +18,8 @@ import com.android.trail.R;
 public class PersonalData2Activity extends Activity{
 
     private Button pback;                            //返回按钮
-    private LayoutInflater mInflater;
-    private FlowLayout mFlowLayout;
+
+    private Button save;
 
     private EditText et_realname;
     private EditText et_birthday;
@@ -36,18 +37,21 @@ public class PersonalData2Activity extends Activity{
         et_school = (EditText)findViewById(R.id.et_school);
         et_love = (EditText) findViewById(R.id.et_love);
         et_Enrollment = (EditText)findViewById(R.id.et_Enrollment);
+        save = (Button)findViewById(R.id.btn_persondata2keep);
 
-        Intent intent = getIntent();
-        String realname = intent.getStringExtra("realname");
-        String birthday = intent.getStringExtra("birthday");
-        String school = intent.getStringExtra("school");
-        String love = intent.getStringExtra("love");
-        String enrollment = intent.getStringExtra("enrollment");
+        SharedPreferences share=getSharedPreferences("user", MainActivity.MODE_WORLD_WRITEABLE);
+
+
+        String realname = share.getString("realname",null);
+        String school = share.getString("school",null);
+        String enrollment = share.getString("getdate",null);
+        String gone = share.getString("gone",null);
+        String hobbies = share.getString("hobbies",null);
 
         et_realname.setText(realname);
-        et_birthday.setText(birthday);
+        et_birthday.setText(gone);
         et_school.setText(school);
-        et_love.setText(love);
+        et_love.setText(hobbies);
         et_Enrollment.setText(enrollment);
 
         //返回
@@ -55,6 +59,20 @@ public class PersonalData2Activity extends Activity{
         pback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                finish();
+            }
+        });
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences share=getSharedPreferences("user", MainActivity.MODE_WORLD_WRITEABLE);
+                SharedPreferences.Editor editor = share.edit();
+                editor.putString("realname",et_realname.getText().toString());
+                editor.putString("gone",et_birthday.getText().toString());
+                editor.putString("school",et_school.getText().toString());
+                editor.putString("hobbies",et_love.getText().toString());
+                editor.putString("enrollment",et_Enrollment.getText().toString());
+                editor.commit();
                 Intent pback = new Intent();
                 pback.setClass(PersonalData2Activity.this, PersonalActivity.class);
                 startActivity(pback);

@@ -11,10 +11,9 @@
         android:background="#FFCC00">
         <Button
             android:id="@+id/person_back"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/goback"
-            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退出登陆"
             android:layout_marginLeft="5dp"/>
     </LinearLayout>
 
@@ -296,14 +295,21 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content">
 
-                    <com.android.trail.xizheng.FlowLayout
-                        android:id="@+id/id_flowlayout"
+                    <!--<com.android.trail.xizheng.FlowLayout-->
+                        <!--android:id="@+id/id_flowlayout"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:background="#FFFFFF"-->
+                        <!--android:layout_marginLeft="52sp"-->
+                        <!--android:padding="10dp" >-->
+                    <!--</com.android.trail.xizheng.FlowLayout>-->
+                    <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:padding="10sp"
                         android:background="#FFFFFF"
-                        android:layout_marginLeft="52sp"
-                        android:padding="10dp" >
-                    </com.android.trail.xizheng.FlowLayout>
+                        android:text="我就是爱音乐别让我停下来！"
+                        android:layout_marginLeft="52sp"/>
 
                 </LinearLayout>
 
