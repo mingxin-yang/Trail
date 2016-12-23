@@ -360,7 +360,9 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                             map.put("sina", sina);
                             list.add(map);
                         }
-                        editor.putString("username", list.get(0).get("username"));
+                        editor.putString("" +
+                                "" +
+                                "", list.get(0).get("username"));
                         editor.putString("headsculpture",list.get(0).get("headsculpture"));
                     } catch (JSONException e) {
                         e.printStackTrace();

@@ -7,7 +7,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -38,8 +37,6 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
-
-import qiu.niorgai.StatusBarCompat;
 
 
 /**
@@ -92,7 +89,7 @@ public class PersonalActivity extends AppCompatActivity implements View.OnClickL
 
     private URL url = null;
 
-    private String[] mVals = new String[] { "苹果手机", "笔记本电脑", "电饭煲 ", "腊肉",
+    private String[] mVals = new String[] { "打羽毛球", "笔记本电脑", "电饭煲 ", "腊肉",
             "特产", "剃须刀", "宝宝", "康佳" , "腊肉",
             "特产", "剃须刀", "宝宝", "康佳"};
     private LayoutInflater mInflater;
@@ -193,10 +190,10 @@ public class PersonalActivity extends AppCompatActivity implements View.OnClickL
         });
 
 
-        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
-        mInflater = LayoutInflater.from(this);
-        mFlowLayout = (FlowLayout) findViewById(R.id.id_flowlayout);
-        initData();
+//        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
+//        mInflater = LayoutInflater.from(this);
+//        mFlowLayout = (FlowLayout) findViewById(R.id.id_flowlayout);
+//        initData();
 
         //返回
         pback = (Button)findViewById(R.id.person_back);
@@ -305,25 +302,25 @@ public class PersonalActivity extends AppCompatActivity implements View.OnClickL
 
 
 
-    public void initData() {
-        /**
-         * 找到搜索标签的控件
-         */
-        for (int i = 0; i < mVals.length; i++) {
-            TextView tv = (TextView) mInflater.inflate(
-                    R.layout.search_label_tv, mFlowLayout, false);
-            tv.setText(mVals[i]);
-            final String str = tv.getText().toString();
-            //点击事件
-            tv.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                }
-            });
-            mFlowLayout.addView(tv);//添加到父View
-        }
-    }
+//    public void initData() {
+//        /**
+//         * 找到搜索标签的控件
+//         */
+//        for (int i = 0; i < mVals.length; i++) {
+//            TextView tv = (TextView) mInflater.inflate(
+//                    R.layout.search_label_tv, mFlowLayout, false);
+//            tv.setText(mVals[i]);
+//            final String str = tv.getText().toString();
+//            //点击事件
+//            tv.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//                }
+//            });
+//            mFlowLayout.addView(tv);//添加到父View
+//        }
+//    }
 
     Handler handler2 = new Handler()
     {
