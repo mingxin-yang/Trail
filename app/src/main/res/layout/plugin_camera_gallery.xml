@@ -56,7 +56,7 @@
 
     </RelativeLayout>
     
-    <com.android.trail.map.zoom.ViewPagerFixed
+    <com.android.trail.zoom.ViewPagerFixed
       android:id="@+id/gallery01" 
       android:layout_width="fill_parent" 
       android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
       android:layout_centerHorizontal="true"
       android:background="@color/plugin_camera_black"
       android:unselectedAlpha="1">
-   	</com.android.trail.map.zoom.ViewPagerFixed>
+   	</com.android.trail.zoom.ViewPagerFixed>
    
 </RelativeLayout>
   

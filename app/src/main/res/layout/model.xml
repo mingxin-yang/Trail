@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.android.trail.wangyang.MoveList">
+    tools:context="com.android.trail.activity.MoveList">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

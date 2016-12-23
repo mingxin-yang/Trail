@@ -47,13 +47,13 @@ public class ShopRequestJson {
                 JSONObject item = jsonArray.getJSONObject(i); // 得到每个对象
                 int id = item.getInt("id");
                 String picurl = item.getString("picurl");
-                String brief = item.getString("brief");
+                String specialist = item.getString("specialist");
                 String shopname = item.getString("shopname");
                 String shopgrid = item.getString("shopgrid");
                 map = new HashMap<String, String>();
                 map.put("id", id + "");
                 map.put("picurl", picurl);
-                map.put("brief",brief);
+                map.put("specialist",specialist);
                 map.put("shopname",shopname);
                 map.put("shopgrid",shopgrid);
                 list.add(map);

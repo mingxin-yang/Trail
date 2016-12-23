@@ -22,9 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15sp"
         android:textSize="25sp"
-        android:text="学术研究"/>
+        android:text="历史沿革"/>
 
-    <com.android.trail.com.adroid.huizhao.DragImageView
+    <com.android.trail.view.DragImageView
         android:id="@+id/div_main"
         android:layout_margin="5sp"
         android:layout_width="match_parent"

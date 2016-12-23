@@ -5,6 +5,7 @@
     <ImageView
         android:id="@+id/gv_img"
         android:layout_width="wrap_content"
+        android:scaleType="centerCrop"
         android:layout_height="wrap_content"
         android:src="@drawable/shop_list1"/>
 </LinearLayout>

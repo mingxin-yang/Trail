@@ -29,7 +29,7 @@
         android:id="@+id/rl4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-    <com.android.trail.map.MyGridView
+    <com.android.trail.view.MyGridView
         android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

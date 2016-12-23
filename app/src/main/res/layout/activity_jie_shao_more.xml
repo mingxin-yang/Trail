@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.android.trail.com.adroid.huizhao.ViewPager.JieShaoMore">
+    tools:context="com.android.trail.activity.JieShaoMore">
     <!-- 黄色标题栏以及返回按钮-->
     <LinearLayout
         android:orientation="horizontal"

@@ -47,29 +47,13 @@ public class ShopevaluateRequestJson {
                 JSONObject item = jsonArray.getJSONObject(i); // 得到每个对象
                 int id = item.getInt("id");
                 String shopname = item.getString("shopname");
-                String goodsname = item.getString("goodsname");
                 String evaluate = item.getString("evaluate");
                 String username = item.getString("username");
-                String headsculpture = item.getString("headsculpture");
-                String epic1 = item.getString("epic1");
-                String epic2 = item.getString("epic2");
-                String epic3 = item.getString("epic3");
-                String epic4 = item.getString("epic4");
-                String epic5 = item.getString("epic5");
-                String epic6 = item.getString("epic6");
                 map = new HashMap<String, String>();
                 map.put("id", id + "");
                 map.put("shopname", shopname);
-                map.put("goodsname", goodsname);
                 map.put("evaluate",evaluate);
                 map.put("username",username);
-                map.put("headsculpture",headsculpture);
-                map.put("epic1",epic1);
-                map.put("epic2",epic2);
-                map.put("epic3",epic3);
-                map.put("epic4",epic4);
-                map.put("epic5",epic5);
-                map.put("epic6",epic6);
                 list.add(map);
             }
         }

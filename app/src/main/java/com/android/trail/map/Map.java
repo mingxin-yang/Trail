@@ -10,7 +10,6 @@ import android.widget.Toast;
 import android.widget.ZoomControls;
 
 import com.android.trail.R;
-
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
@@ -107,7 +106,6 @@ public class Map extends Activity{
                                 Toast.LENGTH_SHORT)
                                 .show();
                         Intent intent0=new Intent(Map.this,Map_list.class);
-                        intent0.putExtra("title","师生活动中心");
                         startActivity(intent0);
                         break;
                     case 1:
@@ -116,7 +114,6 @@ public class Map extends Activity{
                                 Toast.LENGTH_SHORT)
                                 .show();
                         Intent intent1=new Intent(Map.this,Map_list.class);
-                        intent1.putExtra("title","东门商业区");
                         startActivity(intent1);
                         break;
                     case 2:
@@ -125,7 +122,6 @@ public class Map extends Activity{
                                 Toast.LENGTH_SHORT)
                                 .show();
                         Intent intent2=new Intent(Map.this,Map_list.class);
-                        intent2.putExtra("title","西门商业区");
                         startActivity(intent2);
                         break;
                 }
