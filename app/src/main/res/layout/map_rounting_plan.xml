@@ -34,7 +34,7 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:background="#3F51B5"
+                    android:background="@drawable/shape"
                     android:id="@+id/btn_serch"
                     android:text="快上车，带你畅游师大"
                     android:textSize="20sp"

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -27,6 +28,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
+import qiu.niorgai.StatusBarCompat;
 
 public class Share extends AppCompatActivity implements View.OnClickListener{
     private ImageView imageView;
@@ -53,7 +56,8 @@ public class Share extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share);
-
+        //沉浸式状态栏
+        StatusBarCompat.setStatusBarColor(this, Color.BLACK);
         imageView = (ImageView)findViewById(R.id.share_img);
         Intent intent =getIntent();
         if (intent != null){

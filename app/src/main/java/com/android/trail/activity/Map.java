@@ -81,7 +81,7 @@ public class Map extends Activity{
         if (child != null && (child instanceof ImageView || child instanceof ZoomControls)) {
             child.setVisibility(View.INVISIBLE);
         }
-        MapStatusUpdate msu = MapStatusUpdateFactory.zoomTo(19.0f);
+        MapStatusUpdate msu = MapStatusUpdateFactory.zoomTo(16.0f);
         mBaiduMap.setMapStatus(msu);
         mUiSettings = mBaiduMap.getUiSettings();
 

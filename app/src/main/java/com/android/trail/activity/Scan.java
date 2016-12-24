@@ -3,6 +3,7 @@ package com.android.trail.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
@@ -23,6 +24,8 @@ import com.dalong.carrousellayout.OnCarrouselItemSelectedListener;
 
 import java.io.ByteArrayOutputStream;
 
+import qiu.niorgai.StatusBarCompat;
+
 public class Scan extends AppCompatActivity {
     private final  String TAG=Scan.class.getSimpleName();
     private SeekBar mSeekBarR;
@@ -41,6 +44,8 @@ public class Scan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan);
+        //沉浸式状态栏
+        StatusBarCompat.setStatusBarColor(this, Color.BLACK);
         initView();
         initLinstener();
     }

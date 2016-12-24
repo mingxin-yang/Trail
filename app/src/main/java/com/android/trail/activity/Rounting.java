@@ -46,14 +46,24 @@ public class Rounting extends Activity implements View.OnClickListener{
         walk1=(Button)findViewById(R.id.walk1);
         walk2=(Button)findViewById(R.id.walk2);
         walk3=(Button)findViewById(R.id.walk3);
-        luxian_back=(Button)findViewById(R.id.luxian_back);
+
+        Button bstop_back = (Button) findViewById(R.id.luxian_back);
+        bstop_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent bstop_back_intent = new Intent();
+                bstop_back_intent.setClass(Rounting.this, Map.class);
+                startActivity(bstop_back_intent);
+                finish();
+            }
+        });
 
 //        searchButtonProcess(rount);
 
         walk1.setOnClickListener(this);
         walk2.setOnClickListener(this);
         walk3.setOnClickListener(this);
-        luxian_back.setOnClickListener(this);
+
 
 
 

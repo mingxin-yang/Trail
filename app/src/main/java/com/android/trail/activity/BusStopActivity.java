@@ -45,7 +45,7 @@ public class BusStopActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bus_stop);
         //沉浸式状态栏
-        StatusBarCompat.setStatusBarColor(this, Color.parseColor("#FFCC00"));
+        StatusBarCompat.setStatusBarColor(this, Color.BLACK);
 
         //监听
         bstop_back = (Button) findViewById(R.id.bstop_back);
