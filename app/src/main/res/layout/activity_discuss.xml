@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -21,26 +21,25 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="5dp"/>
     </LinearLayout>
-    <com.android.trail.view.RefreshableView
-        android:id="@+id/refreshable_view"
+    <com.android.trail.pulltorefresh.RefreshableView
+        android:id="@+id/fresh_view"
+        android:layout_below="@id/top"
+        android:layout_above="@id/bottom"
         android:layout_width="fill_parent"
         android:layout_height="match_parent" >
         <ListView
             android:id="@+id/discuss_list"
-            android:layout_toEndOf="@+id/top"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    </com.android.trail.view.RefreshableView>
-
+            android:layout_height="wrap_content">
+        </ListView>
+    </com.android.trail.pulltorefresh.RefreshableView>
     <RelativeLayout
         android:background="#FFCC00"
         android:paddingBottom="5dp"
         android:id="@+id/bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
+        android:layout_alignParentBottom="true">
         <Button
             android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
@@ -52,7 +51,7 @@
             android:background="@drawable/send"
             android:id="@+id/btn_put"/>
         <EditText
-            android:layout_toLeftOf="@+id/btn"
+            android:layout_toLeftOf="@+id/btn_put"
             android:id="@+id/discuss_edt"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="5dp"
