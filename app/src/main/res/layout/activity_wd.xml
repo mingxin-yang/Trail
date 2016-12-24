@@ -9,16 +9,34 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context="com.android.trail.activity.WDActivity">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFCC00">
+        <Button
+            android:id="@+id/bstop_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/goback"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
     <ImageView
         android:src="@drawable/bus_65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-<TextView
-    android:text="南焦客运站-->白佛客运站\t\t\t\t南焦客运站\n南二环体育街口\n赵卜口\n建华塔南路口\n南王\n大石门\n世纪公园\n万达广场"
-    android:textSize="25sp"
-    android:lineSpacingMultiplier="1.5"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+    <TextView
+        android:text="南焦客运站-->白佛客运站\t\t\t\t南焦客运站\n南二环体育街口\n赵卜口\n建华塔南路口\n南王\n大石门\n世纪公园\n万达广场"
+        android:textSize="25sp"
+        android:lineSpacingMultiplier="1.5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
 </LinearLayout>
