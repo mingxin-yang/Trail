@@ -72,6 +72,9 @@
             android:name=".activity.Discuss"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".activity.BusStopActivity" />
+        <activity android:name=".activity.HCZActivity"/>
+        <activity android:name=".activity.WDActivity"/>
+        <activity android:name=".activity.XBActivity"/>
         <activity android:name=".activity.JieShaoActivity" />
         <activity android:name=".activity.JieShao1" />
         <activity android:name=".activity.JieShao2" />
@@ -81,9 +84,10 @@
         <activity android:name=".activity.JieShao6" />
         <activity android:name=".activity.JieShaoMore" />
         <activity android:name=".activity.MoveList" />
-        <activity android:name=".activity.Userlogin" />
         <activity android:name=".activity.PersonalData2Activity" />
         <activity android:name=".activity.First" />
+        <activity android:name=".activity.Userlogin" />
+        <activity android:name=".activity.PersonalActivity"/>
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.PersonalData2Activity" />
         <activity android:name=".activity.NotFirst">

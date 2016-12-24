@@ -30,14 +30,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.android.trail.xizheng.CircleImageEx
+            <com.android.trail.view.CircleImageEx
                 android:id="@+id/t1"
                 android:layout_alignParentTop="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/mm"/>
 
-            <com.android.trail.com.adroid.huizhao.XCRoundImageView
+            <com.android.trail.view.XCRoundImageView
                 android:id="@+id/t2"
                 android:layout_width="145sp"
                 android:layout_height="145sp"

@@ -32,9 +32,9 @@ public class FlowLayout extends ViewGroup {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
     {
 
-        int sizeWidth = MeasureSpec.getSize(widthMeasureSpec);
+        int sizeWidth = MeasureSpec.getSize(widthMeasureSpec) ;
         int modeWidth = MeasureSpec.getMode(widthMeasureSpec);
-        int sizeHeight = MeasureSpec.getSize(heightMeasureSpec);
+        int sizeHeight = MeasureSpec.getSize(heightMeasureSpec) ;
         int modeHeight = MeasureSpec.getMode(heightMeasureSpec);
 
         // 如果是warp_content情况下，记录宽和高
@@ -80,7 +80,7 @@ public class FlowLayout extends ViewGroup {
             // 未换行
             {
                 // 叠加行宽
-                lineWidth += childWidth;
+                lineWidth += childWidth ;
                 // 得到当前行最大的高度
                 lineHeight = Math.max(lineHeight, childHeight);
             }

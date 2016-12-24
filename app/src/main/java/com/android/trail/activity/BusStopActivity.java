@@ -13,9 +13,10 @@ import android.widget.ListView;
 
 import com.android.trail.R;
 import com.android.trail.adapter.BstopAdapter;
+import com.android.trail.activity.MainActivity;
 import com.android.trail.util.BusRequestJson;
-import com.android.trail.util.bstop;
 import com.android.trail.view.RefreshableView;
+import com.android.trail.util.bstop;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -93,14 +94,20 @@ public class BusStopActivity extends Activity {
                     finish();
                     break;
                 case R.id.bstop_btn1:
-                    startActivity(bstop_btn_intent);
+                    Intent bstop_back_intent1 = new Intent();
+                    bstop_back_intent1.setClass(BusStopActivity.this,WDActivity.class);
+                    startActivity(bstop_back_intent1);
                     break;
                 case R.id.bstop_btn2:
-                    startActivity(bstop_btn_intent);
+                    Intent bstop_back_intent2 = new Intent();
+                    bstop_back_intent2.setClass(BusStopActivity.this, XBActivity.class);
+                    startActivity(bstop_back_intent2);
                     break;
                 case R.id.bstop_btn3:
                     ;
-                    startActivity(bstop_btn_intent);
+                    Intent bstop_back_intent3 = new Intent();
+                    bstop_back_intent3.setClass(BusStopActivity.this,HCZActivity.class);
+                    startActivity(bstop_back_intent3);
                     break;
             }
         }
