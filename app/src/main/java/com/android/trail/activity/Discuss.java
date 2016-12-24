@@ -90,7 +90,6 @@ public class Discuss extends Activity {
     }
     private void putData(){
         String str = DiscussEdt.getText().toString();
-        Resources res = this.getResources();
         lb.add(new discussAdata(1,"qwe","http://img.zcool.cn/community/01970357612c3d0000018c1bebe3c1.png",str));
     }
 
