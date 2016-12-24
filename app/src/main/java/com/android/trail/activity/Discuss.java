@@ -12,11 +12,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.android.trail.R;
-import com.android.trail.homepage.MainActivity;
-import com.android.trail.hongxue.discussAdapter;
-import com.android.trail.hongxue.discussAdata;
-import com.android.trail.json.BBSRequestJson;
-import com.android.trail.pulltorefresh.RefreshableView;
+import com.android.trail.adapter.discussAdapter;
+import com.android.trail.util.discussAdata;
+import com.android.trail.util.BBSRequestJson;
+import com.android.trail.view.RefreshableView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +31,7 @@ public class Discuss extends Activity {
     private EditText DiscussEdt;
     private Button btn;
     private Button btn_put;
-    private com.android.trail.hongxue.discussAdapter discussAdapter;
+    private discussAdapter discussAdapter;
     private RefreshableView refreshableView;
     //声明ListView控件
     private ListView mListView;

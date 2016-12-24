@@ -139,7 +139,7 @@ public class MainActivity extends Activity {
                     //留言
                     case R.id.telId3:
                         Intent intent3 = new Intent();
-//                        intent3.setClass(MainActivity.this, Discuss.class);
+                        intent3.setClass(MainActivity.this, Discuss.class);
                         startActivity(intent3);
                         break;
                     //出行

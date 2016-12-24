@@ -11,8 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.trail.R;
-import com.android.trail.hongxue.discussAdata;
-import com.android.trail.wangyang.LoadPicture;
+import com.android.trail.util.LoadPicture;
+import com.android.trail.util.discussAdata;
 
 import java.io.IOException;
 import java.util.ArrayList;

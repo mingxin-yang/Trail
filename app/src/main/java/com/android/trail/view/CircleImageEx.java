@@ -100,8 +100,7 @@ public class CircleImageEx extends ImageView {
         else
             p = bmp;
         //最后输出的图片信息
-        Bitmap output = Bitmap.createBitmap(p.getWidth(),
-                p.getHeight(), Bitmap.Config.ARGB_8888);
+        Bitmap output = Bitmap.createBitmap(p.getWidth(), p.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(output);
         final int color = 0xffa19774;
         final Paint paint = new Paint();
@@ -123,6 +122,8 @@ public class CircleImageEx extends ImageView {
         WindowManager wm = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
         int w = wm.getDefaultDisplay().getWidth();
         int h = wm.getDefaultDisplay().getHeight();
+
+
 
         Path path = new Path();
         path.moveTo(0, 0);
