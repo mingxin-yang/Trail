@@ -1,7 +1,9 @@
 package com.android.trail.activity;
 
 import android.app.Activity;
+import android.app.LauncherActivity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -82,8 +84,14 @@ public class Discuss extends Activity {
         btn_put.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                putData();
             }
         });
+    }
+    private void putData(){
+        String str = DiscussEdt.getText().toString();
+        Resources res = this.getResources();
+        lb.add(new discussAdata(1,"qwe","http://img.zcool.cn/community/01970357612c3d0000018c1bebe3c1.png",str));
     }
 
     Handler handler =new Handler(){
