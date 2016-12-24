@@ -27,7 +27,7 @@ public class JieShaoMore extends AppCompatActivity {
         WebSettings webSettings = show.getSettings();
         webSettings.setJavaScriptEnabled(true);//允许运行JavaScript
 
-        show.loadUrl("http://www.baidu.com");             //加载外网
+        show.loadUrl("http://www.hebtu.edu.cn/");             //加载外网
         show.setWebViewClient(new HelloWebViewClient ());
         //webView.loadUrl("file:///android_asset/XX.html");   //本地网站
 

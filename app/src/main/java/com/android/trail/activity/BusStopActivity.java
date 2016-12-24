@@ -2,6 +2,7 @@ package com.android.trail.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -22,6 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import qiu.niorgai.StatusBarCompat;
+
 
 public class BusStopActivity extends Activity {
 
@@ -41,6 +44,8 @@ public class BusStopActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bus_stop);
+        //沉浸式状态栏
+        StatusBarCompat.setStatusBarColor(this, Color.parseColor("#FFCC00"));
 
         //监听
         bstop_back = (Button) findViewById(R.id.bstop_back);

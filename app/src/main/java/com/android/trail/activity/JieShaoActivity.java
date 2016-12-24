@@ -136,7 +136,7 @@ public class JieShaoActivity extends Activity {
         setContentView(R.layout.jie_shao);
         mViewPaper = (ViewPager) findViewById(R.id.vp);
         //沉浸式状态栏
-        StatusBarCompat.setStatusBarColor(this, Color.BLUE,255);
+        StatusBarCompat.setStatusBarColor(this, Color.parseColor("#FFCC00"));
         getID();
 
         //显示的图片
