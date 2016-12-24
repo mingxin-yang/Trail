@@ -340,9 +340,9 @@ public class PersonalActivity extends AppCompatActivity implements View.OnClickL
     public void upData(){
         SharedPreferences share=getSharedPreferences("user", MainActivity.MODE_WORLD_WRITEABLE);
         try {
-            urlPath2 = "http://10.7.88.94:8992/user/?obj=3&realname="+ URLEncoder.encode(share.getString("realname",null),"UTF-8")
-                    +"&school="+ URLEncoder.encode(share.getString("school",null),"UTF-8")
-                    +"&hobbies="+ URLEncoder.encode(share.getString("hobbies",null),"UTF-8")
+            urlPath2 = "http://10.7.88.94:8992/user/?obj=3&realname="+ URLEncoder.encode(share.getString("realname","jjj"),"UTF-8")
+                    +"&school="+ URLEncoder.encode(share.getString("school","1"),"UTF-8")
+                    +"&hobbies="+ URLEncoder.encode(share.getString("hobbies","615"),"UTF-8")
                     +"&id="+ share.getInt("id",0);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
