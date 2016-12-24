@@ -9,9 +9,8 @@ android {
     signingConfigs {
         config {
             keyAlias 'key'
-
-            keyPassword '654321'
-            storeFile file('E:/AndroidSDK/keystore.jks')
+            keyPassword '123456'
+            storeFile file('C:/Android/android-studio/keystore.jks')
             storePassword '123456'
         }
     }
@@ -48,7 +47,6 @@ dependencies {
     compile project(':PullToRefresh')
     compile project(':StatusBar')
     compile files('libs/BaiduLBS_Android.jar')
-
     compile files('libs/httpmime-4.1.2.jar')
     compile files('libs/afinal_0.5.1_bin.jar')
     compile project(':carrousellayout')
