@@ -1,7 +1,9 @@
 package com.android.trail.activity;
 
 import android.app.Activity;
+import android.app.LauncherActivity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -86,8 +88,13 @@ public class Discuss extends Activity {
         btn_put.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                putData();
             }
         });
+    }
+    private void putData(){
+        String str = DiscussEdt.getText().toString();
+        lb.add(new discussAdata(1,"qwe","http://img.zcool.cn/community/01970357612c3d0000018c1bebe3c1.png",str));
     }
 
     Handler handler =new Handler(){
@@ -110,7 +117,7 @@ public class Discuss extends Activity {
         @Override
         public void run() {
             // TODO获取网络资源
-            final String path = "http://192.168.168.103:8992/bbs/json";
+            final String path = "http://192.168.168.101:8992/bbs/json";
             try {
                 list = BBSRequestJson.getJSONObject(path);
                 if (lb.size() != 0) {
