@@ -84,7 +84,7 @@ public class MapShow_list extends Activity{
         public void run() {
             // TODO
             //获取网络资源
-            final String path = "http://192.168.168.103:8992/goods/json";
+            final String path = "http://192.168.168.101:8992/goods/json";
             Intent in=getIntent();
             final String shopname=in.getStringExtra("shopname");
             try {

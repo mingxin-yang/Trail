@@ -340,7 +340,7 @@ public class PersonalActivity extends AppCompatActivity implements View.OnClickL
     public void upData(){
         SharedPreferences share=getSharedPreferences("user", MainActivity.MODE_WORLD_WRITEABLE);
         try {
-            urlPath2 = "http://192.168.168.103:8992/user/?obj=3&realname="+ URLEncoder.encode(share.getString("realname","jjj"),"UTF-8")
+            urlPath2 = "http://192.168.168.101:8992/user/?obj=3&realname="+ URLEncoder.encode(share.getString("realname","jjj"),"UTF-8")
                     +"&school="+ URLEncoder.encode(share.getString("school","1"),"UTF-8")
                     +"&hobbies="+ URLEncoder.encode(share.getString("hobbies","615"),"UTF-8")
                     +"&id="+ share.getInt("id",0);

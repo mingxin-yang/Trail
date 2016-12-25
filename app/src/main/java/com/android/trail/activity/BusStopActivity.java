@@ -139,7 +139,7 @@ public class BusStopActivity extends Activity {
         public void run() {
             // TODO
             //获取网络资源
-            final String path = "http://192.168.168.103:8992/bus/json";
+            final String path = "http://192.168.168.101:8992/bus/json";
             try {
                 list = BusRequestJson.getJSONObject(path);
                 if (lb.size() != 0) {

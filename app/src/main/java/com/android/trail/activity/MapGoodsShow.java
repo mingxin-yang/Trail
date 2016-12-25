@@ -82,7 +82,7 @@ public class MapGoodsShow extends Activity {
 
         new Thread(){
             public void run(){
-                final String path = "http://192.168.168.103:8992/goods/json";
+                final String path = "http://192.168.168.101:8992/goods/json";
                 Intent in=getIntent();
                 String goodsname=in.getStringExtra("goodsname");
                 try{
@@ -136,7 +136,7 @@ public class MapGoodsShow extends Activity {
         @Override
         public void run() {
             //获取网络资源
-            final String path = "http://192.168.168.103:8992/goods/json";
+            final String path = "http://192.168.168.101:8992/goods/json";
             Intent in=getIntent();
             String goodsname=in.getStringExtra("goodsname");
             try {
@@ -189,7 +189,7 @@ public class MapGoodsShow extends Activity {
         @Override
         public void run() {
             //获取网络资源
-            final String path = "http://192.168.168.103:8992/goods/json";
+            final String path = "http://192.168.168.101:8992/goods/json";
             Intent in=getIntent();
             String goodsname=in.getStringExtra("goodsname");
             try {
@@ -243,7 +243,7 @@ public class MapGoodsShow extends Activity {
         @Override
         public void run() {
             //获取网络资源
-            final String path = "http://192.168.168.103:8992/shopevaluate/json";
+            final String path = "http://192.168.168.101:8992/shopevaluate/json";
             Intent in = getIntent();
             String goodsname = in.getStringExtra("goodsname");
             String shopname=in.getStringExtra("shopname");

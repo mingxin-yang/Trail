@@ -249,7 +249,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
     //登陆
     private void Login(){
         try {
-            urlPath2 = "http://192.168.168.103:8992/user/?obj=1&passward="+et_pass.getText().toString()
+            urlPath2 = "http://192.168.168.101:8992/user/?obj=1&passward="+et_pass.getText().toString()
                     +"&username="+URLEncoder.encode(et_name.getText().toString(),"UTF-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -280,7 +280,7 @@ public class Userlogin extends Activity implements View.OnClickListener,View.OnL
                 EditText realname =(EditText)change1.findViewById(R.id.txt_nicename);
                 EditText username =(EditText)change1.findViewById(R.id.txt_username);
                 try {
-                    urlPath = "http://192.168.168.103:8992/user/?obj=0&passward="+passward.getText().toString()
+                    urlPath = "http://192.168.168.101:8992/user/?obj=0&passward="+passward.getText().toString()
                                         +"&realname="+URLEncoder.encode(realname.getText().toString(),"UTF-8")
                                         +"&username="+URLEncoder.encode(username.getText().toString(),"UTF-8");
                 } catch (UnsupportedEncodingException e) {
