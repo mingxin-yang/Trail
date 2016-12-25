@@ -110,7 +110,7 @@ public class Discuss extends Activity {
         @Override
         public void run() {
             // TODO获取网络资源
-            final String path = "http://192.168.168.101:8992/bbs/json";
+            final String path = "http://192.168.168.103:8992/bbs/json";
             try {
                 list = BBSRequestJson.getJSONObject(path);
                 if (lb.size() != 0) {
